@@ -1,0 +1,35 @@
+
+.glyph {
+  font-size: 52px;
+}
+.glyph fieldset, .glyph .fs0 {
+  display:none;
+}
+.glyph span {
+  display:block;
+  text-align: center;
+}
+.glyph .pbs {
+  float:left;
+  height: 80px;
+  margin: 5px;
+  padding: 5px;
+  border:1px solid #999; 
+}
+.glyph .mls {
+  font-size:12px;
+}
+code {
+  display:block;
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+  font-size: 105%;
+}
+tabs {
+  display:block;
+}
+tab {
+  display:inline-block;
+}
