@@ -15,9 +15,9 @@
         <tab class="ml-2 py-2 px-4 text-white">
           <a href="index.html">ICONS</a>
         </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
+        <!-- <tab class="ml-2 py-2 px-4 text-white">
           <a href="elements.html">ELEMENTS</a>
-        </tab>
+        </tab> -->
         <tab class="ml-2 py-2 px-4 bg-white rounded-t-lg">
           <a href="components.html">COMPONENTS</a>
         </tab>
@@ -27,55 +27,114 @@
       <div class="clearfix mhl ptl">
         <h1 class="text-5xl my-16">Components</h1>
       </div>
-      <section id="pageheader">
-        <h2 class="text-4xl my-8">Page header (without menu)</h2>
-        <header class="flex bg-white p-4 shadow">
-          <img
-            class="w-28 my-auto flex-none mr-8"
-            src="img/logo_nav.png"
-            alt="IEIMS LOGO"
-            title="IEIMS"
-          />
-          <div class="flex-1">
-            <div class="flex text-gray-500 text-sm gap-2">
-              <p>Registration</p>
-              <span class="icon-Chevron-right text-xl"></span>
-              <p>Add New School</p>
-            </div>
-            <p class="text-lg font-semibold pt-1">Add New School</p>
-          </div>
-        </header>
-        <div class="flex h-20 bg-white shadow items-center">
-          <div class="flex flex-col ml-6">
-            <div class="flex text-gray-500 text-sm">
-              <p>Registration</p>
-              <span class="icon-Chevron-right"></span>
-              <p>Add New School</p>
-            </div>
-            <p class="text-lg font-semibold pt-1">Add New School</p>
-          </div>
-          <div class="flex items-center ml-auto mr-6">
-            <img class="w-4" src="img/icon_bell.svg" alt="Notifications" />
-            <div class="flex ml-4">
-              <img class="h-10" src="img/avatar.png" alt="Avatar" />
-              <div class="felx flex-col ml-2">
-                <div class="flex">
-                  <p class="text-black text-base font-medium pr-2">
-                    Mohammad Habibul Bashar
-                  </p>
-                  <img src="img/icon_drop.svg" alt="Dropdown" />
-                </div>
-                <p class="text-gray-500 text-sm">Super Admin</p>
-              </div>
-            </div>
-          </div>
+      <section id="breadcrumb">
+        <h2 class="text-4xl my-8">Breadcrumb</h2>
+        <div id="breadcrumb" class="flex text-gray-500 text-sm gap-2">
+          <p class="my-auto">Registration</p>
+          <span class="icon-Chevron-right text-xl justify-center"></span>
+          <p class="my-auto">Add New School</p>
         </div>
         <section id="example" class="my-8 p-8 bg-gray-200 rounded">
           <p class="font-bold mb-2">Html</p>
-          <code>
-            &lt;span class="<span class="bg-yellow-100">icon-Academic-cap</span
-            >"&gt;&lt;/span&gt;
-          </code>
+          <pre><code>&lt;div id="..." class="flex text-gray-500 text-sm gap-2"&gt;
+  &lt;p class="my-auto">Registration&lt;/p&gt; 
+  &lt;span class="icon-Chevron-right text-xl justify-center">&lt;/span&gt;
+  &lt;p class="my-auto">Add New School&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+      </section>
+      <section id="ico_menuitem">
+        <h2 class="text-4xl my-8">Left menu items</h2>
+        <div class="flex flex-col w-1/3 gap-2">
+          <a
+            href="index.html"
+            class="
+              group
+              flex
+              hover:bg-gray-100
+              active:bg-indigo-50
+              p-2
+              mx-2
+              rounded-lg
+            "
+          >
+            <span class="icon-Home text-2xl text-gray-400"></span>
+            <span
+              class="
+                my-auto
+                ml-3
+                text-gray-600
+                group-hover:text-gray-900
+                text-base
+                font-medium
+                rounded-md
+              "
+              >Dashboard</span
+            >
+          </a>
+          <a href="" class="group flex hover:bg-gray-100 p-2 mx-2 rounded-lg">
+            <span class="icon-User-group text-2xl text-gray-400"></span>
+            <span
+              class="
+                my-auto
+                ml-3
+                text-gray-600
+                group-hover:text-gray-900
+                text-base
+                font-medium
+                rounded-md
+              "
+              >User Management</span
+            >
+          </a>
+          <a
+            href=""
+            class="group flex bg-indigo-50 p-2 mx-2 rounded-lg cursor-default"
+          >
+            <span class="icon-Folder text-2xl text-indigo-600"></span>
+            <span
+              class="
+                my-auto
+                ml-3
+                text-gray-900 text-base
+                font-medium
+                rounded-md
+              "
+              >Registration</span
+            >
+          </a>
+          <a href="" class="group flex hover:bg-gray-100 p-2 mx-2 rounded-lg">
+            <span class="icon-Calendar text-2xl text-gray-400"></span>
+            <span
+              class="
+                my-auto
+                ml-3
+                text-gray-600
+                group-hover:text-gray-900
+                text-base
+                font-medium
+                rounded-md
+              "
+              >...</span
+            >
+          </a>
+        </div>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <pre><code><span class="text-gray-400">&lt;div class=&quot;flex flex-col w-1/3 gap-2&quot;&gt;</span>
+  &lt;a href=&quot;index.html&quot; class=&quot;group flex hover:bg-gray-100 active:bg-indigo-50 p-2 mx-2 rounded-lg&quot; &gt;
+    &lt;span class=&quot;icon-Home text-2xl text-gray-400&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot; my-auto ml-3 text-gray-600 group-hover:text-gray-900 text-base font-medium rounded-md&quot;&gt;Dashboard&lt;/span&gt;
+  &lt;/a&gt;
+  <span class="text-gray-400">...
+  ...
+  ...
+&lt;/div&gt;</span></code></pre>
+          <p class="my-4 text-sm">Active menu</p>
+          <pre><code>&lt;a href=&quot;&quot;class=&quot;group flex bg-indigo-50 p-2 mx-2 rounded-lg cursor-default&quot;&gt;
+  &lt;span class=&quot;icon-Folder text-2xl text-indigo-600&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;my-auto ml-3 text-gray-900 text-base font-medium rounded-md&quot; &gt;Registration&lt;/span&gt;
+&lt;/a&gt;</code></pre>
         </section>
       </section>
     </main>

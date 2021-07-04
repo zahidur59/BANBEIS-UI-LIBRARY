@@ -1,35 +1,36 @@
-
 .glyph {
   font-size: 52px;
 }
-.glyph fieldset, .glyph .fs0 {
-  display:none;
+.glyph fieldset,
+.glyph .fs0 {
+  display: none;
 }
 .glyph span {
-  display:block;
+  display: block;
   text-align: center;
 }
 .glyph .pbs {
-  float:left;
+  float: left;
   height: 80px;
   margin: 5px;
   padding: 5px;
-  border:1px solid #999; 
+  border: 1px solid #999;
 }
 .glyph .mls {
-  font-size:12px;
+  font-size: 12px;
+}
+pre {
+  overflow: auto;
+  max-height: 500px;
 }
 code {
-  display:block;
-  font-family: Consolas,"courier new";
-  color: crimson;
-  background-color: #f1f1f1;
-  padding: 2px;
-  font-size: 105%;
+  display: block;
+  padding: 5px;
+  background-color: #f2f2f2;
 }
 tabs {
-  display:block;
+  display: block;
 }
 tab {
-  display:inline-block;
+  display: inline-block;
 }
