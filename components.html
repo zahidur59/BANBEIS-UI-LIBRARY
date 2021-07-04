@@ -27,6 +27,22 @@
       <div class="clearfix mhl ptl">
         <h1 class="text-5xl my-16">Components</h1>
       </div>
+      <section id="pageheader">
+        <h2 class="text-4xl my-8">Page header</h2>
+        <h1 class="text-lg font-semibold py-1">Add New School</h1>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <pre><code>&lt;h1 class=&quot;text-lg font-semibold py-1&quot;&gt;Add New School&lt;/h1&gt;</code></pre>
+        </section>
+      </section>
+      <section id="sectionheader">
+        <h2 class="text-4xl my-6">Section header</h2>
+        <h2 class="text-xl mb-4 font-medium">Name &amp; Location</h2>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <pre><code>&lt;h2 class=&quot;text-xl mb-4 font-medium&quot;&gt;Name &amp;amp; Location&lt;/h2&gt;</code></pre>
+        </section>
+      </section>
       <section id="breadcrumb">
         <h2 class="text-4xl my-8">Breadcrumb</h2>
         <div id="breadcrumb" class="flex text-gray-500 text-sm gap-2">
@@ -135,6 +151,87 @@
   &lt;span class=&quot;icon-Folder text-2xl text-indigo-600&quot;&gt;&lt;/span&gt;
   &lt;span class=&quot;my-auto ml-3 text-gray-900 text-base font-medium rounded-md&quot; &gt;Registration&lt;/span&gt;
 &lt;/a&gt;</code></pre>
+        </section>
+      </section>
+      <section id="pageheader">
+        <h2 class="text-4xl my-8">User widget</h2>
+        <p class="text-sm my-8">If avatar image available</p>
+        <div class="flex flex-row items-center">
+          <span class="icon-Bell text-2xl text-gray-400"></span>
+          <div class="flex ml-4">
+            <img
+              class="h-10 rounded-full"
+              src="img/avatar2.jpg"
+              alt="Avatar Image"
+            />
+            <div class="felx flex-col ml-2">
+              <p class="text-black text-base font-medium pr-2">
+                Mohammad Habibul Bashar
+              </p>
+              <p class="text-gray-500 text-sm">Super Admin</p>
+            </div>
+            <span class="icon-Chevron-down text-1xl mt-2"></span>
+          </div>
+        </div>
+        <p class="text-sm my-8">If avatar image not available</p>
+        <div class="flex flex-row items-center">
+          <span class="icon-Bell text-2xl text-gray-400"></span>
+          <div class="flex ml-4">
+            <div
+              class="flex w-10 h-10 justify-center rounded-full bg-indigo-900"
+            >
+              <p class="block text-3xl text-white">A</p>
+            </div>
+            <div class="felx flex-col ml-2">
+              <p class="text-black text-base font-medium pr-2">Abdul Karim</p>
+              <p class="text-gray-500 text-sm">Super Admin</p>
+            </div>
+            <span class="icon-Chevron-down text-1xl mt-2"></span>
+          </div>
+        </div>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <p class="text-sm my-8">If avatar image available</p>
+          <pre><code>&lt;div class=&quot;flex flex-row items-center&quot;&gt;
+  &lt;span class=&quot;icon-Bell text-2xl text-gray-400&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;flex ml-4&quot;&gt;
+    &lt;img class=&quot;h-10 rounded-full&quot; src=&quot;img/avatar2.jpg&quot; alt=&quot;Avatar Image&quot; /&gt;
+    &lt;div class=&quot;felx flex-col ml-2&quot;&gt;
+      &lt;p class=&quot;text-black text-base font-medium pr-2&quot;&gt;Mohammad Habibul Bashar&lt;/p&gt;
+      &lt;p class=&quot;text-gray-500 text-sm&quot;&gt;Super Admin&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;icon-Chevron-down text-1xl mt-2&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <p class="text-sm my-8">If avatar image not available</p>
+          <pre><code>...<br/><span class="text-gray-400 line-through">&lt;img class=&quot;h-10 rounded-full&quot; src=&quot;img/avatar2.jpg&quot; alt=&quot;Avatar Image&quot; /&gt;</span>
+&lt;div class=&quot;flex w-10 h-10 justify-center rounded-full bg-indigo-900&quot;&gt;
+  &lt;p class=&quot;block text-3xl text-white&quot;&gt;A&lt;/p&gt;
+&lt;/div&gt;<br />...</code></pre>
+        </section>
+      </section>
+      <section id="Card">
+        <h2 class="text-4xl my-8">Card</h2>
+        <div class="bg-gray-100 p-12">
+          <section class="bg-white shadow-sm rounded-md p-6">
+            <h2 class="text-xl mb-4 font-medium">Name &amp; Location</h2>
+            <p class="text-sm">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </section>
+        </div>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <pre><code>...
+&lt;div class="bg-white shadow-sm rounded-md p-6"&gt;
+  ...  
+&lt;/div&gt;</code></pre>
         </section>
       </section>
     </main>
