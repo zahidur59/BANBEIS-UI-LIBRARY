@@ -816,13 +816,10 @@
     </section>
     <section id="pageheader">
       <h2 class="text-4xl my-8">Pagination</h2>
-      <div class="px-5 bg-white py-5 flex flex-col items-center justify-between">
+      <div class="flex">
         <div class="flex items-center">
-           <button type="button" class="w-full p-4 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100">
-              <svg width="9" fill="currentColor" height="8" class="" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z">
-                 </path>
-              </svg>
+           <button type="button" class="w-full p-2 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100">
+            <span class="icon-Chevron-left"></span>
            </button>
            <button type="button" class="w-full px-4 py-2 border-t border-b text-base text-indigo-500 bg-white hover:bg-gray-100 ">
            1
@@ -836,17 +833,31 @@
            <button type="button" class="w-full px-4 py-2 border text-base text-gray-600 bg-white hover:bg-gray-100">
            4
            </button>
-           <button type="button" class="w-full p-4 border-t border-b border-r text-base  rounded-r-xl text-gray-600 bg-white hover:bg-gray-100">
-              <svg width="9" fill="currentColor" height="8" class="" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
-                 </path>
-              </svg>
+           <button type="button" class="w-full p-2 border-t border-b border-r text-base  rounded-r-xl text-gray-600 bg-white hover:bg-gray-100">
+            <span class="icon-Chevron-right"></span>
            </button>
         </div>
      </div>
       <section id="example" class="my-8 p-8 bg-gray-200 rounded">
         <p class="font-bold mb-2">Html</p>
-        <pre><code>&lt;h1 class=&quot;text-lg font-semibold py-1&quot;&gt;Add New School&lt;/h1&gt;</code></pre>
+        <pre><code>&lt;div class=&quot;flex&quot;&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;w-full p-2 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100&quot;&gt;
+      &lt;span class=&quot;icon-Chevron-left&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;w-full px-4 py-2 border-t border-b text-base text-indigo-500 bg-white hover:bg-gray-100 &quot;&gt;
+      1
+      &lt;/button&gt;
+      &lt;button type=&quot;button&quot; class=&quot;w-full px-4 py-2 border text-base text-gray-600 bg-white hover:bg-gray-100&quot;&gt;
+      2
+      &lt;/button&gt;
+      ...
+      ...
+      &lt;button type=&quot;button&quot; class=&quot;w-full p-2 border-t border-b border-r text-base  rounded-r-xl text-gray-600 bg-white hover:bg-gray-100&quot;&gt;
+      &lt;span class=&quot;icon-Chevron-right&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
       </section>
     </section>
     </main>
