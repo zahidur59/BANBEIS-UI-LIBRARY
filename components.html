@@ -322,7 +322,7 @@
             <div
               class="flex w-10 h-10 justify-center rounded-full bg-indigo-900"
             >
-              <p class="block text-3xl text-white">A</p>
+              <p class="block text-xl text-white my-auto">A</p>
             </div>
             <div class="felx flex-col ml-2">
               <p class="text-black text-base font-medium pr-2">Abdul Karim</p>
@@ -347,9 +347,12 @@
 &lt;/div&gt;</code></pre>
           <p class="text-sm my-8">If avatar image not available</p>
           <pre><code>...<br/><del class="text-gray-400">&lt;img class=&quot;h-10 rounded-full&quot; src=&quot;img/avatar2.jpg&quot; alt=&quot;Avatar Image&quot; /&gt;</del>
-&lt;div class=&quot;flex w-10 h-10 justify-center rounded-full bg-indigo-900&quot;&gt;
-  &lt;p class=&quot;block text-3xl text-white&quot;&gt;A&lt;/p&gt;
+&lt;div class=&quot;flex w-10 h-10 justify-center rounded-full <span class="bg-yellow-100">bg-indigo-900</span>&quot;&gt;
+  &lt;p class=&quot;block text-xl text-white my-auto&quot;&gt;<span class="bg-yellow-100">A</span>&lt;/p&gt;
 &lt;/div&gt;<br />...</code></pre>
+<p class="text-red-500 italic text-sm my-4">
+  * the highlighted parts need to be changed dynamically
+</p>
         </section>
       </section>
       <section id="Card">
@@ -512,7 +515,7 @@
   &lt;/fieldset&gt;
 &lt;/form&gt;
 </code></pre>
-          <p class="text-sm my-2">Input box</p>
+          <p class="text-sm my-8">Input box</p>
           <pre><code>&lt;label class=&quot;block mb-2&quot;&gt;
   &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
     &lt;span&gt;Email address&lt;/span&gt;
@@ -809,6 +812,41 @@
   focus:ring-purple-600
   focus:border-transparent
 &quot;&gt;&lt;/textarea&gt;</code></pre>       
+      </section>
+    </section>
+    <section id="pageheader">
+      <h2 class="text-4xl my-8">Pagination</h2>
+      <div class="px-5 bg-white py-5 flex flex-col items-center justify-between">
+        <div class="flex items-center">
+           <button type="button" class="w-full p-4 border text-base rounded-l-xl text-gray-600 bg-white hover:bg-gray-100">
+              <svg width="9" fill="currentColor" height="8" class="" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z">
+                 </path>
+              </svg>
+           </button>
+           <button type="button" class="w-full px-4 py-2 border-t border-b text-base text-indigo-500 bg-white hover:bg-gray-100 ">
+           1
+           </button>
+           <button type="button" class="w-full px-4 py-2 border text-base text-gray-600 bg-white hover:bg-gray-100">
+           2
+           </button>
+           <button type="button" class="w-full px-4 py-2 border-t border-b text-base text-gray-600 bg-white hover:bg-gray-100">
+           3
+           </button>
+           <button type="button" class="w-full px-4 py-2 border text-base text-gray-600 bg-white hover:bg-gray-100">
+           4
+           </button>
+           <button type="button" class="w-full p-4 border-t border-b border-r text-base  rounded-r-xl text-gray-600 bg-white hover:bg-gray-100">
+              <svg width="9" fill="currentColor" height="8" class="" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z">
+                 </path>
+              </svg>
+           </button>
+        </div>
+     </div>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <pre><code>&lt;h1 class=&quot;text-lg font-semibold py-1&quot;&gt;Add New School&lt;/h1&gt;</code></pre>
       </section>
     </section>
     </main>
