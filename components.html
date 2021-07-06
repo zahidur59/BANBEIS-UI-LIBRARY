@@ -106,7 +106,7 @@
               px-4
               bg-indigo-600
               text-white text-center text-base
-              font-medium
+              font-semibold
               shadow-md
               hover:bg-indigo-700
               focus:ring-indigo-500 focus:ring-offset-indigo-200
@@ -122,7 +122,7 @@
             class="
               py-2
               px-4
-              font-medium
+              font-semibold
               transition
               ease-in
               duration-200
@@ -142,6 +142,7 @@
               px-4
               bg-gray-300
               text-gray-500
+              font-semibold
               opacity-70
               cursor-not-allowed
               rounded-lg
@@ -311,7 +312,7 @@
               </p>
               <p class="text-gray-500 text-sm">Super Admin</p>
             </div>
-            <span class="icon-Chevron-down text-1xl mt-2"></span>
+            <span class="icon-Chevron-down text-black text-1xl mt-2"></span>
           </div>
         </div>
         <p class="text-sm my-8">If avatar image not available</p>
@@ -327,7 +328,7 @@
               <p class="text-black text-base font-medium pr-2">Abdul Karim</p>
               <p class="text-gray-500 text-sm">Super Admin</p>
             </div>
-            <span class="icon-Chevron-down text-1xl mt-2"></span>
+            <span class="icon-Chevron-down text-black text-1xl mt-2"></span>
           </div>
         </div>
         <section id="example" class="my-8 p-8 bg-gray-200 rounded">
@@ -341,7 +342,7 @@
       &lt;p class=&quot;text-black text-base font-medium pr-2&quot;&gt;Mohammad Habibul Bashar&lt;/p&gt;
       &lt;p class=&quot;text-gray-500 text-sm&quot;&gt;Super Admin&lt;/p&gt;
     &lt;/div&gt;
-    &lt;span class=&quot;icon-Chevron-down text-1xl mt-2&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;icon-Chevron-down text-black text-1xl mt-2&quot;&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
           <p class="text-sm my-8">If avatar image not available</p>
@@ -397,8 +398,10 @@
             <fieldset class="bg-white shadow-sm rounded-md p-6">
               <h2 class="text-xl mb-4 font-semibold">Location information</h2>
               <label class="block mb-2">
-                <span>School Name</span>
-                <span title="required" class="text-red-500">*</span>
+                <div class="text-gray-700 mb-2">
+                  <span>School Name</span>
+                  <span title="required" class="text-red-500 invisible">*</span>
+                </div>
                 <input
                   type="name"
                   placeholder="school name"
@@ -420,11 +423,18 @@
                     focus:border-transparent
                   "
                 />
-                <p title="error-message" class="text-red-500">&#160;</p>
+                <p
+                  title="error-message"
+                  class="text-red-500 italic text-sm invisible"
+                >
+                  &#160;
+                </p>
               </label>
               <label class="block mb-2">
-                <span>Email address</span>
-                <span title="required" class="text-red-500">*</span>
+                <div class="text-gray-700 mb-2">
+                  <span>Email address</span>
+                  <span title="required" class="text-red-500">*</span>
+                </div>
                 <input
                   type="name"
                   placeholder="email address"
@@ -446,136 +456,361 @@
                     focus:border-transparent
                   "
                 />
-                <p title="error-message" class="text-red-500">
+                <p title="error-message" class="text-red-500 italic text-sm">
                   Invalid email address
                 </p>
               </label>
-              <label class="block mb-8">
-                <span class="text-gray-700">Select</span>
-                <select
+              <label class="block mb-2">
+                <div class="text-gray-700 mb-2">
+                  <span>School Name</span>
+                  <span title="required" class="text-red-500 invisible">*</span>
+                </div>
+                <input
+                  type="name"
+                  disabled
+                  placeholder="school name"
                   class="
-                    form-select
+                    form-input
                     block
                     w-full
-                    appearance-none
+                    rounded-lg
+                    bg-gray-100
+                    cursor-not-allowed
                     border border-gray-300
+                    text-gray-700
+                    placeholder-gray-400
                     px-4
                     py-2
-                    rounded-lg
-                    shadow-sm
-                    leading-tight
+                    placeholder-gray-400
+                    text-base
                     focus:outline-none
                     focus:ring-2
                     focus:ring-purple-600
                     focus:border-transparent
                   "
+                />
+                <p
+                  title="error-message"
+                  class="text-red-500 italic text-sm invisible"
                 >
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                </select>
+                  error message over here
+                </p>
               </label>
-              <div
-                class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-8"
-              >
-                <label class="inline-flex items-center">
-                  <input
-                    type="checkbox"
-                    checked
-                    class="
-                      form-checkbox
-                      border border-gray-400
-                      text-indigo-700
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-purple-600
-                      focus:border-transparent
-                    "
-                  />
-                  <span class="ml-2">Model School</span>
-                </label>
-                <label class="inline-flex items-center">
-                  <input
-                    type="checkbox"
-                    class="
-                      form-checkbox
-                      border border-gray-400
-                      text-indigo-700
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-purple-600
-                      focus:border-transparent
-                    "
-                  />
-                  <span class="ml-2">Primary School</span>
-                </label>
-              </div>
-              <div class="flex-1">
-                <span class="text-gray-700">Radio Buttons</span>
-                <div class="flex flex-col md:flex-row gap-2 md:gap-4">
-                  <label class="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="radio-option"
-                      value="1"
-                      checked
-                      class="
-                        form-radio
-                        border border-gray-400
-                        text-indigo-700
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-purple-600
-                        focus:border-transparent
-                      "
-                    />
-                    <span class="ml-2">Option 1</span>
-                  </label>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="radio-option"
-                      value="1"
-                      checked
-                      class="
-                        form-radio
-                        border border-gray-400
-                        text-indigo-700
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-purple-600
-                        focus:border-transparent
-                      "
-                    />
-                    <span class="ml-2">Option 2</span>
-                  </label>
-                  <label class="inline-flex items-center">
-                    <input
-                      type="radio"
-                      name="radio-option"
-                      value="1"
-                      checked
-                      class="
-                        form-radio
-                        border border-gray-400
-                        text-indigo-700
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-purple-600
-                        focus:border-transparent
-                      "
-                    />
-                    <span class="ml-2">Option 3</span>
-                  </label>
-                </div>
-              </div>
+              
             </fieldset>
           </form>
         </section>
         <section id="example" class="my-8 p-8 bg-gray-200 rounded">
           <p class="font-bold mb-2">Html</p>
-          <pre><code> working on it</code></pre>
+          <p class="text-sm my-6">Form layout</p>
+          <pre><code >&lt;form&gt;
+  &lt;fieldset class=&quot;bg-white shadow-sm rounded-md p-6&quot;&gt;
+  &lt;h2 class=&quot;text-xl mb-4 font-semibold&quot;&gt;Location information&lt;/h2&gt;
+  ...
+  ...
+  ...
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</code></pre>
+          <p class="text-sm my-2">Input box</p>
+          <pre><code>&lt;label class=&quot;block mb-2&quot;&gt;
+  &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
+    &lt;span&gt;Email address&lt;/span&gt;
+    &lt;span title=&quot;required&quot; class=&quot;text-red-500 invisible&quot;&gt;*&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;name&quot; placeholder=&quot;email address&quot; class=&quot;
+    form-input
+    block
+    w-full
+    rounded-lg
+    border border-gray-300
+    text-gray-700
+    placeholder-gray-400
+    px-4
+    py-2
+    placeholder-gray-400
+    text-base
+    focus:outline-none
+    focus:ring-2
+    focus:ring-purple-600
+    focus:border-transparent
+    &quot; /&gt;
+  &lt;p title=&quot;error-message&quot; class=&quot;
+    text-red-500 
+    italic 
+    text-sm 
+    invisible
+    &quot;&gt;
+    Invalid email address
+  &lt;/p&gt;
+&lt;/label&gt;</code></pre>
+          <p class="text-sm my-6">Differences for error condition</p>
+          <pre><code class="text-gray-400">&lt;label class=&quot;block mb-2&quot;&gt;
+  &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
+    &lt;span&gt;Email address&lt;/span&gt;
+    &lt;span title=&quot;required&quot; class=&quot;text-red-500 <del>invisible</del> <span class="text-black bg-yellow-100">visible</span>&quot;&gt;*&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;name&quot; placeholder=&quot;email address&quot; class=&quot;
+    ...
+    border <del>border-gray-300</del>
+    border <span class="text-black bg-yellow-100">border-red-500</span>
+    ...
+    &quot; /&gt;
+  &lt;p title=&quot;error-message&quot; class=&quot;
+    ...
+    <del>invisible</del> 
+    <span class="text-black bg-yellow-100">visible</span>
+    &quot;&gt;
+    Invalid email address
+  &lt;/p&gt;
+&lt;/label&gt;</code></pre>
+          <p class="text-sm my-6">Differences for disabled</p>
+          <pre><code class="text-gray-400">...
+&lt;input type=&quot;name&quot; placeholder=&quot;email address&quot; <span class="text-black bg-yellow-100">disabled</span> class=&quot;
+  ...
+  <span class="text-black bg-yellow-100">bg-gray-100</span>
+  <span class="text-black bg-yellow-100">cursor-not-allowed</span>
+  ...
+</code></pre>
         </section>
       </section>
+      <section class="bg-gray-100 p-12">
+        <form>
+          <fieldset class="bg-white shadow-sm rounded-md p-6">
+            <label class="block mb-8">
+              <div class="text-gray-700 mb-2">
+                <span>School Name</span>
+                <span title="required" class="text-red-500 invisible">*</span>
+              </div>
+              <select
+                class="
+                  form-select
+                  block
+                  w-full
+                  appearance-none
+                  border border-gray-300
+                  px-4
+                  py-2
+                  rounded-lg
+                  shadow-sm
+                  leading-tight
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-purple-600
+                  focus:border-transparent
+                "
+              >
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+              <p title="error-message" class="
+              text-red-500 
+              italic 
+              text-sm 
+              invisible
+              ">
+              Invalid email address
+            </p>
+            </label>
+            <div
+              class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-8"
+            >
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  checked
+                  class="
+                    form-checkbox
+                    border border-gray-400
+                    text-indigo-700
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                />
+                <span class="ml-2">Model School</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="
+                    form-checkbox
+                    border border-gray-400
+                    text-indigo-700
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                />
+                <span class="ml-2">Primary School</span>
+              </label>
+            </div>
+            <div class="flex-1 mb-4">
+              <span class="text-gray-700">Radio Buttons</span>
+              <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="radio-option"
+                    value="1"
+                    checked
+                    class="
+                      form-radio
+                      border border-gray-400
+                      text-indigo-700
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-purple-600
+                      focus:border-transparent
+                    "
+                  />
+                  <span class="ml-2">Option 1</span>
+                </label>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="radio-option"
+                    value="1"
+                    checked
+                    class="
+                      form-radio
+                      border border-gray-400
+                      text-indigo-700
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-purple-600
+                      focus:border-transparent
+                    "
+                  />
+                  <span class="ml-2">Option 2</span>
+                </label>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="radio-option"
+                    value="1"
+                    checked
+                    class="
+                      form-radio
+                      border border-gray-400
+                      text-indigo-700
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-purple-600
+                      focus:border-transparent
+                    "
+                  />
+                  <span class="ml-2">Option 3</span>
+                </label>
+              </div>
+            </div>
+            <label class="block mb-8">
+              <div class="text-gray-700 mb-2">
+                <span>Details</span>
+                <textarea id="details" placeholder="Enter Details" name="details" class="
+                    block
+                    w-full
+                    appearance-none
+                    border border-gray-300
+                    py-2
+                    px-4
+                    text-gray-700
+                    placeholder-gray-400
+                    rounded-lg
+                    text-base
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "></textarea>
+              </div>
+            </label>
+          </fieldset>
+        </form>
+      </section>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <p class="text-sm my-6">Select</p>
+        <pre><code >&lt;label class=&quot;block mb-8&quot;&gt;
+  &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
+    &lt;span&gt;School Name&lt;/span&gt;
+    &lt;span title=&quot;required&quot; class=&quot;text-red-500 invisible&quot;&gt;*&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;select class=&quot;
+    form-select
+    block
+    w-full
+    appearance-none
+    border border-gray-300
+    px-4
+    py-2
+    rounded-lg
+    shadow-sm
+    leading-tight
+    focus:outline-none
+    focus:ring-2
+    focus:ring-purple-600
+    focus:border-transparent
+    &quot;&gt;
+        &lt;option&gt;Option 1&lt;/option&gt;
+        &lt;option&gt;Option 2&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;p title=&quot;error-message&quot; class=&quot;
+    text-red-500 
+    italic 
+    text-sm 
+    invisible
+    &quot;&gt;
+    Invalid email address
+  &lt;/p&gt;
+&lt;/label&gt;</code></pre>
+<p class="text-sm my-8">Check box</p>
+      <pre><code >&lt;label class=&quot;inline-flex items-center&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; checked class=&quot;
+      form-checkbox
+      border border-gray-400
+      text-indigo-700
+      focus:outline-none
+      focus:ring-2
+      focus:ring-purple-600
+      focus:border-transparent
+    &quot;/&gt;
+  &lt;span class=&quot;ml-2&quot;&gt;Model School&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+<p class="text-sm my-8">Radio</p>
+<pre><code >&lt;label class=&quot;inline-flex items-center&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio-option&quot; value=&quot;1&quot; checked class=&quot;
+      form-radio
+      border border-gray-400
+      text-indigo-700
+      focus:outline-none
+      focus:ring-2
+      focus:ring-purple-600
+      focus:border-transparent
+    &quot;/&gt;
+  &lt;span class=&quot;ml-2&quot;&gt;Option 1&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+<p class="text-sm my-8">Textarea</p>
+<pre><code >&lt;textarea id=&quot;details&quot; placeholder=&quot;Enter Details&quot; name=&quot;details&quot; class=&quot;
+  block
+  w-full
+  appearance-none
+  border border-gray-300
+  py-2
+  px-4
+  text-gray-700
+  placeholder-gray-400
+  rounded-lg
+  text-base
+  focus:outline-none
+  focus:ring-2
+  focus:ring-purple-600
+  focus:border-transparent
+&quot;&gt;&lt;/textarea&gt;</code></pre>       
+      </section>
+    </section>
     </main>
   </body>
 </html>
