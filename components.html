@@ -26,6 +26,19 @@
   </head>
   <body>
     <nav class="w-full mb-4 px-5 pt-4 bg-gray-600">
+      <span
+        class="
+          block
+          max-w-screen-md
+          mx-auto
+          mt-2
+          mb-4
+          text-2xl
+          italic
+          text-white
+        "
+        >BANBEIS UI GUIDE</span
+      >
       <tabs class="flex flex-row max-w-screen-md mx-auto">
         <tab class="ml-2 py-2 px-4 text-white">
           <a href="index.html">ICONS</a>
@@ -33,7 +46,6 @@
         <tab class="ml-2 py-2 px-4 bg-white rounded-t-lg">
           <a href="components.html">COMPONENTS</a>
         </tab>
-        <span class="ml-auto text-sm italic text-white">BANBEIS UI GUIDE</span>
       </tabs>
     </nav>
     <main class="max-w-screen-md mx-auto px-4 md:p-0">
@@ -60,10 +72,10 @@
       </section>
       <section id="sectionheader">
         <h2 class="text-4xl my-6">Section header</h2>
-        <h2 class="text-xl mb-4 font-medium">Name &amp; Location</h2>
+        <h2 class="text-xl mb-4 font-semibold">Name &amp; Location</h2>
         <section id="example" class="my-8 p-8 bg-gray-200 rounded">
           <p class="font-bold mb-2">Html</p>
-          <pre><code>&lt;h2 class=&quot;text-xl mb-4 font-medium&quot;&gt;Name &amp;amp; Location&lt;/h2&gt;</code></pre>
+          <pre><code>&lt;h2 class=&quot;text-xl mb-4 font-semibold&quot;&gt;Name &amp;amp; Location&lt;/h2&gt;</code></pre>
         </section>
       </section>
       <section id="breadcrumb">
@@ -383,13 +395,13 @@
         <section class="bg-gray-100 p-12">
           <form>
             <fieldset class="bg-white shadow-sm rounded-md p-6">
-              <h2 class="text-xl mb-4 font-medium">Location information</h2>
-              <label class="block mb-6">
+              <h2 class="text-xl mb-4 font-semibold">Location information</h2>
+              <label class="block mb-2">
                 <span>School Name</span>
                 <span title="required" class="text-red-500">*</span>
                 <input
-                  type="email"
-                  placeholder="enter name of your school"
+                  type="name"
+                  placeholder="school name"
                   class="
                     form-input
                     block
@@ -408,6 +420,35 @@
                     focus:border-transparent
                   "
                 />
+                <p title="error-message" class="text-red-500">&#160;</p>
+              </label>
+              <label class="block mb-2">
+                <span>Email address</span>
+                <span title="required" class="text-red-500">*</span>
+                <input
+                  type="name"
+                  placeholder="email address"
+                  class="
+                    form-input
+                    block
+                    w-full
+                    rounded-lg
+                    border border-red-500
+                    text-gray-700
+                    placeholder-gray-400
+                    px-4
+                    py-2
+                    placeholder-gray-400
+                    text-base
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                />
+                <p title="error-message" class="text-red-500">
+                  Invalid email address
+                </p>
               </label>
               <label class="block mb-8">
                 <span class="text-gray-700">Select</span>
@@ -433,30 +474,48 @@
                   <option>Option 2</option>
                 </select>
               </label>
-
-              <label class="inline-flex items-center mb-8">
-                <input
-                  type="checkbox"
-                  checked
-                  class="
-                    form-checkbox
-                    border border-gray-400
-                    text-indigo-700
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-purple-600
-                    focus:border-transparent
-                  "
-                />
-                <span class="ml-2">Model School</span>
-              </label>
+              <div
+                class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-8"
+              >
+                <label class="inline-flex items-center">
+                  <input
+                    type="checkbox"
+                    checked
+                    class="
+                      form-checkbox
+                      border border-gray-400
+                      text-indigo-700
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-purple-600
+                      focus:border-transparent
+                    "
+                  />
+                  <span class="ml-2">Model School</span>
+                </label>
+                <label class="inline-flex items-center">
+                  <input
+                    type="checkbox"
+                    class="
+                      form-checkbox
+                      border border-gray-400
+                      text-indigo-700
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-purple-600
+                      focus:border-transparent
+                    "
+                  />
+                  <span class="ml-2">Primary School</span>
+                </label>
+              </div>
               <div class="flex-1">
                 <span class="text-gray-700">Radio Buttons</span>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4">
                   <label class="inline-flex items-center">
                     <input
                       type="radio"
-                      name="radio-colors"
+                      name="radio-option"
                       value="1"
                       checked
                       class="
@@ -474,7 +533,7 @@
                   <label class="inline-flex items-center">
                     <input
                       type="radio"
-                      name="radio-colors"
+                      name="radio-option"
                       value="1"
                       checked
                       class="
@@ -492,7 +551,7 @@
                   <label class="inline-flex items-center">
                     <input
                       type="radio"
-                      name="radio-colors"
+                      name="radio-option"
                       value="1"
                       checked
                       class="
