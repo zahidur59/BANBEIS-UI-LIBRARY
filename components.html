@@ -7,10 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/banbeis_fonticons.css" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/base.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/components.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/utilities.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss/dist/base.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss/dist/components.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss/dist/utilities.min.css"
+    />
   </head>
   <body>
     <nav class="w-full mb-4 px-5 pt-4 bg-gray-600">
@@ -27,7 +39,13 @@
     <main class="max-w-screen-md mx-auto px-4 md:p-0">
       <div class="bg-yellow-200 p-4 my-8">
         <p class="text-red-700">* Using tailwindcss v2.1.4</p>
-        <p class="text-red-700">* Requires tailwindcss's custom-forms plugin (<a href="https://tailwindcss-custom-forms.netlify.app/" target="_blank">https://tailwindcss-custom-forms.netlify.app/</a>)</p>
+        <p class="text-red-700">
+          * Requires tailwindcss's custom-forms plugin (<a
+            href="https://tailwindcss-custom-forms.netlify.app/"
+            target="_blank"
+            >https://tailwindcss-custom-forms.netlify.app/</a
+          >)
+        </p>
       </div>
       <div class="clearfix mhl ptl">
         <h1 class="text-5xl my-16">Components</h1>
@@ -67,7 +85,7 @@
       <section id="buttons">
         <h2 class="text-4xl my-8">Buttons</h2>
 
-        <div class="flex gap-8">
+        <div class="flex gap-2 md:gap-8">
           <button
             type="button"
             class="
@@ -363,110 +381,136 @@
       <section id="progressbar">
         <h2 class="text-4xl my-8">Form inputs</h2>
         <section class="bg-gray-100 p-12">
-        <form>
-        <fieldset class="bg-white shadow-sm rounded-md p-6">
-        <h2 class="text-xl mb-4 font-medium">Location information</h2>
-        <label class="block mb-6">
-        <span>School Name</span>
-        <span title="required" class="text-red-500">*</span>
-        <input type="email" placeholder="enter name of your school" class="
-        form-input 
-        block 
-        w-full
-        rounded-lg
-        border border-gray-300 
-        text-gray-700 
-        placeholder-gray-400 
-        px-4
-        py-2 
-        placeholder-gray-400  
-        text-base
-        focus:outline-none 
-        focus:ring-2 
-        focus:ring-purple-600 
-        focus:border-transparent" >
-      </label>
-      <label class="block mb-8">
-        <span class="text-gray-700">Select</span>
-        <select class="form-select 
-        block 
-        w-full 
-        appearance-none 
-        border 
-        border-gray-300 
-        px-4 
-        py-2  
-        rounded-lg 
-        shadow-sm 
-        leading-tight 
-        focus:outline-none
-        focus:ring-2
-        focus:ring-purple-600
-        focus:border-transparent">
-          <option>Option 1</option>
-          <option>Option 2</option>
-        </select>
-      </label>
-      
-      <label class="inline-flex items-center mb-8">
-      <input type="checkbox" checked class="
-      form-checkbox
-      border 
-      border-gray-400
-      text-indigo-700
-      focus:outline-none 
-      focus:ring-2 
-      focus:ring-purple-600 
-      focus:border-transparent" >
-      <span class="ml-2">Model School</span>
-      </label>
-      <div class="flex-1">
-          <span class="text-gray-700">Radio Buttons</span>
-          <div class="flex flex-col md:flex-row gap-2 md:gap-4">
-             <label class="inline-flex items-center">
-                <input type="radio" name="radio-colors" value="1" checked class="
-                form-radio
-                border 
-                border-gray-400 
-                text-indigo-700
-                focus:outline-none 
-                focus:ring-2 
-                focus:ring-purple-600 
-                focus:border-transparent
-                " >
-                <span class="ml-2">Option 1</span>
+          <form>
+            <fieldset class="bg-white shadow-sm rounded-md p-6">
+              <h2 class="text-xl mb-4 font-medium">Location information</h2>
+              <label class="block mb-6">
+                <span>School Name</span>
+                <span title="required" class="text-red-500">*</span>
+                <input
+                  type="email"
+                  placeholder="enter name of your school"
+                  class="
+                    form-input
+                    block
+                    w-full
+                    rounded-lg
+                    border border-gray-300
+                    text-gray-700
+                    placeholder-gray-400
+                    px-4
+                    py-2
+                    placeholder-gray-400
+                    text-base
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                />
               </label>
-            <label class="inline-flex items-center">
-                <input type="radio" name="radio-colors" value="1" checked class="
-                form-radio
-                border 
-                border-gray-400 
-                text-indigo-700
-                focus:outline-none 
-                focus:ring-2 
-                focus:ring-purple-600 
-                focus:border-transparent
-                " >
-                <span class="ml-2">Option 2</span>
+              <label class="block mb-8">
+                <span class="text-gray-700">Select</span>
+                <select
+                  class="
+                    form-select
+                    block
+                    w-full
+                    appearance-none
+                    border border-gray-300
+                    px-4
+                    py-2
+                    rounded-lg
+                    shadow-sm
+                    leading-tight
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                >
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
               </label>
-              <label class="inline-flex items-center">
-                <input type="radio" name="radio-colors" value="1" checked class="
-                form-radio
-                border 
-                border-gray-400 
-                text-indigo-700
-                focus:outline-none 
-                focus:ring-2 
-                focus:ring-purple-600 
-                focus:border-transparent
-                " >
-                <span class="ml-2">Option 3</span>
-              </label>
-          </div>
-      </div>
 
-        </fieldset>
-        </form>
+              <label class="inline-flex items-center mb-8">
+                <input
+                  type="checkbox"
+                  checked
+                  class="
+                    form-checkbox
+                    border border-gray-400
+                    text-indigo-700
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                />
+                <span class="ml-2">Model School</span>
+              </label>
+              <div class="flex-1">
+                <span class="text-gray-700">Radio Buttons</span>
+                <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                  <label class="inline-flex items-center">
+                    <input
+                      type="radio"
+                      name="radio-colors"
+                      value="1"
+                      checked
+                      class="
+                        form-radio
+                        border border-gray-400
+                        text-indigo-700
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-purple-600
+                        focus:border-transparent
+                      "
+                    />
+                    <span class="ml-2">Option 1</span>
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input
+                      type="radio"
+                      name="radio-colors"
+                      value="1"
+                      checked
+                      class="
+                        form-radio
+                        border border-gray-400
+                        text-indigo-700
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-purple-600
+                        focus:border-transparent
+                      "
+                    />
+                    <span class="ml-2">Option 2</span>
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input
+                      type="radio"
+                      name="radio-colors"
+                      value="1"
+                      checked
+                      class="
+                        form-radio
+                        border border-gray-400
+                        text-indigo-700
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-purple-600
+                        focus:border-transparent
+                      "
+                    />
+                    <span class="ml-2">Option 3</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
         </section>
         <section id="example" class="my-8 p-8 bg-gray-200 rounded">
           <p class="font-bold mb-2">Html</p>
