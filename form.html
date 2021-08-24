@@ -58,7 +58,7 @@
          <div class="clearfix mhl ptl">
             <h1 class="text-4xl my-8">Form inputs</h1>
          </div>
-         <section id="progressbar">
+         <section id="elementset1">
             <section class="bg-gray-100 p-12">
                <form>
                   <fieldset class="bg-white shadow-md rounded-md p-6">
@@ -66,13 +66,9 @@
                      <label class="block mb-2">
                         <div class="text-gray-700 mb-1">
                            <span>School Name</span>
-                           <span title="required" class="text-red-500 invisible">*</span>
                         </div>
-                        <input type="name" placeholder="School Name" class="
+                        <input type="text" placeholder="School Name" class="
                            form-input
-                           px-3
-                           py-2
-                           block
                            w-full
                            rounded-lg
                            text-gray-700
@@ -93,11 +89,8 @@
                            <span>Email Address</span>
                            <span title="required" class="text-red-500">*</span>
                         </div>
-                        <input type="name" placeholder="Email Address" class="
+                        <input type="text" placeholder="Email Address" class="
                         form-input
-                        px-3
-                        py-2
-                        block
                         w-full
                         rounded-lg
                         text-gray-700
@@ -118,18 +111,14 @@
                            <span>School Name</span>
                            <span title="required" class="text-red-500 invisible">*</span>
                         </div>
-                        <input type="name" disabled placeholder="School Name" class="
+                        <input type="text" disabled placeholder="School Name" class="
                            form-input
-                           px-3
-                           py-2
-                           block
                            w-full
                            rounded-lg
                            placeholder-gray-400 
                            bg-gray-100
                            cursor-not-allowed
                            border border-gray-300
-                           
                            " />
                         <p title="error-message" class="text-red-500 italic text-sm invisible">
                            error message over here
@@ -152,32 +141,29 @@
 </code></pre>
                <p class="text-sm my-8">Input box</p>
                <pre><code>&lt;label class=&quot;block mb-2&quot;&gt;
-&lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
-&lt;span&gt;Email address&lt;/span&gt;
-&lt;span title=&quot;required&quot; class=&quot;text-red-500 invisible&quot;&gt;*&lt;/span&gt;
-&lt;/div&gt;
-&lt;input type=&quot;name&quot; placeholder=&quot;Email Address&quot; class=&quot;
-form-input
-                           px-3
-                           py-2
-                           block
-                           w-full
-                           rounded-lg
-                           text-gray-700
-                           placeholder-gray-400
-                           bg-transparent
-                           border border-gray-300
-                           focus:outline-none
-                           focus:ring-2
-                           focus:ring-purple-600
-                           focus:border-transparent
-&quot; /&gt;
-  &lt;p title=&quot;error-message&quot; class=&quot;
-    text-red-500
-    mt-1
-    &quot;&gt;
-    Invalid email address
-  &lt;/p&gt;
+   &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
+      &lt;span&gt;Email address&lt;/span&gt;
+      &lt;span title=&quot;required&quot; class=&quot;text-red-500 invisible&quot;&gt;*&lt;/span&gt;
+   &lt;/div&gt;
+   &lt;input type=&quot;name&quot; placeholder=&quot;Email Address&quot; class=&quot;
+      form-input
+      w-full
+      rounded-lg
+      text-gray-700
+      placeholder-gray-400
+      bg-transparent
+      border border-gray-300
+      focus:outline-none
+      focus:ring-2
+      focus:ring-purple-600
+      focus:border-transparent
+   &quot; /&gt;
+   &lt;p title=&quot;error-message&quot; class=&quot;
+      text-red-500
+      mt-1
+      &quot;&gt;
+      Invalid email address
+   &lt;/p&gt;
 &lt;/label&gt;</code></pre>
                <p class="text-sm my-6">Differences for error condition</p>
                <pre><code class="text-gray-400">&lt;label class=&quot;block mb-2&quot;&gt;
@@ -187,8 +173,8 @@ form-input
   &lt;/div&gt;
   &lt;input type=&quot;name&quot; placeholder=&quot;Email Address&quot; class=&quot;
     ...
-    border <del>border-gray-300</del>
-    border <span class="text-black bg-yellow-100">border-red-500</span>
+    <del>border-gray-300</del>
+    <span class="text-black bg-yellow-100">border-red-500</span>
     ...
     &quot; /&gt;
   &lt;p title=&quot;error-message&quot; class=&quot;
@@ -209,105 +195,92 @@ form-input
 </code></pre>
             </section>
          </section>
-         <section id="progressbar">
+         <section id="elementset2">
             <section class="bg-gray-100 p-12">
                <form>
                   <fieldset class="bg-white shadow-md rounded-md p-6">
-                     <h2 class="text-xl mb-4 font-semibold">Information</h2>
-                     <div class="grid grid-cols-2 gap-6">
-                        <label class="block mb-2">
-                           <div class="text-gray-700 mb-2">
-                              <span>School Name</span>
-                              <span title="required" class="text-red-500">*</span>
-                           </div>
-                        </label>
-                        <div>
-                           <input type="name" placeholder="School Name" class="
-                           form-input
-                           px-3
-                           py-2
-                           block
-                           w-full
-                           rounded-lg
-                           text-gray-700
-                           placeholder-gray-400
-                           bg-transparent
-                           border border-gray-300
-                           focus:outline-none
-                           focus:ring-2
-                           focus:ring-purple-600
-                           focus:border-transparent
-                              " />
-                           <p title="error-message" class="
-                              text-red-500
-                              mt-1
-                              invisible
-                              ">
-                              Invalid Message
-                           </p>
+                     <h2 class="text-xl mb-4 font-semibold">2 column layout</h2>
+                     <div title="input-component" class="mb-2">
+                        <div class="block flex flex-row items-center">
+                           <label class=" text-gray-700 w-64">
+                                 <span>School Name</span>
+                                 
+                           </label>
+                           <input type="text" placeholder="School Name" class="
+                                    form-input
+                                    flex-1
+                                    rounded-lg
+                                    text-gray-700
+                                    placeholder-gray-400
+                                    bg-transparent
+                                    border border-gray-300
+                                    focus:outline-none
+                                    focus:ring-2
+                                    focus:ring-purple-600
+                                    focus:border-transparent
+                                    " />
                         </div>
-      
-                        <label class="block mb-2">
-                           <div class="text-gray-700 mb-2">
-                              <span>Email address</span>
-                              <span title="required" class="text-red-500 invisible">*</span>
-                           </div>
-                        </label>
-                        <div>
-                           <input type="name" placeholder="Email Address" class="
-                           form-input
-                           px-3
-                           py-2
-                           block
-                           w-full
-                           rounded-lg
-                           text-gray-700
-                           placeholder-gray-400
-                           bg-transparent
-                              border border-red-500     
-                              focus:outline-none
-                              focus:ring-2
-                              focus:ring-purple-600
-                              focus:border-transparent
-                              " />
-                           <p title="error-message" class="
-                              text-red-500
-                              mt-1
-                              ">
-                              Invalid email address
-                           </p>
+                        <div class="block mb-2 flex flex-row items-center">
+                           <div class="w-64"></div>
+                           <label title="error-message" class="text-red-500 text-sm ">
+                              &#160;
+                           </label>
                         </div>
-                        <label class="block mb-2">
-                           <div class="text-gray-700 mb-2">
-                              <span>School Name</span>
-                              <span title="required" class="text-red-500 invisible">*</span>
-                           </div>
-                        </label>
-                        <div>
-                           <input type="name" placeholder="School Name" disabled class="
-                           form-input
-                           px-3
-                           py-2
-                           block
-                           w-full
-                           rounded-lg
-                           text-gray-700
-                           placeholder-gray-400
-                           bg-transparent
-                              bg-gray-100
-                              cursor-not-allowed
-                              focus:outline-none
-                              focus:ring-2
-                              focus:ring-purple-600
-                              focus:border-transparent
-                              " />
-                           <p title="error-message" class="
-                              text-red-500
-                              mt-1
-                              invisible
-                              ">
-                              Invalid Name
-                           </p>
+                     </div>
+                     <div title="input-component" class="mb-2">
+                        <div class="block flex flex-row items-center">
+                           <label class=" text-gray-700 w-64">
+                                 <span>School Name</span>
+                                 <span title="required" class="text-red-500">*</span>
+                           </label>
+                           <input type="text" placeholder="School Name" class="
+                                    form-input
+                                    flex-1
+                                    rounded-lg
+                                    text-gray-700
+                                    placeholder-gray-400
+                                    bg-transparent
+                                    border border-red-500
+                                    focus:outline-none
+                                    focus:ring-2
+                                    focus:ring-purple-600
+                                    focus:border-transparent
+                                    " />
+                        </div>
+                        <div class="block mb-2 flex flex-row items-center">
+                           <div class="w-64"></div>
+                           <label title="error-message" class="text-red-500 text-sm ">
+                              &#160;Invalid email address
+                           </label>
+                        </div>
+                     </div>
+                     <div title="input-component" class="mb-2">
+                        <div class="block flex flex-row items-center">
+                           <label class=" text-gray-700 w-64">
+                                 <span>School Name</span>
+
+                           </label>
+                           <input type="text" placeholder="School Name" class="
+                                    form-input
+                                    flex-1
+                                    rounded-lg
+                                    text-gray-700
+                                    placeholder-gray-400
+                                    bg-transparent
+                                    border  
+                                    border border-gray-300
+                                    cursor-not-allowed
+                                    focus:outline-none
+                                    focus:ring-2
+                                    focus:ring-purple-600
+                                    focus:border-transparent
+                                    " />
+                        </div>
+                        <div class="block mb-2 flex flex-row items-center">
+                           <div class="w-64"></div>
+                           <label title="error-message" class="text-red-500 text-sm ">
+                              &#160;
+                           </label>
                         </div>
                      </div>
                   </fieldset>
@@ -315,83 +288,43 @@ form-input
             </section>
             <section id="example" class="my-8 p-8 bg-gray-200 rounded">
                <p class="font-bold mb-2">Html</p>
-               <p class="text-sm my-6">Form layout</p>
-               <pre><code >&lt;form&gt;
-  &lt;fieldset class=&quot;bg-white shadow-md rounded-md p-6&quot;&gt;
-  &lt;h2 class=&quot;text-xl mb-4 font-semibold&quot;&gt;Information&lt;/h2&gt;
-  ...
-  ...
-  ...
-  &lt;/fieldset&gt;
-&lt;/form&gt;
+               <p class="text-sm my-6">2 column structure</p>
+               <pre><code >&lt;div title=&quot;input-component&quot; class=&quot;mb-2&quot;&gt;
+   &lt;div class=&quot;block flex flex-row items-center&quot;&gt;
+      &lt;label class=&quot; text-gray-700 <span class="text-black bg-yellow-100">w-64</span>&quot;&gt;
+            &lt;span&gt;School Name&lt;/span&gt;
+            &lt;span title="required" class="text-red-500">*&lt;/span>
+      &lt;/label&gt;
+      &lt;input type=&quot;text&quot; placeholder=&quot;School Name&quot; class=&quot;
+               form-input
+               flex-1
+               rounded-lg
+               text-gray-700
+               placeholder-gray-400
+               bg-transparent
+               border border-gray-300
+               focus:outline-none
+               focus:ring-2
+               focus:ring-purple-600
+               focus:border-transparent
+               &quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class=&quot;block mb-2 flex flex-row items-center&quot;&gt;
+      &lt;div class=&quot;<span class="text-black bg-yellow-100">w-64</span>&quot;&gt;&lt;/div&gt;
+      &lt;label title=&quot;error-message&quot; class=&quot;text-red-500 text-sm &quot;&gt;
+         &amp;#160;
+      &lt;/label&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
-               <p class="text-sm my-8">Input box</p>
-               <pre><code>&lt;div class=&quot;grid grid-cols-2 gap-6&quot;&gt;
-                &lt;label class=&quot;block mb-2&quot;&gt;
-                   &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
-                      &lt;span&gt;School Name&lt;/span&gt;
-                      &lt;span title=&quot;required&quot; class=&quot;text-red-500&quot;&gt;*&lt;/span&gt;
-                   &lt;/div&gt;
-                &lt;/label&gt;
-                &lt;div&gt;
-                   &lt;input type=&quot;name&quot; placeholder=&quot;School Name&quot; class=&quot;
-                   form-input
-                   px-3
-                   py-2
-                   block
-                   w-full
-                   rounded-lg
-                   text-gray-700
-                   placeholder-gray-400
-                   bg-transparent
-                   border border-gray-300
-                   focus:outline-none
-                   focus:ring-2
-                   focus:ring-purple-600
-                   focus:border-transparent
-                      &quot; /&gt;
-                   &lt;p title=&quot;error-message&quot; class=&quot;
-                      text-red-500
-                      mt-1
-                      invisible
-                      &quot;&gt;
-                      Invalid Message
-                   &lt;/p&gt;
-                &lt;/div&gt;
-                ...
-                ...
-                &lt;/div&gt;</code></pre>
-               <p class="text-sm my-6">Differences for error condition</p>
-               <pre><code class="text-gray-400">&lt;label class=&quot;block mb-2&quot;&gt;
-                &lt;div class=&quot;text-gray-700 mb-2&quot;&gt;
-                   &lt;span&gt;School Name&lt;/span&gt;
-                   &lt;span title=&quot;required&quot; class=&quot;text-red-500&quot;&gt;*&lt;/span&gt;
-                &lt;/div&gt;
-             &lt;/label&gt;
-             &lt;div&gt;
-  &lt;input type=&quot;name&quot; placeholder=&quot;Email Address&quot; class=&quot;
-    ...
-    border <del>border-gray-300</del>
-    border <span class="text-black bg-yellow-100">border-red-500</span>
-    ...
-    &quot; /&gt;
-  &lt;p title=&quot;error-message&quot; class=&quot;
-    ...
-    <del>invisible</del> 
-    <span class="text-black bg-yellow-100">visible</span>
-    &quot;&gt;
-    Invalid email address
-  &lt;/p&gt;
-&lt;/label&gt;</code></pre>
-               <p class="text-sm my-6">Differences for disabled</p>
-               <pre><code class="text-gray-400">...
-&lt;input type=&quot;name&quot; placeholder=&quot;Email Address&quot; <span class="text-black bg-yellow-100">disabled</span> class=&quot;
-  ...
-  <span class="text-black bg-yellow-100">bg-gray-100</span>
-  <span class="text-black bg-yellow-100">cursor-not-allowed</span>
-  ...
-</code></pre>
+<p class="text-red-500 text-sm my-4">
+   * the highlighted parts should to be changed dynamically
+ </p>
+ <p class="text-red-500 text-sm my-4">
+   ** style changes for errors and disabled cases are same as previous example
+ </p>   
             </section>
+            
          </section>
          <section class="bg-gray-100 p-12">
             <form>
@@ -478,7 +411,7 @@ form-input
                         <span class="ml-2">Option 1</span>
                         </label>
                         <label class="inline-flex items-center">
-                        <input type="radio" name="radio-option" value="1" checked class="
+                        <input type="radio" name="radio-option" value="1" class="
                            form-radio
                            border border-gray-300
                            text-indigo-700
@@ -490,7 +423,7 @@ form-input
                         <span class="ml-2">Option 2</span>
                         </label>
                         <label class="inline-flex items-center">
-                        <input type="radio" name="radio-option" value="1" checked disabled class="
+                        <input type="radio" name="radio-option" value="1" disabled class="
                            form-radio
                            border border-gray-300
                            bg-gray-100
