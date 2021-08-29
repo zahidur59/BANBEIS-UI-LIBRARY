@@ -57,7 +57,7 @@
           <pre><code>&lt;h1 class=&quot;text-lg font-semibold py-1&quot;&gt;Add New School&lt;/h1&gt;</code></pre>
         </section>
       </section>
-      <section id="sectionheader">
+      <section id="sectionHeader">
         <h2 class="text-4xl my-6">Section header</h2>
         <h2 class="text-xl mb-4 font-semibold">Name &amp; Location</h2>
         <section id="example" class="my-8 p-8 bg-gray-200 rounded">
@@ -282,6 +282,131 @@
     ...
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+        </section>
+      </section>
+      <section id="toast">
+        <h2 class="text-4xl my-8">Toast</h2>
+        <div class="flex flex-col gap-4">
+        <!-- Success -->
+        <div class="flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden">
+          <div class="initial p-4 bg-green-500">
+            <span class="icon-check-circle text-white text-2xl"></span> 
+          </div>
+          <div class="flex-1 px-4 py-2">
+            <div id="message_header" class="text-green-500 font-bold">Success</div>
+            <div id="the_message">Your account was registered!</div>
+          </div>
+          <div class="initial p-4 cursor-pointer">
+            <span class="icon-x text-2xl"></span> 
+          </div>
+        </div>
+        <!-- Success -->
+        <div class="flex flex-row border border-blue-500 bg-blue-50 rounded-lg shadow-md overflow-hidden">
+          <div class="initial p-4 bg-blue-500">
+            <span class="icon-exclamation-circle text-white text-2xl"></span> 
+          </div>
+          <div class="flex-1 px-4 py-2">
+            <div id="message_header" class="text-blue-500 font-bold">Info</div>
+            <div id="the_message">This file was saved!</div>
+          </div>
+          <div class="initial p-4 cursor-pointer">
+            <span class="icon-x text-2xl"></span> 
+          </div>
+        </div>
+        <!-- Success -->
+        <div class="flex flex-row border border-yellow-500 bg-yellow-50 rounded-lg shadow-md overflow-hidden">
+          <div class="initial p-4 bg-yellow-500">
+            <span class="icon-exclamation-circle text-white text-2xl"></span> 
+          </div>
+          <div class="flex-1 px-4 py-2">
+            <div id="message_header" class="text-yellow-500 font-bold">Warning</div>
+            <div id="the_message">Your file is too large!</div>
+          </div>
+          <div class="initial p-4 cursor-pointer">
+            <span class="icon-x text-2xl"></span> 
+          </div>
+        </div>
+        <!-- Success -->
+        <div class="flex flex-row border border-red-500 bg-red-50 rounded-lg shadow-md overflow-hidden">
+          <div class="initial p-4 bg-red-500">
+            <span class="icon-ban text-white text-2xl"></span> 
+          </div>
+          <div class="flex-1 px-4 py-2">
+            <div id="message_header" class="text-red-500 font-bold">Error</div>
+            <div id="the_message">Your email is already in use!</div>
+          </div>
+          <div class="initial p-4 cursor-pointer">
+            <span class="icon-x text-2xl"></span> 
+          </div>
+        </div>
+      </div>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <p class="text-sm my-6"><span class="icon-check-circle text-2xl"></span> Success toast</p>
+          <pre><code>&lt;div class=&quot;flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden&quot;&gt;
+  &lt;div class=&quot;initial p-4 bg-green-500&quot;&gt;
+    &lt;span class=&quot;icon-check-circle text-white text-2xl&quot;&gt;&lt;/span&gt; 
+  &lt;/div&gt;
+  &lt;div class=&quot;flex-1 px-4 py-2&quot;&gt;
+    &lt;div id=&quot;message_header&quot; class=&quot;text-green-500 font-bold&quot;&gt;Success&lt;/div&gt;
+    &lt;div id=&quot;the_message&quot;&gt;Your account was registered!&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;initial p-4 cursor-pointer&quot;&gt;
+    &lt;span class=&quot;icon-x text-2xl&quot;&gt;&lt;/span&gt; 
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p class="text-sm my-6"><span class="icon-exclamation-circle text-2xl"></span> Info toast</p>
+          <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-blue-500 bg-blue-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
+  &lt;div class=&quot;initial p-4 <span class="text-black bg-yellow-100">bg-blue-500</span>&quot;&gt;
+    &lt;span class=&quot;<span class="text-black bg-yellow-100">icon-exclamation-circle</span> text-white text-2xl&quot;&gt;&lt;/span&gt; 
+  &lt;/div&gt;
+  &lt;div class=&quot;flex-1 px-4 py-2&quot;&gt;
+    &lt;div id=&quot;message_header&quot; class=&quot;<span class="text-black bg-yellow-100">text-blue-500</span> font-bold&quot;&gt;Success&lt;/div&gt;
+    ...
+    ...
+    ...</code></pre>
+    <p class="text-sm my-6"><span class="icon-exclamation-circle text-2xl"></span> Warning toast</p>
+          <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-yellow-500 bg-yellow-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
+  &lt;div class=&quot;initial p-4 <span class="text-black bg-yellow-100">bg-yellow-500</span>&quot;&gt;
+    &lt;span class=&quot;<span class="text-black bg-yellow-100">icon-exclamation-circle</span> text-white text-2xl&quot;&gt;&lt;/span&gt; 
+  &lt;/div&gt;
+  &lt;div class=&quot;flex-1 px-4 py-2&quot;&gt;
+    &lt;div id=&quot;message_header&quot; class=&quot;<span class="text-black bg-yellow-100">text-yellow-500</span> font-bold&quot;&gt;Success&lt;/div&gt;
+    ...
+    ...
+    ...</code></pre>
+    <p class="text-sm my-6"><span class="icon-ban text-2xl"></span> Info toast</p>
+          <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-red-500 bg-red-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
+  &lt;div class=&quot;initial p-4 <span class="text-black bg-yellow-100">bg-red-500</span>&quot;&gt;
+    &lt;span class=&quot;<span class="text-black bg-yellow-100">icon-ban</span> text-white text-2xl&quot;&gt;&lt;/span&gt; 
+  &lt;/div&gt;
+  &lt;div class=&quot;flex-1 px-4 py-2&quot;&gt;
+    &lt;div id=&quot;message_header&quot; class=&quot;<span class="text-black bg-yellow-100">text-red-500</span> font-bold&quot;&gt;Success&lt;/div&gt;
+    ...
+    ...
+    ...</code></pre>
+        </section>
+      </section>
+      <section id="dialougeBox">
+        <h2 class="text-4xl my-6">Dialouge Box</h2>
+        <div class="flex p-32 bg-gray-500 ">
+           <div class="mx-auto border shadow-md bg-white rounded">
+             <div class="flex flex-row p-8">
+                  <div class="flex-initial">
+                      Studies
+                  </div>
+                  <div class="flex-1">
+                      dfdfdfdfdefdfdf df dfd f
+                  </div>
+             </div>
+             <div class="border-t p-4"> 
+                  fdfdfdf
+             </div>
+           </div> 
+        </div>
+        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+          <p class="font-bold mb-2">Html</p>
+          <pre><code>&lt;h2 class=&quot;text-xl mb-4 font-semibold&quot;&gt;Name &amp;amp; Location&lt;/h2&gt;</code></pre>
         </section>
       </section>
     </main>
