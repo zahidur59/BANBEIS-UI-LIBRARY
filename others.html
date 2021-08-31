@@ -42,10 +42,22 @@
     </tabs>
   </nav>
   <main class="max-w-screen-md mx-auto px-4 md:p-0">
+    <div id="articles" class="hidden lg:block fixed right-8 p-10 bg-gray-50 rounded border shadow-md">
+      <ul class="flex flex-col gap-4">
+        <li><a class="text-blue-500" href="#navHeader" title="Page Header" >Nav Header</a></li>
+        <li><a class="text-blue-500" href="#sectionHeader" title="Page Header" >Section Header</a></li>
+        <li><a class="text-blue-500" href="#breadcrumb" title="Page Header" >Breadcrumb</a></li>
+        <li><a class="text-blue-500" href="#card" title="Page Header" >Card</a></li>
+        <li><a class="text-blue-500" href="#progressbar" title="Page Header" >Progressbar</a></li>
+        <li><a class="text-blue-500" href="#datepicker" title="Page Header" >Date Picker</a></li>
+        <li><a class="text-blue-500" href="#toast" title="Page Header" >Toast</a></li>
+        <li><a class="text-blue-500" href="#dialougeBox" title="Page Header" >Dialouge Box</a></li>
+      </ul>
+    </div>
     <div class="bg-yellow-200 p-4 my-8">
       <p class="text-red-700">* Using tailwindcss v2.1.4</p>
     </div>
-    <section id="pageheader">
+    <section id="navHeader">
       <h2 class="text-4xl my-8">Nav header</h2>
       <h1 class="text-lg font-semibold py-1">Add New School</h1>
       <section id="example" class="my-8 p-8 bg-gray-200 rounded">
@@ -77,7 +89,7 @@
 &lt;/div&gt;</code></pre>
       </section>
     </section>
-    <section id="Card">
+    <section id="card">
       <h2 class="text-4xl my-8">Card</h2>
       <div class="bg-gray-100 p-12">
         <section class="bg-white shadow-md rounded-md p-6 border">
@@ -376,150 +388,53 @@
     ...
     ...</code></pre>
       </section>
-      <section id="dialougeBox">
-        <h2 class="text-4xl my-6">Dialouge Box</h2>
-        <div class="flex flex-col gap-4 p-8 bg-gray-500  ">
-          <!-- With icon -->
-          <div class="mx-auto border max-w-xl shadow-md bg-white rounded">
-            <div class="cursor-pointer relative">
-              <span class="icon-x text-2xl absolute top-2 right-2"></span> 
-            </div>
-             <div class="flex flex-row p-8">
-                  <div class="flex-initial mr-4">
-                    <div class="
-                        bg-indigo-100
-                        rounded-full
-                        w-10 h-10
-                        flex 
-                        items-center
-                        text-center
-                      ">
-                <span class="icon-exclamation-circle text-indigo-600 text-3xl mx-auto"></span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <p class="text-gray-900 text-xl">Deactivate account</p>
-              <p class="text-gray-500">Are you sure you want to deactivate your account? All of your data will be
-                permanently removed from our servers forever. </p>
+    </section>
+    <section id="dialougeBox">
+      <h2 class="text-4xl my-6">Dialouge Box</h2>
+      <div class="flex flex-col gap-4 p-8 bg-gray-500  ">
+        <!-- With icon -->
+        <div class="mx-auto border max-w-xl shadow-md bg-white rounded">
+          <div class="cursor-pointer relative">
+            <span class="icon-x text-2xl absolute top-2 right-2"></span> 
+          </div>
+           <div class="flex flex-row p-8">
+                <div class="flex-initial mr-4">
+                  <div class="
+                      bg-indigo-100
+                      rounded-full
+                      w-10 h-10
+                      flex 
+                      items-center
+                      text-center
+                    ">
+              <span class="icon-exclamation-circle text-indigo-600 text-3xl mx-auto"></span>
             </div>
           </div>
-          <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse">
-            <button type="button" class="
-                font-medium
-                rounded-lg
-                py-2
-                px-4
-                transition
-                ease-in
-                duration-200
-                text-white
-                bg-indigo-600
-                hover:bg-indigo-800
-                focus:bg-indigo-800
-                focus:ring-indigo-200
-                focus:outline-none focus:ring-2
-              ">
-              Primary
-            </button>
-            <button class="
-              font-medium
-              rounded-lg
-              py-2
-              px-4
-              transition
-              ease-in
-              duration-200
-              text-indigo-600
-              bg-white
-              border border-indigo-600
-              hover:bg-indigo-50
-              focus:bg-indigo-50
-              focus:ring-indigo-200
-              focus:outline-none
-              focus:ring-2
-            ">
-            Secondary
-          </button>
-             </div>
-          </div> 
-          <!-- Without icon -->
-          <div class="mx-auto border max-w-xl shadow-md bg-white rounded">
-            <div class="cursor-pointer relative">
-              <span class="icon-x text-2xl absolute top-2 right-2"></span> 
-            </div>
-             <div class="p-8">
-                  <p class="text-gray-900 text-xl">Deactivate account</p>
-                  <p class="text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed from our servers forever. </p>
-             </div>
-             <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse"> 
-              <button type="button" class="
-                font-medium
-                rounded-lg
-                py-2
-                px-4
-                transition
-                ease-in
-                duration-200
-                text-white
-                bg-indigo-600
-                hover:bg-indigo-800
-                focus:bg-indigo-800
-                focus:ring-indigo-200
-                focus:outline-none focus:ring-2
-              ">
-              Primary
-              </button>
-              <button class="
-              font-medium
-              rounded-lg
-              py-2
-              px-4
-              transition
-              ease-in
-              duration-200
-              text-indigo-600
-              bg-white
-              border border-indigo-600
-              hover:bg-indigo-50
-              focus:bg-indigo-50
-              focus:ring-indigo-200
-              focus:outline-none
-              focus:ring-2
-            ">
-            Secondary
-          </button>
-             </div>
+          <div class="flex-1">
+            <p class="text-gray-900 text-xl">Deactivate account</p>
+            <p class="text-gray-500">Are you sure you want to deactivate your account? All of your data will be
+              permanently removed from our servers forever. </p>
           </div>
         </div>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <p class="mb-2">With icon</p>
-          <pre><code>&lt;div class=&quot;mx-auto border max-w-xl shadow-md bg-white rounded&quot;&gt;
-  &lt;div class=&quot;cursor-pointer relative&quot;&gt;
-    &lt;span class=&quot;icon-x text-2xl absolute top-2 right-2&quot;&gt;&lt;/span&gt; 
-  &lt;/div&gt;
-    &lt;div class=&quot;flex flex-row p-8&quot;&gt;
-        &lt;div class=&quot;flex-initial mr-4&quot;&gt;
-          &lt;div class=&quot;
-              bg-indigo-100
-              rounded-full
-              w-10 h-10
-              flex 
-              items-center
-              text-center
-            &quot;&gt;
-            &lt;span class=&quot;icon-exclamation-circle text-indigo-600 text-3xl mx-auto&quot;&gt;&lt;/span&gt; 
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;flex-1&quot;&gt;
-            &lt;p class=&quot;text-gray-900 text-xl&quot;&gt;Deactivate account&lt;/p&gt;
-            &lt;p class=&quot;text-gray-500&quot;&gt;Are you sure you want to deactivate 
-            your account? All of your data will be permanently removed from our servers 
-            forever. &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;border-t px-8 py-4 gap-4 flex flex-row-reverse&quot;&gt; 
-          &lt;button type=&quot;button&quot; class=&quot;
+        <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse">
+          <button type="button" class="
+              font-medium
+              rounded-lg
+              py-2
+              px-4
+              transition
+              ease-in
+              duration-200
+              text-white
+              bg-indigo-600
+              hover:bg-indigo-800
+              focus:bg-indigo-800
+              focus:ring-indigo-200
+              focus:outline-none focus:ring-2
+            ">
+            Primary
+          </button>
+          <button class="
             font-medium
             rounded-lg
             py-2
@@ -527,16 +442,97 @@
             transition
             ease-in
             duration-200
-            text-white
-            bg-indigo-600
-            hover:bg-indigo-800
-            focus:bg-indigo-800
+            text-indigo-600
+            bg-white
+            border border-indigo-600
+            hover:bg-indigo-50
+            focus:bg-indigo-50
             focus:ring-indigo-200
-            focus:outline-none focus:ring-2
-          &quot;&gt;
+            focus:outline-none
+            focus:ring-2
+          ">
+          Secondary
+        </button>
+           </div>
+        </div> 
+        <!-- Without icon -->
+        <div class="mx-auto border max-w-xl shadow-md bg-white rounded">
+          <div class="cursor-pointer relative">
+            <span class="icon-x text-2xl absolute top-2 right-2"></span> 
+          </div>
+           <div class="p-8">
+                <p class="text-gray-900 text-xl">Deactivate account</p>
+                <p class="text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed from our servers forever. </p>
+           </div>
+           <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse"> 
+            <button type="button" class="
+              font-medium
+              rounded-lg
+              py-2
+              px-4
+              transition
+              ease-in
+              duration-200
+              text-white
+              bg-indigo-600
+              hover:bg-indigo-800
+              focus:bg-indigo-800
+              focus:ring-indigo-200
+              focus:outline-none focus:ring-2
+            ">
             Primary
-          &lt;/button&gt;
-          &lt;button class=&quot;
+            </button>
+            <button class="
+            font-medium
+            rounded-lg
+            py-2
+            px-4
+            transition
+            ease-in
+            duration-200
+            text-indigo-600
+            bg-white
+            border border-indigo-600
+            hover:bg-indigo-50
+            focus:bg-indigo-50
+            focus:ring-indigo-200
+            focus:outline-none
+            focus:ring-2
+          ">
+          Secondary
+        </button>
+           </div>
+        </div>
+      </div>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <p class="mb-2">With icon</p>
+        <pre><code>&lt;div class=&quot;mx-auto border max-w-xl shadow-md bg-white rounded&quot;&gt;
+&lt;div class=&quot;cursor-pointer relative&quot;&gt;
+  &lt;span class=&quot;icon-x text-2xl absolute top-2 right-2&quot;&gt;&lt;/span&gt; 
+&lt;/div&gt;
+  &lt;div class=&quot;flex flex-row p-8&quot;&gt;
+      &lt;div class=&quot;flex-initial mr-4&quot;&gt;
+        &lt;div class=&quot;
+            bg-indigo-100
+            rounded-full
+            w-10 h-10
+            flex 
+            items-center
+            text-center
+          &quot;&gt;
+          &lt;span class=&quot;icon-exclamation-circle text-indigo-600 text-3xl mx-auto&quot;&gt;&lt;/span&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;flex-1&quot;&gt;
+          &lt;p class=&quot;text-gray-900 text-xl&quot;&gt;Deactivate account&lt;/p&gt;
+          &lt;p class=&quot;text-gray-500&quot;&gt;Are you sure you want to deactivate 
+          your account? All of your data will be permanently removed from our servers 
+          forever. &lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;border-t px-8 py-4 gap-4 flex flex-row-reverse&quot;&gt; 
+        &lt;button type=&quot;button&quot; class=&quot;
           font-medium
           rounded-lg
           py-2
@@ -544,52 +540,68 @@
           transition
           ease-in
           duration-200
-          text-indigo-600
-          bg-white
-          border border-indigo-600
-          hover:bg-indigo-50
-          focus:bg-indigo-50
+          text-white
+          bg-indigo-600
+          hover:bg-indigo-800
+          focus:bg-indigo-800
           focus:ring-indigo-200
-          focus:outline-none
-          focus:ring-2
+          focus:outline-none focus:ring-2
         &quot;&gt;
-          Secondary
-      &lt;/button&gt;
-    &lt;/div&gt;
+          Primary
+        &lt;/button&gt;
+        &lt;button class=&quot;
+        font-medium
+        rounded-lg
+        py-2
+        px-4
+        transition
+        ease-in
+        duration-200
+        text-indigo-600
+        bg-white
+        border border-indigo-600
+        hover:bg-indigo-50
+        focus:bg-indigo-50
+        focus:ring-indigo-200
+        focus:outline-none
+        focus:ring-2
+      &quot;&gt;
+        Secondary
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt; </code></pre>
 <p class="my-2">Without icon</p>
-          <pre class="text-gray-400">&lt;div class=&quot;mx-auto border max-w-xl shadow-md bg-white rounded&quot;&gt;
-  &lt;div class=&quot;cursor-pointer relative&quot;&gt;
-    &lt;span class=&quot;icon-x text-2xl absolute top-2 right-2&quot;&gt;&lt;/span&gt; 
-  &lt;/div&gt;<span class="line-through">
-  &lt;div class=&quot;flex flex-row p-8&quot;&gt;
-    &lt;div class=&quot;flex-initial mr-4&quot;&gt;
-      &lt;div class=&quot;
-          bg-indigo-100
-          rounded-full
-          w-10 h-10
-          flex 
-          items-center
-          text-center
-        &quot;&gt;
-        &lt;span class=&quot;icon-exclamation-circle text-indigo-600 text-3xl mx-auto&quot;&gt;&lt;/span&gt;
-      &lt;/div&gt;
+        <pre class="text-gray-400">&lt;div class=&quot;mx-auto border max-w-xl shadow-md bg-white rounded&quot;&gt;
+&lt;div class=&quot;cursor-pointer relative&quot;&gt;
+  &lt;span class=&quot;icon-x text-2xl absolute top-2 right-2&quot;&gt;&lt;/span&gt; 
+&lt;/div&gt;<span class="line-through">
+&lt;div class=&quot;flex flex-row p-8&quot;&gt;
+  &lt;div class=&quot;flex-initial mr-4&quot;&gt;
+    &lt;div class=&quot;
+        bg-indigo-100
+        rounded-full
+        w-10 h-10
+        flex 
+        items-center
+        text-center
+      &quot;&gt;
+      &lt;span class=&quot;icon-exclamation-circle text-indigo-600 text-3xl mx-auto&quot;&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;flex-1&quot;&gt;
-      &lt;p class=&quot;text-gray-900 text-xl&quot;&gt;Deactivate account&lt;/p&gt;
-      &lt;p class=&quot;text-gray-500&quot;&gt;Are you sure you want to deactivate your account? All of your data will be
-        permanently removed from our servers forever. &lt;/p&gt;
-    &lt;/div&gt;</span><span class="text-gray-900">
-    &lt;div class=&quot;p-8&quot;&gt;
-        &lt;p class=&quot;text-gray-900 text-xl&quot;&gt;Deactivate account&lt;/p&gt;
-        &lt;p class=&quot;text-gray-500&quot;&gt;Are you sure you want to deactivate 
-        your account? All of your data will be permanently removed from our servers 
-        forever. &lt;/p&gt;
-    &lt;/div&gt;</span>
   &lt;/div&gt;
-  ...
+  &lt;div class=&quot;flex-1&quot;&gt;
+    &lt;p class=&quot;text-gray-900 text-xl&quot;&gt;Deactivate account&lt;/p&gt;
+    &lt;p class=&quot;text-gray-500&quot;&gt;Are you sure you want to deactivate your account? All of your data will be
+      permanently removed from our servers forever. &lt;/p&gt;
+  &lt;/div&gt;</span><span class="text-gray-900">
+  &lt;div class=&quot;p-8&quot;&gt;
+      &lt;p class=&quot;text-gray-900 text-xl&quot;&gt;Deactivate account&lt;/p&gt;
+      &lt;p class=&quot;text-gray-500&quot;&gt;Are you sure you want to deactivate 
+      your account? All of your data will be permanently removed from our servers 
+      forever. &lt;/p&gt;
+  &lt;/div&gt;</span>
+&lt;/div&gt;
+...
 </code></pre>
-        </section>
       </section>
     </section>
   </main>
