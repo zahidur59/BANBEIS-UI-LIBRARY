@@ -1,135 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>BANBEIS UI</title>
-    <meta
-      name="description"
-      content="The style guide for BANBAIS applications"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/banbeis_fonticons.css" />
-    <link rel="stylesheet" href="css/base.min.css" />
-    <link rel="stylesheet" href="css/forms.min.css" />
-    <link rel="stylesheet" href="css/components.min.css" />
-    <link rel="stylesheet" href="css/utilities.min.css" />
-  </head>
 
-  <body>
-    <nav class="w-full mb-4 px-5 pt-4 bg-gray-600">
-      <span class="block max-w-screen-md mx-auto mt-2 mb-4 text-2xl text-white"
-        >BANBEIS UI GUIDE</span
-      >
-      <tabs class="flex flex-row max-w-screen-md mx-auto">
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="index.html">Icons</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="buttons.html">Buttons</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="form.html">Form</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="table.html">Table</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="nav.html">Nav</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="userwidget.html">User Widget</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 bg-white rounded-t-md">
-          <a href="others.html">Others</a>
-        </tab>
-      </tabs>
-    </nav>
-    <main class="max-w-screen-md mx-auto px-4 md:p-0">
-      <div class="bg-yellow-200 p-4 my-8">
-        <p class="text-red-700">* Using tailwindcss v2.1.4</p>
+<head>
+  <meta charset="utf-8" />
+  <title>BANBEIS UI</title>
+  <meta name="description" content="The style guide for BANBAIS applications" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/banbeis_fonticons.css" />
+  <link rel="stylesheet" href="css/base.min.css" />
+  <link rel="stylesheet" href="css/forms.min.css" />
+  <link rel="stylesheet" href="css/components.min.css" />
+  <link rel="stylesheet" href="css/utilities.min.css" />
+</head>
+
+<body>
+  <nav class="w-full mb-4 px-5 pt-4 bg-gray-600">
+    <span class="block max-w-screen-md mx-auto mt-2 mb-4 text-2xl text-white">BANBEIS UI GUIDE</span>
+    <tabs class="flex flex-row max-w-screen-md mx-auto">
+      <tab class="ml-2 py-2 px-4 text-white">
+        <a href="index.html">Icons</a>
+      </tab>
+      <tab class="ml-2 py-2 px-4 text-white">
+        <a href="buttons.html">Buttons</a>
+      </tab>
+      <tab class="ml-2 py-2 px-4 text-white">
+        <a href="form.html">Form</a>
+      </tab>
+      <tab class="ml-2 py-2 px-4 text-white">
+        <a href="table.html">Table</a>
+      </tab>
+      <tab class="ml-2 py-2 px-4 text-white">
+        <a href="nav.html">Nav</a>
+      </tab>
+      <tab class="ml-2 py-2 px-4 text-white">
+        <a href="userwidget.html">User Widget</a>
+      </tab>
+      <tab class="ml-2 py-2 px-4 bg-white rounded-t-md">
+        <a href="others.html">Others</a>
+      </tab>
+    </tabs>
+  </nav>
+  <main class="max-w-screen-md mx-auto px-4 md:p-0">
+    <div class="bg-yellow-200 p-4 my-8">
+      <p class="text-red-700">* Using tailwindcss v2.1.4</p>
+    </div>
+    <section id="pageheader">
+      <h2 class="text-4xl my-8">Nav header</h2>
+      <h1 class="text-lg font-semibold py-1">Add New School</h1>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <pre><code>&lt;h1 class=&quot;text-lg font-semibold py-1&quot;&gt;Add New School&lt;/h1&gt;</code></pre>
+      </section>
+    </section>
+    <section id="sectionHeader">
+      <h2 class="text-4xl my-6">Section header</h2>
+      <h2 class="text-xl mb-4 font-semibold">Name &amp; Location</h2>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <pre><code>&lt;h2 class=&quot;text-xl mb-4 font-semibold&quot;&gt;Name &amp;amp; Location&lt;/h2&gt;</code></pre>
+      </section>
+    </section>
+    <section id="breadcrumb">
+      <h2 class="text-4xl my-8">Breadcrumb</h2>
+      <div id="breadcrumb" class="flex text-gray-500 text-base gap-6">
+        <p class="my-auto">Registration</p>
+        <span class="icon-chevron-right text-xl justify-center"></span>
+        <p class="my-auto">Add New School</p>
       </div>
-      <section id="pageheader">
-        <h2 class="text-4xl my-8">Nav header</h2>
-        <h1 class="text-lg font-semibold py-1">Add New School</h1>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <pre><code>&lt;h1 class=&quot;text-lg font-semibold py-1&quot;&gt;Add New School&lt;/h1&gt;</code></pre>
-        </section>
-      </section>
-      <section id="sectionHeader">
-        <h2 class="text-4xl my-6">Section header</h2>
-        <h2 class="text-xl mb-4 font-semibold">Name &amp; Location</h2>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <pre><code>&lt;h2 class=&quot;text-xl mb-4 font-semibold&quot;&gt;Name &amp;amp; Location&lt;/h2&gt;</code></pre>
-        </section>
-      </section>
-      <section id="breadcrumb">
-        <h2 class="text-4xl my-8">Breadcrumb</h2>
-        <div id="breadcrumb" class="flex text-gray-500 text-base gap-6">
-          <p class="my-auto">Registration</p>
-          <span class="icon-Chevron-right text-xl justify-center"></span>
-          <p class="my-auto">Add New School</p>
-        </div>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <pre><code>&lt;div id="..." class="flex text-gray-500 text-base gap-6"&gt;
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <pre><code>&lt;div id="..." class="flex text-gray-500 text-base gap-6"&gt;
 &lt;p class="my-auto">Registration&lt;/p&gt; 
-&lt;span class="icon-Chevron-right text-xl justify-center">&lt;/span&gt;
+&lt;span class="icon-chevron-right text-xl justify-center">&lt;/span&gt;
 &lt;p class="my-auto">Add New School&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-        </section>
       </section>
-      <section id="Card">
-        <h2 class="text-4xl my-8">Card</h2>
-        <div class="bg-gray-100 p-12">
-          <section class="bg-white shadow-md rounded-md p-6 border">
-            <h2 class="text-xl mb-4 font-semibold">Name &amp; Location</h2>
-            <p class="text-base">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-          </section>
-        </div>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <pre><code>...
+    </section>
+    <section id="Card">
+      <h2 class="text-4xl my-8">Card</h2>
+      <div class="bg-gray-100 p-12">
+        <section class="bg-white shadow-md rounded-md p-6 border">
+          <h2 class="text-xl mb-4 font-semibold">Name &amp; Location</h2>
+          <p class="text-base">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+        </section>
+      </div>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <pre><code>...
 &lt;div class="bg-white shadow-md rounded-md p-6 border"&gt;
 ...  
 &lt;/div&gt;</code></pre>
-        </section>
       </section>
-      <section id="progressbar">
-        <h2 class="text-4xl my-8">Progress bar</h2>
-        <div class="flex h-2 bg-indigo-200 rounded-full">
-          <div class="bg-indigo-700 rounded-full" style="width: 76%"></div>
-        </div>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <pre><code>&lt;div class=&quot;flex h-2 bg-indigo-200 rounded-full&quot;&gt;
+    </section>
+    <section id="progressbar">
+      <h2 class="text-4xl my-8">Progress bar</h2>
+      <div class="flex h-2 bg-indigo-200 rounded-full">
+        <div class="bg-indigo-700 rounded-full" style="width: 76%"></div>
+      </div>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <pre><code>&lt;div class=&quot;flex h-2 bg-indigo-200 rounded-full&quot;&gt;
 &lt;div class=&quot;bg-indigo-700 rounded-full&quot; <span class="bg-yellow-100">style=&quot;width:76%&quot;</span>&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-          <p class="text-red-500 text-sm my-4">
-            * the highlighted part changes dynamically
-          </p>
-        </section>
+        <p class="text-red-500 text-sm my-4">
+          * the highlighted part changes dynamically
+        </p>
       </section>
-      <section id="datepicker">
-        <h2 class="text-4xl my-8">Date picker</h2>
-        <label class="group block mb-2 relative w-48">
-          <div class="text-gray-700 mb-1">
-            <span>Select Date</span>
-          </div>
-          <div class="relative">
-            <input
-              type="text"
-              class="
+    </section>
+    <section id="datepicker">
+      <h2 class="text-4xl my-8">Date picker</h2>
+      <label class="group block mb-2 relative w-48">
+        <div class="text-gray-700 mb-1">
+          <span>Select Date</span>
+        </div>
+        <div class="relative">
+          <input type="text" class="
                 w-full
                 rounded-lg
                 text-gray-700
@@ -141,82 +135,78 @@
                 focus:ring-purple-600
                 focus:border-transparent
               "
-              placeholder="Select"
-              value="Aug 21, 2021"
-            />
+            placeholder="Select" value="Aug 21, 2021" />
 
-            <div class="absolute top-0 right-0 px-3 py-1 text-3xl">
-              <span
-                class="icon-calendar text-gray-400 group-hover:text-gray-600"
-              ></span>
-            </div>
-          </div>
-        </label>
-        <div id="calender" class="w-64 border p-4 rounded shadow-md">
-          <div id="calender_header" class="flex flex-row">
-            <div class="text-lg font-semibold">August</div>
-            <div class="text-lg text-gray-400 flex-auto pl-2">2021</div>
-            <span class="icon-chevron-left text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
-            <span class="icon-chevron-right text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
-          </div>
-          <!-- Calender header -->
-          <div class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-4 text-center text-xs mt-4 mb-3">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tus</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div class="text-indigo-600">Fri</div>
-            <div class="text-indigo-600">Sat</div>    
-          </div>
-          <!-- Calender Body -->
-          <div id="week" class="grid grid-flow-row grid-cols-7 grid-rows-5 gap-4 text-center text-sm">
-            <!-- week -->
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">30</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">31</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">1</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">2</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">3</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">4</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">5</div>
-            <!-- week -->
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">6</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5  bg-indigo-100">7</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">8</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">9</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">10</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">11</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">12</div>
-            <!-- week -->
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">13</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">14</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">15</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">16</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">17</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">18</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">19</div>
-            <!-- week -->
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">20</div>
-            <div class="hover:bg-gray-100 hover:text-black text-white bg-indigo-600 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">21</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">22</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">23</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">24</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">25</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">26</div>
-            <!-- week -->
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">27</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">28</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">29</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">30</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">31</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">1</div>
-            <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">2</div>
+          <div class="absolute top-0 right-0 px-3 py-1 text-3xl">
+            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"></span>
           </div>
         </div>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <p class="text-sm my-6">Date Input box</p>
-          <pre><code>&lt;label class=&quot;group block mb-2 relative w-48&quot;&gt;
+      </label>
+      <div id="calender" class="w-64 border p-4 rounded shadow-md">
+        <div id="calender_header" class="flex flex-row">
+          <div class="text-lg font-semibold">August</div>
+          <div class="text-lg text-gray-400 flex-auto pl-2">2021</div>
+          <span class="icon-chevron-left text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
+          <span class="icon-chevron-right text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
+        </div>
+        <!-- Calender header -->
+        <div class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-4 text-center text-xs mt-4 mb-3">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tus</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div class="text-indigo-600">Fri</div>
+          <div class="text-indigo-600">Sat</div>
+        </div>
+        <!-- Calender Body -->
+        <div id="week" class="grid grid-flow-row grid-cols-7 grid-rows-5 gap-4 text-center text-sm">
+          <!-- week -->
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">30</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">31</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">1</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">2</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">3</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">4</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">5</div>
+          <!-- week -->
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">6</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5  bg-indigo-100">7</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">8</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">9</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">10</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">11</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">12</div>
+          <!-- week -->
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">13</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">14</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">15</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">16</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">17</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">18</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">19</div>
+          <!-- week -->
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">20</div>
+          <div class="hover:bg-gray-100 hover:text-black text-white bg-indigo-600 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">21</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">22</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">23</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">24</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">25</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">26</div>
+          <!-- week -->
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">27</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">28</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">29</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">30</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">31</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">1</div>
+          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">2</div>
+        </div>
+      </div>
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <p class="text-sm my-6">Date Input box</p>
+        <pre><code>&lt;label class=&quot;group block mb-2 relative w-48&quot;&gt;
   &lt;div class=&quot;text-gray-700 mb-1&quot;&gt;
     &lt;span&gt;Select Date&lt;/span&gt;
   &lt;/div&gt;
@@ -244,8 +234,8 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/label&gt;</code></pre>
-<p class="text-sm my-6">Calender Popup</p>
-          <pre><code>&lt;div id=&quot;calender&quot; class=&quot;w-64 border p-4 rounded shadow-md&quot;&gt;
+        <p class="text-sm my-6">Calender Popup</p>
+        <pre><code>&lt;div id=&quot;calender&quot; class=&quot;w-64 border p-4 rounded shadow-md&quot;&gt;
   &lt;!-- Calender header --&gt;
   &lt;div id=&quot;calender_header&quot; class=&quot;flex flex-row&quot;&gt;
     &lt;div class=&quot;text-lg font-semibold&quot;&gt;August&lt;/div&gt;
@@ -282,68 +272,68 @@
     ...
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        </section>
       </section>
-      <section id="toast">
-        <h2 class="text-4xl my-8">Toast</h2>
-        <div class="flex flex-col gap-4">
+    </section>
+    <section id="toast">
+      <h2 class="text-4xl my-8">Toast</h2>
+      <div class="flex flex-col gap-4">
         <!-- Success -->
         <div class="flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden">
           <div class="initial p-4 bg-green-500">
-            <span class="icon-check-circle text-white text-2xl"></span> 
+            <span class="icon-check-circle text-white text-2xl"></span>
           </div>
           <div class="flex-1 px-4 py-2">
             <div id="message_header" class="text-green-500 font-bold">Success</div>
             <div id="the_message">Your account was registered!</div>
           </div>
           <div class="initial p-4 cursor-pointer">
-            <span class="icon-x text-2xl"></span> 
+            <span class="icon-x text-2xl"></span>
           </div>
         </div>
         <!-- Success -->
         <div class="flex flex-row border border-blue-500 bg-blue-50 rounded-lg shadow-md overflow-hidden">
           <div class="initial p-4 bg-blue-500">
-            <span class="icon-exclamation-circle text-white text-2xl"></span> 
+            <span class="icon-exclamation-circle text-white text-2xl"></span>
           </div>
           <div class="flex-1 px-4 py-2">
             <div id="message_header" class="text-blue-500 font-bold">Info</div>
             <div id="the_message">This file was saved!</div>
           </div>
           <div class="initial p-4 cursor-pointer">
-            <span class="icon-x text-2xl"></span> 
+            <span class="icon-x text-2xl"></span>
           </div>
         </div>
         <!-- Success -->
         <div class="flex flex-row border border-yellow-500 bg-yellow-50 rounded-lg shadow-md overflow-hidden">
           <div class="initial p-4 bg-yellow-500">
-            <span class="icon-exclamation-circle text-white text-2xl"></span> 
+            <span class="icon-exclamation-circle text-white text-2xl"></span>
           </div>
           <div class="flex-1 px-4 py-2">
             <div id="message_header" class="text-yellow-500 font-bold">Warning</div>
             <div id="the_message">Your file is too large!</div>
           </div>
           <div class="initial p-4 cursor-pointer">
-            <span class="icon-x text-2xl"></span> 
+            <span class="icon-x text-2xl"></span>
           </div>
         </div>
         <!-- Success -->
         <div class="flex flex-row border border-red-500 bg-red-50 rounded-lg shadow-md overflow-hidden">
           <div class="initial p-4 bg-red-500">
-            <span class="icon-ban text-white text-2xl"></span> 
+            <span class="icon-ban text-white text-2xl"></span>
           </div>
           <div class="flex-1 px-4 py-2">
             <div id="message_header" class="text-red-500 font-bold">Error</div>
             <div id="the_message">Your email is already in use!</div>
           </div>
           <div class="initial p-4 cursor-pointer">
-            <span class="icon-x text-2xl"></span> 
+            <span class="icon-x text-2xl"></span>
           </div>
         </div>
       </div>
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <p class="text-sm my-6"><span class="icon-check-circle text-2xl"></span> Success toast</p>
-          <pre><code>&lt;div class=&quot;sticky bottom-4 z-50 m-auto w-9/12 flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden&quot;&gt;
+      <section id="example" class="my-8 p-8 bg-gray-200 rounded">
+        <p class="font-bold mb-2">Html</p>
+        <p class="text-sm my-6"><span class="icon-check-circle text-2xl"></span> Success toast</p>
+        <pre><code>&lt;div class=&quot;sticky bottom-4 z-50 m-auto w-9/12 flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden&quot;&gt;
   &lt;div class=&quot;initial p-4 bg-green-500&quot;&gt;
     &lt;span class=&quot;icon-check-circle text-white text-2xl&quot;&gt;&lt;/span&gt; 
   &lt;/div&gt;
@@ -355,8 +345,8 @@
     &lt;span class=&quot;icon-x text-2xl&quot;&gt;&lt;/span&gt; 
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-<p class="text-sm my-6"><span class="icon-exclamation-circle text-2xl"></span> Info toast</p>
-          <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-blue-500 bg-blue-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
+        <p class="text-sm my-6"><span class="icon-exclamation-circle text-2xl"></span> Info toast</p>
+        <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-blue-500 bg-blue-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
   &lt;div class=&quot;initial p-4 <span class="text-black bg-yellow-100">bg-blue-500</span>&quot;&gt;
     &lt;span class=&quot;<span class="text-black bg-yellow-100">icon-exclamation-circle</span> text-white text-2xl&quot;&gt;&lt;/span&gt; 
   &lt;/div&gt;
@@ -365,8 +355,8 @@
     ...
     ...
     ...</code></pre>
-    <p class="text-sm my-6"><span class="icon-exclamation-circle text-2xl"></span> Warning toast</p>
-          <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-yellow-500 bg-yellow-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
+        <p class="text-sm my-6"><span class="icon-exclamation-circle text-2xl"></span> Warning toast</p>
+        <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-yellow-500 bg-yellow-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
   &lt;div class=&quot;initial p-4 <span class="text-black bg-yellow-100">bg-yellow-500</span>&quot;&gt;
     &lt;span class=&quot;<span class="text-black bg-yellow-100">icon-exclamation-circle</span> text-white text-2xl&quot;&gt;&lt;/span&gt; 
   &lt;/div&gt;
@@ -375,8 +365,8 @@
     ...
     ...
     ...</code></pre>
-    <p class="text-sm my-6"><span class="icon-ban text-2xl"></span> Info toast</p>
-          <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-red-500 bg-red-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
+        <p class="text-sm my-6"><span class="icon-ban text-2xl"></span> Info toast</p>
+        <pre class="text-gray-400"><code>&lt;div class=&quot;flex flex-row border <span class="text-black bg-yellow-100">border-red-500 bg-red-50</span> rounded-lg shadow-md overflow-hidden&quot;&gt;
   &lt;div class=&quot;initial p-4 <span class="text-black bg-yellow-100">bg-red-500</span>&quot;&gt;
     &lt;span class=&quot;<span class="text-black bg-yellow-100">icon-ban</span> text-white text-2xl&quot;&gt;&lt;/span&gt; 
   &lt;/div&gt;
@@ -385,7 +375,6 @@
     ...
     ...
     ...</code></pre>
-        </section>
       </section>
       <section id="dialougeBox">
         <h2 class="text-4xl my-6">Dialouge Box</h2>
@@ -405,16 +394,17 @@
                         items-center
                         text-center
                       ">
-                      <span class="icon-exclamation-circle text-indigo-600 text-3xl mx-auto"></span> 
-                    </div>
-                  </div>
-                  <div class="flex-1">
-                      <p class="text-gray-900 text-xl">Deactivate account</p>
-                      <p class="text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed from our servers forever. </p>
-                  </div>
-             </div>
-             <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse"> 
-              <button type="button" class="
+                <span class="icon-exclamation-circle text-indigo-600 text-3xl mx-auto"></span>
+              </div>
+            </div>
+            <div class="flex-1">
+              <p class="text-gray-900 text-xl">Deactivate account</p>
+              <p class="text-gray-500">Are you sure you want to deactivate your account? All of your data will be
+                permanently removed from our servers forever. </p>
+            </div>
+          </div>
+          <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse">
+            <button type="button" class="
                 font-medium
                 rounded-lg
                 py-2
@@ -430,8 +420,8 @@
                 focus:outline-none focus:ring-2
               ">
               Primary
-              </button>
-              <button class="
+            </button>
+            <button class="
               font-medium
               rounded-lg
               py-2
@@ -568,9 +558,9 @@
     &lt;/div&gt;
 &lt;/div&gt; </code></pre>
 <p class="my-2">Without icon</p>
-          <pre><code>&lt;div class=&quot;mx-auto border max-w-xl shadow-md bg-white rounded&quot;&gt;
-  &lt;div class=&quot;cursor-pointer relative&quot;&gt;
-    &lt;span class=&quot;icon-x text-2xl absolute top-2 right-2&quot;&gt;&lt;/span&gt; 
+          <pre><code>...
+  ...
+  ...
   &lt;/div&gt;
     &lt;div class=&quot;flex flex-row p-8&quot;&gt;
         &lt;div class=&quot;flex-initial mr-4&quot;&gt;
@@ -631,20 +621,22 @@
 &lt;/div&gt; </code></pre>
         </section>
       </section>
-    </main>
-    <div id="exampleToast" class="sticky bottom-4 z-50 m-auto w-9/12 flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden">
-      <div class="initial p-4 bg-green-500">
-        <span class="icon-check-circle text-white text-2xl"></span> 
-      </div>
-      <div class="flex-1 px-4 py-2">
-        <div id="message_header" class="text-green-500 font-bold">EXAMPLE </div>
-        <div id="the_message">This is an example of toast!</div>
-      </div>
-      <div class="initial p-4 cursor-pointer" onClick="(function(){
+    </section>
+  </main>
+  <div id="exampleToast" class="sticky bottom-4 z-50 m-auto w-9/12 flex flex-row border border-green-500 bg-green-50 rounded-lg shadow-md overflow-hidden">
+    <div class="initial p-4 bg-green-500">
+      <span class="icon-check-circle text-white text-2xl"></span>
+    </div>
+    <div class="flex-1 px-4 py-2">
+      <div id="message_header" class="text-green-500 font-bold">EXAMPLE </div>
+      <div id="the_message">This is an example of toast!</div>
+    </div>
+    <div class="initial p-4 cursor-pointer" onClick="(function(){
         document. getElementById('exampleToast').remove();
     })();return false;">
-        <span class="icon-x text-2xl"></span> 
-      </div>
+      <span class="icon-x text-2xl"></span>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
