@@ -39,11 +39,14 @@ tab {
   font-style: italic;
 }
 :-moz-placeholder {
-  font-style: italic;  
+  font-style: italic;
 }
 ::-moz-placeholder {
-  font-style: italic;  
+  font-style: italic;
 }
-:-ms-input-placeholder {  
-  font-style: italic; 
+:-ms-input-placeholder {
+  font-style: italic;
+}
+.banneis-blue-1 {
+  background-color: #01579b;
 }

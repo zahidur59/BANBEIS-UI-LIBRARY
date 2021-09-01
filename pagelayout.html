@@ -19,32 +19,63 @@
     <!-- root -->
     <div class="antialiased flex min-w-max h-screen">
       <!-- Left panel -->
-      <div class="w-64 bg-blue-500 h-screen">
-          <img src="img/IEMIS_logo_2.png" class="w-24 m-4">
-          <div class="flex-col p-2 ">
-            <!-- Default ment -->
-            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
-              <span class="icon-home text-2xl"></span>
-              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+      <div class="flex flex-col w-64 h-screen banneis-blue-1" >
+          <img src="img/IEMIS_logo_2.png" class="flex w-24 m-4">
+          <div class="flex-grow flex-col p-2 overflow-hidden max-h-full overflow-y-scroll">
+            <!-- Default menu -->
+            <a href="index.html" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Dashboard</span>
+            </a>
+            <!-- Default menu full -->
+            <a href="index.html" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-user-group text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">User Management</span>
+              <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
+                <p class="text-white text-xs mx-auto">3</p>
+              </div>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
             </a>
             <!-- Selected Menu -->
-            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-100 hover:opacity-100 bg-blue-900">
-              <span class="icon-home text-2xl"></span>
-              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            <a href="index.html" class="flex group items-center block px-2 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25 ">
+              <span class="flex icon-folder text-2xl"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 rounded-md">Registration</span>
+              <span class="flex icon-chevron-up text-1xl opacity-60 group-hover:opacity-100"></span>
             </a>
-            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
-              <span class="icon-home text-2xl"></span>
-              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            <!-- Sub Menu -->
+            <div id="submenu">
+              <!-- Submenu Default-->
+              <a href="index.html" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-calendar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Examiner Assign</span>
+              </a>
+              <!-- Submenu Selected-->
+              <a href="index.html" class="flex group items-center block px-2 pl-8 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25">
+                <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Practical Mark</span>
+              </a>
+              <a href="index.html" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Centre Report</span>
+              </a>  
+            </div>
+            <a href="index.html" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-calendar text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Calendar</span>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
             </a>
-            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
-              <span class="icon-home text-2xl"></span>
-              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            <a href="index.html" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Review</span>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
             </a>
-            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
-              <span class="icon-home text-2xl"></span>
-              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            <a href="index.html" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
             </a>
+
           </div>
+          
       </div>
       <!-- Right panel-->
       <div class="flex-1 bg-gray-200">
