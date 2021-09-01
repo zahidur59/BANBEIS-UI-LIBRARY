@@ -21,7 +21,7 @@
       <!-- Left panel -->
       <div class="flex flex-col w-72 h-screen banneis-blue-1" >
           <img src="img/IEMIS_logo_2.png" class="flex w-24 m-4">
-          <div class="flex-grow flex-col p-2 overflow-hidden max-h-full overflow-y-scroll">
+          <div class="flex-grow flex-col p-2 ">
             <!-- Default menu -->
             <a href="index.html" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
               <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
@@ -73,7 +73,6 @@
               <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
               <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
             </a>
-
           </div>
           
       </div>
@@ -116,22 +115,21 @@
           <div class="flex gap-4 p-4 items-center bg-white shadow-lg">
             <!-- Left -->
             <div class="flex-initial">
-              <label class="inline-flex items-center">
-                <input type="checkbox" checked class="rounded border border-gray-300 text-indigo-600 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent "/>
-                <span class="ml-2">Model School</span>
-             </label>
+              <button type="button" class="font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+                Exit without save
+              </button>
             </div>
             <!-- Middle -->
-            <div class="flex-1 items-center">
-               <p class="italic text-gray-500 text-sm">Some instructions over here</p>
+            <div class="flex-1 items-center text-center">
+               <p class="">Please check all the information before submitting</p>
             </div>  
             <!-- Right -->
             <div class="grid grid-flow-col gap-4 items-center">
                 <button type="button" class="font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
-                  Secondary
+                  Disapprove
                 </button>
                 <button type="button" class=" font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
-                  Primary
+                  Approve
                 </button>
             </div>
           </div>
