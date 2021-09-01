@@ -251,7 +251,7 @@
       </section>
     </section>
 
-    <section id="pageheader">
+    <section id="pagination">
       <h2 class="text-4xl my-8">Pagination</h2>
       <div class="flex">
         <div class="flex items-center">
@@ -272,7 +272,7 @@
                 py-2
                 border-t border-b
                 text-gray-600
-                bg-gray-100
+                hover:bg-gray-100
               ">
             1
           </button>
@@ -302,10 +302,10 @@
                 w-full
                 px-4
                 py-2
-                border-2 border-indigo-600
-                text-gray-600
-                bg-white
-                hover:bg-gray-100
+                border
+                text-white
+                bg-blue-700
+                cursor-not-allowed
               ">
             4
           </button>
@@ -316,35 +316,82 @@
                 rounded-r-xl
                 text-gray-600
                 bg-white
-                hover:bg-gray-100
+                cursor-not-allowed
               ">
-            <span class="icon-chevron-right"></span>
+            <span class="icon-chevron-right text-gray-300"></span>
           </button>
         </div>
       </div>
       <section id="example" class="my-8 p-8 bg-gray-200 rounded">
         <p class="font-bold mb-2">Html</p>
         <pre><code>&lt;div class=&quot;flex&quot;&gt;
-&lt;div class=&quot;flex items-center&quot;&gt;
-&lt;button type=&quot;button&quot; class=&quot;w-full p-2 border rounded-l-xl text-gray-600 bg-white hover:bg-gray-100&quot;&gt;
-&lt;span class=&quot;icon-chevron-left&quot;&gt;&lt;/span&gt;
-&lt;/button&gt;
-<span class="text-gray-400"> &lt;!--Hover--&gt; </span>
-&lt;button type=&quot;button&quot; class=&quot;w-full px-4 py-2 border-t border-b text-gray-600 bg-gray-100  &quot;&gt;
-1
-&lt;/button&gt;
-...
-...
-<span class="text-gray-400"> &lt;!--Active--&gt; </span>
-&lt;button type=&quot;button&quot; class=&quot;w-full px-4 py-2 border-2 border-indigo-600 text-gray-600 bg-white hover:bg-gray-100&quot;&gt;
-2
-&lt;/button&gt;
-...
-...
-&lt;button type=&quot;button&quot; class=&quot;w-full p-2 border-t border-b border-r rounded-r-xl text-gray-600 bg-white hover:bg-gray-100&quot;&gt;
-&lt;span class=&quot;icon-chevron-right&quot;&gt;&lt;/span&gt;
-&lt;/button&gt;
-&lt;/div&gt;
+  &lt;div class=&quot;flex items-center&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;
+          w-full
+          p-2
+          border
+          rounded-l-xl
+          text-gray-600
+          bg-white
+          hover:bg-gray-100
+        &quot;&gt;
+      &lt;span class=&quot;icon-chevron-left&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;
+          w-full
+          px-4
+          py-2
+          border-t border-b
+          text-gray-600
+          hover:bg-gray-100
+        &quot;&gt;
+      1
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;
+          w-full
+          px-4
+          py-2
+          border
+          text-gray-600
+          bg-white
+          hover:bg-gray-100
+        &quot;&gt;
+      2
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;
+          w-full
+          px-4
+          py-2
+          border-t border-b
+          text-gray-600
+          bg-white
+          hover:bg-gray-100
+        &quot;&gt;
+      3
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;
+          w-full
+          px-4
+          py-2
+          border
+          text-white
+          bg-blue-700
+          cursor-not-allowed
+        &quot;&gt;
+      4
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;
+          w-full
+          p-2
+          border-t border-b border-r
+          rounded-r-xl
+          text-gray-600
+          bg-white
+          cursor-not-allowed
+        &quot;&gt;
+      &lt;span class=&quot;icon-chevron-right text-gray-300&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </section>
     </section>
