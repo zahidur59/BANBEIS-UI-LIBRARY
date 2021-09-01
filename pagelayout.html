@@ -16,171 +16,96 @@
   </head>
 
   <body>
-    <nav class="w-full mb-4 px-5 pt-4 bg-gray-600">
-      <span class="block max-w-screen-md mx-auto mt-2 mb-4 text-2xl text-white"
-        >BANBEIS UI GUIDE</span
-      >
-      <tabs class="flex flex-row max-w-screen-md mx-auto">
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="index.html">Icons</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="buttons.html">Buttons</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="form.html">Form</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="table.html">Table</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="nav.html">Nav</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="userwidget.html">User Widget</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 text-white">
-          <a href="others.html">Others</a>
-        </tab>
-        <tab class="ml-2 py-2 px-4 bg-white rounded-t-md">
-          <a href="pagelayout.html">Page Layout</a>
-        </tab>
-      </tabs>
-    </nav>
-    <main class="max-w-screen-md mx-auto px-4 md:p-0">
-      <div class="bg-yellow-200 p-4 my-8">
-        <p class="text-red-700">* Using tailwindcss v2.1.4</p>
+    <!-- root -->
+    <div class="antialiased flex min-w-max h-screen">
+      <!-- Left panel -->
+      <div class="w-64 bg-blue-500 h-screen">
+          <img src="img/IEMIS_logo_2.png" class="w-24 m-4">
+          <div class="flex-col p-2 ">
+            <!-- Default ment -->
+            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
+              <span class="icon-home text-2xl"></span>
+              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            </a>
+            <!-- Selected Menu -->
+            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-100 hover:opacity-100 bg-blue-900">
+              <span class="icon-home text-2xl"></span>
+              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            </a>
+            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
+              <span class="icon-home text-2xl"></span>
+              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            </a>
+            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
+              <span class="icon-home text-2xl"></span>
+              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            </a>
+            <a href="index.html" class="block p-2 group flex rounded-md text-white opacity-60 hover:opacity-100">
+              <span class="icon-home text-2xl"></span>
+              <span class="font-medium  my-auto ml-4 rounded-md">Dashboard</span>
+            </a>
+          </div>
       </div>
-      <div class="clearfix mhl ptl">
-        <h1 class="text-4xl my-8">Buttons</h1>
-      </div>
-
-      <section id="buttons">
-        <div class="flex gap-2 md:gap-8">
-          <button
-            type="button"
-            class="
-              font-medium
-              rounded-lg
-              py-2
-              px-4
-              transition
-              ease-in
-              duration-200
-              text-white
-              bg-indigo-600
-              hover:bg-indigo-800
-              focus:bg-indigo-800
-              focus:ring-indigo-200
-              focus:outline-none
-              focus:ring-2
-            "
-          >
-            Primary
-          </button>
-          <button
-            class="
-              font-medium
-              rounded-lg
-              py-2
-              px-4
-              transition
-              ease-in
-              duration-200
-              text-indigo-600
-              bg-white
-              border border-indigo-600
-              hover:bg-indigo-50
-              focus:bg-indigo-50
-              focus:ring-indigo-200
-              focus:outline-none
-              focus:ring-2
-            "
-          >
-            Secondary
-          </button>
-          <button
-            type="button"
-            disabled=""
-            class="
-              font-medium
-              rounded-lg
-              py-2
-              px-4
-              text-gray-500
-              bg-gray-300
-              opacity-70
-              cursor-not-allowed
-            "
-          >
-            Disabled
-          </button>
+      <!-- Right panel-->
+      <div class="flex-1 bg-gray-200">
+        <!-- div to make mid pane grow to available space -->
+        <div class="flex flex-col h-screen">
+          <!-- Page header -->
+          <div class="flex bg-white shadow-lg p-4">
+              <!-- Header left -->
+              <div class="w-2/3">
+              <!-- Breadcrumb -->    
+                <div id="..." class="flex text-gray-500 text-base gap-6">
+                  <p class="my-auto">Registration</p> 
+                  <span class="icon-chevron-right text-xl justify-center"></span>
+                  <p class="my-auto">Add New School</p>
+                </div>
+                <h1 class="text-lg font-semibold py-1">Add New School</h1>
+              </div>
+              <!-- Header Right -->
+              <div class="grid w-1/3 justify-items-end">
+                <!-- -->
+                <div class="flex flex-row items-center">
+                  <div class="flex ml-6">
+                    <div class="felx flex-col text-right">
+                      <p class="text-black text-base font-medium">Mohammad Habibul Bashar</p>
+                      <p class="text-gray-500 text-sm">KPBS HIgh School</p>
+                    </div>
+                    <img class="h-10 rounded-full mx-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                    <a href="#" class="icon-chevron-down text-black text-xl mt-2"></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- Page Content -->
+          <div class="flex flex-grow p-4">
+             asdasdasdasd 
+          </div>
+          <!-- Page action pane -->
+          <div class="flex gap-4 p-4 items-center bg-white shadow-lg">
+            <!-- Left -->
+            <div class="flex-initial">
+              <label class="inline-flex items-center">
+                <input type="checkbox" checked class="rounded border border-gray-300 text-indigo-600 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent "/>
+                <span class="ml-2">Model School</span>
+             </label>
+            </div>
+            <!-- Middle -->
+            <div class="flex-1 items-center">
+               <p class="italic text-gray-500">Some instructions over here</p>
+            </div>  
+            <!-- Right -->
+            <div class="grid grid-flow-col gap-4 items-center">
+                <button type="button" class="font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-indigo-600  bg-white border border-indigo-600 hover:bg-indigo-50 focus:bg-indigo-50 focus:ring-indigo-200 focus:outline-none focus:ring-2">
+                  Secondary
+                </button>
+                <button type="button" class=" font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-indigo-600 hover:bg-indigo-800 focus:bg-indigo-800 focus:ring-indigo-200 focus:outline-none focus:ring-2">
+                  Primary
+                </button>
+            </div>
+          </div>
         </div>
-
-        <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-          <p class="font-bold mb-2">Html</p>
-          <p class="my-4 text-sm">Primary button</p>
-          <pre><code>&lt;button type=&quot;button&quot; class=&quot;
-            <span class="text-gray-400"> &lt;!--Common--&gt; </span>
-            font-medium
-            rounded-lg
-            py-2
-            px-4
-            transition
-            ease-in
-            duration-200
-            <span class="text-gray-400"> &lt;!--Primary--&gt; </span>
-            text-white
-            bg-indigo-600
-          <span class="text-gray-400"> &lt;!--Hover--&gt; </span>
-            hover:bg-indigo-800
-          <span class="text-gray-400"> &lt;!--Focus--&gt; </span>
-          focus:bg-indigo-800
-          focus:ring-indigo-200
-          focus:outline-none focus:ring-2
-  &quot;&gt;
-  Primary
-&lt;/button&gt;</code></pre>
-          <p class="my-4 text-sm">Secondary button</p>
-          <pre><code>&lt;button type=&quot;button&quot; class=&quot;
-            <span class="text-gray-400"> &lt;!--Common--&gt; </span>
-            font-medium
-        rounded-lg
-        py-2
-        px-4
-        transition
-        ease-in
-        duration-200
-        <span class="text-gray-400"> &lt;!--Secondary --&gt; </span>
-        text-indigo-600 
-        bg-white
-        border border-indigo-600
-          <span class="text-gray-400"> &lt;!--Hover--&gt; </span>
-          hover:bg-indigo-50
-          <span class="text-gray-400"> &lt;!--Focus--&gt; </span>
-          focus:bg-indigo-50
-        focus:ring-indigo-200
-        focus:outline-none focus:ring-2
-  &quot;&gt;
-  Secondary
-&lt;/button&gt;</code></pre>
-          <p class="my-4 text-sm">Disabled button</p>
-          <pre><code>&lt;button type=&quot;button&quot; disabled class=&quot;
-            <span class="text-gray-400"> &lt;!--Common--&gt; </span>
-            font-medium
-            rounded-lg
-            py-2
-            px-4
-            <span class="text-gray-400"> &lt;!--Disabled--&gt; </span>
-            text-gray-500
-            bg-gray-300
-            opacity-70
-            cursor-not-allowed
-  &quot;&gt;
-  Disabled
-&lt;/button&gt;</code></pre>
-        </section>
-      </section>
-    </main>
+      </div>
+    </div>
   </body>
 </html>
