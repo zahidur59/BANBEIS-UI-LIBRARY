@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/banbeis_fonticons.css" />
     <link rel="stylesheet" href="css/base.min.css" />
+    <link rel="stylesheet" href="css/forms.min.css" />
     <link rel="stylesheet" href="css/components.min.css" />
     <link rel="stylesheet" href="css/utilities.min.css" />
   </head>
@@ -113,9 +114,83 @@
               <div class="grid grid-flow-row grid-cols-2 grid-rows-1 gap-2 w-full mb-2">
                 <fieldset class="bg-white shadow-md rounded-md p-8">
                   <h2 class="text-xl mb-4 font-semibold">Single card (per row)</h2>
-                  ...
-                  ...
-                  ...
+                  <div class="grid grid-cols-2 gap-2 auto-cols-min ">
+                    <label class="text-gray-700 w-64" for="input1">
+                      <span>Your Name</span>
+                      <span title="required" class="text-red-500">*</span>
+                    </label>
+                    <div id="wrapper">
+                      <input id="input1" type="text" placeholder="Full Name" class="
+                            w-full
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-purple-600
+                            focus:border-transparent
+                        " />
+                      <p title="error-message" class="
+                          text-red-500
+                          mt-1
+                          ">
+                          &#160;
+                      </p>
+                    </div>
+                    <label class="text-gray-700 w-64" for="input2">
+                      <span>Your email address</span>
+                      <span title="required" class="text-red-500">*</span>
+                    </label>
+                    <div id="wrapper">
+                      <input id="input2" type="text" placeholder="Email Address" class="
+                            w-full
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-purple-600
+                            focus:border-transparent
+                        " />
+                      <p title="error-message" class="
+                          text-red-500
+                          mt-1
+                          ">
+                          Error message over here
+                      </p>
+                    </div>
+                    <label class="text-gray-700 w-64" for="input3">
+                      <span>Select School</span>
+                      <span title="required" class="text-red-500">*</span>
+                    </label>
+                    <div id="wrapper">
+                      <select class="
+                      w-full
+                      rounded-lg
+                      border border-gray-300
+                      shadow-sm
+                      appearance-none
+                      leading-tight
+                      focus:outline-none
+                      focus:ring-2
+                      focus:ring-purple-600
+                      focus:border-transparent
+                        ">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                      </select>
+                      <p title="error-message" class="
+                          text-red-500
+                          mt-1
+                          ">
+                          &#160;
+                      </p>
+                    </div>
+                  </div>
                 </fieldset>
                 <div id="blank_row">&#160;</div>
               </div>
