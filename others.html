@@ -133,91 +133,224 @@
     </section>
     <section id="datepicker">
       <h2 class="text-4xl my-8">Date picker</h2>
-      <label class="group block mb-2 relative w-48">
-        <div class="text-gray-700 mb-1">
-          <span>Select Date</span>
-        </div>
-        <div class="relative">
-          <input type="text" class="
-                w-full
-                rounded-lg
-                text-gray-700
-                placeholder-gray-400
-                bg-transparent
-                border border-gray-300
-                focus:outline-none
-                focus:ring-2
-                focus:ring-purple-600
-                focus:border-transparent
-              "
-            placeholder="Select" value="Aug 21, 2021" />
-
-          <div class="absolute top-0 right-0 px-3 py-1 text-3xl">
-            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"></span>
+      <div class="grid gap-4 grid-cols-2">
+        <div id="picker-1">
+          <label class="group block mb-2 relative w-48">
+            <div class="text-gray-700 mb-1">
+              <span>Select Date</span>
+            </div>
+            <div class="relative">
+              <input type="text" class="
+                    w-full
+                    rounded-lg
+                    text-gray-700
+                    placeholder-gray-400
+                    bg-transparent
+                    border border-gray-300
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                placeholder="Select" value="Aug 21, 2021" />
+    
+              <div class="absolute top-0 right-0 px-3 py-1 text-3xl">
+                <span class="icon-calendar text-gray-400 group-hover:text-gray-600"></span>
+              </div>
+            </div>
+          </label>
+          <div id="calender" class="w-64 border p-4 rounded shadow-md">
+            <div id="calender_header" class="flex flex-row">
+              <div class="text-lg font-semibold">August</div>
+              <div class="text-lg text-gray-400 flex-auto pl-2">2021</div>
+              <span class="icon-chevron-left text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
+              <span class="icon-chevron-right text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
+            </div>
+            <!-- Calender header -->
+            <div class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-4 text-center text-xs mt-4 mb-3">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tus</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div class="text-indigo-600">Fri</div>
+              <div class="text-indigo-600">Sat</div>
+            </div>
+            <!-- Calender Body -->
+            <div id="week" class="grid grid-flow-row grid-cols-7 grid-rows-5 gap-4 text-center text-sm">
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">30</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">31</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">1</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">2</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">3</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">4</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">5</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">6</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5  bg-indigo-100">7</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">8</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">9</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">10</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">11</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">12</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">13</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">14</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">15</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">16</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">17</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">18</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">19</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">20</div>
+              <div class="hover:bg-gray-100 hover:text-black text-white bg-indigo-600 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">21</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">22</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">23</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">24</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">25</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">26</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">27</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">28</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">29</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">30</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">31</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">1</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">2</div>
+            </div>
           </div>
         </div>
-      </label>
-      <div id="calender" class="w-64 border p-4 rounded shadow-md">
-        <div id="calender_header" class="flex flex-row">
-          <div class="text-lg font-semibold">August</div>
-          <div class="text-lg text-gray-400 flex-auto pl-2">2021</div>
-          <span class="icon-chevron-left text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
-          <span class="icon-chevron-right text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
-        </div>
-        <!-- Calender header -->
-        <div class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-4 text-center text-xs mt-4 mb-3">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tus</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div class="text-indigo-600">Fri</div>
-          <div class="text-indigo-600">Sat</div>
-        </div>
-        <!-- Calender Body -->
-        <div id="week" class="grid grid-flow-row grid-cols-7 grid-rows-5 gap-4 text-center text-sm">
-          <!-- week -->
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">30</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">31</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">1</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">2</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">3</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">4</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">5</div>
-          <!-- week -->
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">6</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5  bg-indigo-100">7</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">8</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">9</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">10</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">11</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">12</div>
-          <!-- week -->
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">13</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">14</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">15</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">16</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">17</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">18</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">19</div>
-          <!-- week -->
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">20</div>
-          <div class="hover:bg-gray-100 hover:text-black text-white bg-indigo-600 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">21</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">22</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">23</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">24</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">25</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">26</div>
-          <!-- week -->
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">27</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">28</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">29</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">30</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">31</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">1</div>
-          <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">2</div>
+        <div id=picker-2>
+          <label class="group block mb-2 relative w-48">
+            <div class="text-gray-700 mb-1">
+              <span>Select Date</span>
+            </div>
+            <div class="relative">
+              <input type="text" class="
+                    w-full
+                    rounded-lg
+                    text-gray-700
+                    placeholder-gray-400
+                    bg-transparent
+                    border border-gray-300
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                  "
+                placeholder="Select" value="Aug 21, 2021" />
+    
+              <div class="absolute top-0 right-0 px-3 py-1 text-3xl">
+                <span class="icon-calendar text-gray-400 group-hover:text-gray-600"></span>
+              </div>
+            </div>
+          </label>
+          <div id="calender" class="w-80 border p-4 rounded shadow-md">
+            <div id="calender_header" class="flex flex-row">
+              <select class="
+              rounded-l-lg
+              border border-gray-300
+              appearance-none
+              leading-tight
+              focus:outline-none
+              focus:ring-2
+              focus:ring-purple-600
+              focus:border-transparent
+            ">
+           <option>January</option>
+           <option>February</option>
+           <option>March</option>
+           <option>April</option>
+           <option>May</option>
+           <option>June</option>
+           <option>July</option>
+           <option>August</option>
+           <option>September</option>
+           <option>October</option>
+           <option>November</option>
+           <option>December</option>
+              </select>
+              <select class="
+                        mx-0.5
+                        rounded-r-lg
+                        border border-gray-300
+                        appearance-none
+                        leading-tight
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-purple-600
+                        focus:border-transparent
+                      ">
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>...</option>
+                    
+              </select>
+              <span class="icon-chevron-left text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
+              <span class="icon-chevron-right text-gray-600 p-2 rounded hover:bg-gray-100 cursor-pointer"></span>
+            </div>
+            <!-- Calender header -->
+            <div class="grid grid-flow-row grid-cols-7 grid-rows-1 gap-4 text-center text-xs mt-4 mb-3">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tus</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div class="text-indigo-600">Fri</div>
+              <div class="text-indigo-600">Sat</div>
+            </div>
+            <!-- Calender Body -->
+            <div id="week" class="grid grid-flow-row grid-cols-7 grid-rows-5 gap-4 text-center text-sm">
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">30</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 opacity-25 hover:opacity-100">31</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">1</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">2</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">3</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">4</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">5</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">6</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5  bg-indigo-100">7</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">8</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">9</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">10</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">11</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">12</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">13</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">14</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">15</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">16</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">17</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">18</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">19</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">20</div>
+              <div class="hover:bg-gray-100 hover:text-black text-white bg-indigo-600 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">21</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">22</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">23</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">24</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">25</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600">26</div>
+              <!-- week -->
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">27</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">28</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">29</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">30</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 ">31</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">1</div>
+              <div class="hover:bg-gray-100 cursor-pointer rounded-full w-6 h-6 text-sm text-center pt-0.5 text-indigo-600 opacity-25 hover:opacity-100">2</div>
+            </div>
+          </div>
         </div>
       </div>
+      
       <section id="example" class="my-8 p-8 bg-gray-200 rounded">
         <p class="font-bold mb-2">Html</p>
         <p class="text-sm my-6">Date Input box</p>
@@ -287,6 +420,35 @@
     ...
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+<p class="text-sm my-6">Month/Year selector</p>
+        <pre><code>&lt;select class=&quot;
+  rounded-l-lg
+  border border-gray-300
+  appearance-none
+  leading-tight
+  focus:outline-none
+  focus:ring-2
+  focus:ring-purple-600
+  focus:border-transparent
+  &quot;&gt;
+  &lt;option&gt;January&lt;/option&gt;
+  &lt;option&gt;February&lt;/option&gt;
+  &lt;option&gt;...&lt;/option&gt;
+&lt;/select&gt;
+&lt;select class=&quot;
+  mx-0.5
+  rounded-r-lg
+  border border-gray-300
+  appearance-none
+  leading-tight
+  focus:outline-none
+  focus:ring-2
+  focus:ring-purple-600
+  focus:border-transparent
+  &quot;&gt;
+  &lt;option&gt;1990&lt;/option&gt;
+  &lt;option&gt;...&lt;/option&gt;
+&lt;/select&gt;</code></pre>
       </section>
     </section>
     <section id="toast">
