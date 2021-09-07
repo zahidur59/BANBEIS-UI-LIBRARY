@@ -205,30 +205,40 @@
 
             <p class="my-8">With choosing file</p>
             <pre><code><div class="text-gray-400">&lt;div class=&quot;w-full overflow-x-auto&quot;&gt;
-                  ...
-                  ...
-                  ...
-                  &lt;div class=&quot;flex flex-col justify-center w-full h-44 bg-transparent border border-gray-300 rounded-lg border-dashed mt-4&quot;&gt;</div>&lt;div class=&quot;flex pt-4 px-4 gap-4&quot;&gt;<div>&lt;div class=&quot;flex flex-col <del class="text-gray-400">items-center</del>&quot;&gt;
-                        <del class="text-gray-400">&lt;img src=&quot;img/no-file.png&quot;&gt;</del>
-                        </div>
-&lt;div class=&quot;relative&quot;&gt;
-                        &lt;button class=&quot;flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
-                              focus:outline-none focus:ring-2 &quot;&gt;
-                           &lt;span class=&quot;icon-x text-2xl text-blue-700 hover:text-white&quot;&gt;&lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;div class=&quot;absolute z-10 w-24 bottom-0&quot;&gt;
-                           &lt;div class=&quot;h-2 bg-blue-100&quot;&gt;
-                              &lt;div class=&quot;h-2 bg-blue-600 w-2/3&quot;&gt;
-                              &lt;/div&gt;
-                           &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;img class=&quot;w-24 h-24&quot; src=&quot;img/file-hover.png&quot;&gt;
-                     &lt;/div&gt;
-                     &lt;p class=&quot;w-24&quot;&gt;Attendance of hall 2 ...&lt;/p&gt;
-                  &lt;/div&gt;</code></pre>
+      ...
+      ...
+      ...
+      &lt;div class=&quot;flex flex-col justify-center w-full h-44 bg-transparent border border-gray-300 rounded-lg border-dashed mt-4&quot;&gt;</div>&lt;div class=&quot;flex pt-4 px-4 gap-4&quot;&gt;<div>&lt;div class=&quot;flex flex-col <del class="text-gray-400">items-center</del>&quot;&gt;
+      <del class="text-gray-400">&lt;img src=&quot;img/no-file.png&quot;&gt;</del></div> &lt;div class=&quot;relative&quot;&gt;
+      <div class="text-blue-500">&lt;button class=&quot;flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+         focus:outline-none focus:ring-2 &quot;&gt;
+         &lt;span class=&quot;icon-x text-2xl text-blue-700 hover:text-white&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</div><div class="text-green-700">&lt;div class=&quot;absolute z-10 w-24 bottom-0&quot;&gt;
+      &lt;div class=&quot;h-2 bg-blue-100&quot;&gt;
+      &lt;div class=&quot;h-2 bg-blue-600 w-2/3&quot;&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+   </div>&lt;img class=&quot;w-24 h-24&quot; src=&quot;img/file-hover.png&quot;&gt;
+      &lt;/div&gt;&lt;p class=&quot;w-24&quot;&gt;Attendance of hall 2 ...&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+            <div class="mt-8">
+               <p class="text-blue-500">Blue part is for button</p>
+               <p class="text-green-700">Green part is for progress-bar</p>
+
+            </div>
+            <p class="my-8">File Upload Error:</p>
+            <pre><code><div class="text-gray-400">...
+...
+...
+<del class="text-gray-400">&lt;img src=&quot;img/no-file.png&quot;&gt;</del><div class="text-red-700">&lt;div class=&quot;flex flex-col items-center justify-center w-24 h-24 bg-gray-500 p-1&quot;&gt;
+&lt;span class=&quot;icon-exclamation-circle text-2xl text-gray-200&quot;&gt;&lt;/span&gt;
+&lt;p class=&quot;flex text-md text-gray-200 text-center leading-4&quot;&gt;File is too large&lt;/p&gt;
+&lt;/div&gt;</div><div class="text-gray-400">...
+...
+...</div></code></pre>
+
          </section>
-
-
       </section>
       <section id="pageheader">
          <h2 class="text-4xl my-8"></h2>
