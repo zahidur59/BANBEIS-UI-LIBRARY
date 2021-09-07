@@ -74,8 +74,8 @@
                      ">
                   Choose File
                   <input type='file' class="hidden" />
-              </label>
-            <p class="ml-4 font-semibold">*File size must be under 10mb</p>
+               </label>
+               <p class="ml-4 font-semibold">*File size must be under 10mb</p>
             </div>
             <div class="flex flex-col justify-center w-full h-44 bg-transparent border border-gray-300 rounded-lg border-dashed mt-4">
                <div class="flex flex-col items-center">
@@ -92,7 +92,7 @@
                </div>
             </label>
             <div class="flex items-center p-1">
-               <button type="button" class="
+               <label type="button" class="
                      font-medium
                      rounded-lg
                      py-2
@@ -109,13 +109,14 @@
                      focus:outline-none focus:ring-2
                      ">
                   Choose File
-               </button>
+                  <input type='file' class="hidden" />
+               </label>
                <p class="ml-4 font-semibold">*File size must be under 10mb</p>
             </div>
             <div class="w-full h-44 bg-transparent border border-gray-300 rounded-lg border-dashed mt-4 overflow-scroll">
                <div class="flex pt-4 px-4 gap-4">
                   <div class="flex flex-col">
-                     <div class="relative ">
+                     <div class="relative">
                         <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
                               focus:outline-none focus:ring-2 ">
                            <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
@@ -132,22 +133,22 @@
                   </div>
                   <div class="flex flex-col">
                      <div class="relative">
-                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
                               focus:outline-none focus:ring-2 ">
-                           <span class="icon-x text-2xl text-white"></span>
+                           <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                         </button>
                         <div class="flex flex-col items-center justify-center w-24 h-24 bg-gray-500 p-1">
                            <span class="icon-exclamation-circle text-2xl text-gray-200"></span>
-                           <p class="flex text-md text-gray-200 text-center">File is too large</p>
+                           <p class="flex text-md text-gray-200 text-center leading-4">File is too large</p>
                         </div>
                      </div>
                      <p class="w-24">Result Sheet.pdf</p>
                   </div>
                   <div class="flex flex-col">
                      <div class="relative">
-                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
                               focus:outline-none focus:ring-2 ">
-                           <span class="icon-x text-2xl text-white"></span>
+                           <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                         </button>
                         <img class="w-24 h-24" src="img/file.png">
                      </div>
@@ -163,23 +164,92 @@
             </div>
          </div>
          <section id="example" class="my-8 p-8 bg-gray-200 rounded">
-            <p class="font-bold mb-2">Html</p>
-            <pre><code>
+            <p class="text-2xl font-bold mb-2">Html</p>
+            <p class="mb-8">Without choosing file</p>
+            <pre><code>&lt;div class=&quot;w-full overflow-x-auto&quot;&gt;
+                  &lt;label class=&quot;block mb-4&quot;&gt;
+                     &lt;div class=&quot;text-gray-700 mb-1&quot;&gt;
+                        &lt;span&gt;Upload Supporting Documents&lt;/span&gt;
+                        &lt;span title=&quot;required&quot; class=&quot;text-red-500&quot;&gt;*&lt;/span&gt;
+                     &lt;/div&gt;
+                  &lt;/label&gt;
+                  &lt;div class=&quot;flex items-center p-1&quot;&gt;
+                     &lt;label type=&quot;button&quot; class=&quot;
+                           font-medium
+                           rounded-lg
+                           py-2
+                           px-4
+                           transition
+                           ease-in
+                           duration-200
+                           text-blue-600 
+                           bg-white
+                           border border-blue-500    
+                           hover:bg-blue-100
+                           focus:bg-blue-100
+                           focus:ring-blue-300
+                           focus:outline-none focus:ring-2
+                           &quot;&gt;
+                        Choose File
+                        &lt;input type=&#39;file&#39; class=&quot;hidden&quot; /&gt;
+                     &lt;/label&gt;
+                     &lt;p class=&quot;ml-4 font-semibold&quot;&gt;*File size must be under 10mb&lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;flex flex-col justify-center w-full h-44 bg-transparent border border-gray-300 rounded-lg border-dashed mt-4&quot;&gt;
+                     &lt;div class=&quot;flex flex-col items-center&quot;&gt;
+                        &lt;img src=&quot;img/no-file.png&quot;&gt;
+                        &lt;p class=&quot;text-gray-400&quot;&gt;No files chosen&lt;/p&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
+            <p class="my-8">With choosing file</p>
+            <pre><code><div class="text-gray-400">&lt;div class=&quot;w-full overflow-x-auto&quot;&gt;
+      ...
+      ...
+      ...
+      &lt;div class=&quot;flex flex-col justify-center w-full h-44 bg-transparent border border-gray-300 rounded-lg border-dashed mt-4&quot;&gt;</div>&lt;div class=&quot;flex pt-4 px-4 gap-4&quot;&gt;<div>&lt;div class=&quot;flex flex-col <del class="text-gray-400">items-center</del>&quot;&gt;
+      <del class="text-gray-400">&lt;img src=&quot;img/no-file.png&quot;&gt;</del></div> &lt;div class=&quot;relative&quot;&gt;
+      <div class="text-blue-500">&lt;button class=&quot;flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+         focus:outline-none focus:ring-2 &quot;&gt;
+         &lt;span class=&quot;icon-x text-2xl text-blue-700 hover:text-white&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</div><div class="text-green-700">&lt;div class=&quot;absolute z-10 w-24 bottom-0&quot;&gt;
+      &lt;div class=&quot;h-2 bg-blue-100&quot;&gt;
+      &lt;div class=&quot;h-2 bg-blue-600 w-2/3&quot;&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+   </div>&lt;img class=&quot;w-24 h-24&quot; src=&quot;img/file-hover.png&quot;&gt;
+      &lt;/div&gt;&lt;p class=&quot;w-24&quot;&gt;Attendance of hall 2 ...&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
+            <div class="mt-8">
+               <p class="text-blue-500">Blue part is for button</p>
+               <p class="text-green-700">Green part is for progress-bar</p>
 
-        </code></pre>
+            </div>
+            <p class="my-8">File Upload Error:</p>
+            <pre><code><div class="text-gray-400">...
+...
+...
+<del class="text-gray-400">&lt;img src=&quot;img/no-file.png&quot;&gt;</del><div class="text-red-700">&lt;div class=&quot;flex flex-col items-center justify-center w-24 h-24 bg-gray-500 p-1&quot;&gt;
+&lt;span class=&quot;icon-exclamation-circle text-2xl text-gray-200&quot;&gt;&lt;/span&gt;
+&lt;p class=&quot;flex text-md text-gray-200 text-center leading-4&quot;&gt;File is too large&lt;/p&gt;
+&lt;/div&gt;</div><div class="text-gray-400">...
+...
+...</div></code></pre>
+
          </section>
       </section>
       <section id="pageheader">
          <h2 class="text-4xl my-8"></h2>
          <div class="w-full p-1 overflow-x-auto">
-            <h2 class="text-4xl my-8">Change Avatar</h2>
+            <h2 class="text-2xl my-8">Change Avatar</h2>
             <div class="flex gap-5">
                <div>
                   <div class="mb-4">
                      <img class="w-28 h-32 p-1 bg-gray-200" src="img/profile-avatar.png">
                   </div>
-                  <button type="button" class="
+                  <label type="button" class="
                         font-medium
                         rounded-lg
                         py-2
@@ -196,7 +266,8 @@
                         focus:outline-none focus:ring-2
                         ">
                      Update
-                  </button>
+                     <input type='file' class="hidden" />
+                  </label>
                </div>
                <div>
                   <div class="mb-4">
@@ -207,14 +278,14 @@
                               </div>
                            </div>
                         </div>
-                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
                               focus:outline-none focus:ring-2 ">
-                           <span class="icon-x text-2xl text-white"></span>
+                           <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                         </button>
                         <img class="w-28 h-32 p-1 bg-gray-200" src="img/profile-avatar-hover.png">
                      </div>
                   </div>
-                  <button type="button" class="
+                  <label type="button" class="
                         font-medium
                         rounded-lg
                         py-2
@@ -231,19 +302,20 @@
                         focus:outline-none focus:ring-2
                         ">
                      Update
-                  </button>
+                     <input type='file' class="hidden" />
+                  </label>
                </div>
                <div>
                   <div class="mb-4">
                      <div class="relative">
-                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                        <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
                               focus:outline-none focus:ring-2 ">
-                           <span class="icon-x text-2xl text-white"></span>
+                           <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                         </button>
                         <img class="w-28 h-32 p-1 bg-gray-200" src="img/profile.png">
                      </div>
                   </div>
-                  <button type="button" class="
+                  <label type="button" class="
                         font-medium
                         rounded-lg
                         py-2
@@ -260,20 +332,21 @@
                         focus:outline-none focus:ring-2
                         ">
                      Update
-                  </button>
+                     <input type='file' class="hidden" />
+                  </label>
                </div>
                <div>
                   <div class="relative">
-                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
                            focus:outline-none focus:ring-2 ">
-                        <span class="icon-x text-2xl text-white"></span>
+                        <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                      </button>
                      <div class="w-28 h-32 mb-4 bg-gray-500 flex flex-col items-center justify-center p-1">
                         <span class="icon-exclamation-circle text-2xl text-gray-200"></span>
-                        <p class="flex text-md text-gray-200 text-center">File size must be under 2mb!</p>
+                        <p class="flex text-md text-gray-200 text-center leading-4">File size must be under 2mb!</p>
                      </div>
                   </div>
-                  <button type="button" class="
+                  <label type="button" class="
                         font-medium
                         rounded-lg
                         py-2
@@ -290,27 +363,23 @@
                         focus:outline-none focus:ring-2
                         ">
                      Update
-                  </button>
+                     <input type='file' class="hidden" />
+                  </label>
                </div>
             </div>
          </div>
       </section>
-
-
-
       <section id="pageheader">
          <h2 class="text-4xl my-8"></h2>
          <div class="w-full p-1 overflow-x-auto flex-wrap">
-            <h2 class="text-4xl my-8">Change Avatar</h2>
+            <h2 class="text-2xl my-8">Change Avatar</h2>
             <div class="flex gap-5 flex-wrap">
-
-
                <div class="flex">
                   <div>
                      <img class="w-28 h-32 p-1 bg-gray-200" src="img/profile-avatar.png">
                   </div>
                   <div class="flex flex-col justify-end ml-4">
-                     <button type="button" class="
+                     <label type="button" class="
                            font-medium
                            rounded-lg
                            py-2
@@ -327,10 +396,10 @@
                            focus:outline-none focus:ring-2
                            ">
                         Update
-                     </button>
+                        <input type='file' class="hidden" />
+                     </label>
                   </div>
                </div>
-
                <div class="flex">
                   <div class="relative">
                      <div class="absolute z-10 w-28 bottom-0">
@@ -339,100 +408,100 @@
                            </div>
                         </div>
                      </div>
-                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
-                                 focus:outline-none focus:ring-2 ">
-                        <span class="icon-x text-2xl text-white"></span>
+                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                           focus:outline-none focus:ring-2 ">
+                        <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                      </button>
                      <img class="w-28 h-32 p-1 bg-gray-200" src="img/profile-avatar-hover.png">
                   </div>
                   <div class="flex flex-col justify-end ml-4">
-                     <button type="button" class="
-                              font-medium
-                              rounded-lg
-                              py-2
-                              px-4
-                              transition
-                              ease-in
-                              duration-200
-                              text-blue-600 
-                              bg-white
-                              border border-blue-500    
-                              hover:bg-blue-100
-                              focus:bg-blue-100
-                              focus:ring-blue-300
-                              focus:outline-none focus:ring-2
-                              ">
+                     <label type="button" class="
+                           font-medium
+                           rounded-lg
+                           py-2
+                           px-4
+                           transition
+                           ease-in
+                           duration-200
+                           text-blue-600 
+                           bg-white
+                           border border-blue-500    
+                           hover:bg-blue-100
+                           focus:bg-blue-100
+                           focus:ring-blue-300
+                           focus:outline-none focus:ring-2
+                           ">
                         Update
-                     </button>
+                        <input type='file' class="hidden" />
+                     </label>
                   </div>
                </div>
                <div class="flex">
                   <div class="relative">
-                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
-                                 focus:outline-none focus:ring-2 ">
-                        <span class="icon-x text-2xl text-white"></span>
+                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                           focus:outline-none focus:ring-2 ">
+                        <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                      </button>
                      <img class="w-28 h-32 p-1 bg-gray-200" src="img/profile.png">
                   </div>
                   <div class="flex flex-col justify-end ml-4">
-                     <button type="button" class="
-                              font-medium
-                              rounded-lg
-                              py-2
-                              px-4
-                              transition
-                              ease-in
-                              duration-200
-                              text-blue-600 
-                              bg-white
-                              border border-blue-500    
-                              hover:bg-blue-100
-                              focus:bg-blue-100
-                              focus:ring-blue-300
-                              focus:outline-none focus:ring-2
-                              ">
+                     <label type="button" class="
+                           font-medium
+                           rounded-lg
+                           py-2
+                           px-4
+                           transition
+                           ease-in
+                           duration-200
+                           text-blue-600 
+                           bg-white
+                           border border-blue-500    
+                           hover:bg-blue-100
+                           focus:bg-blue-100
+                           focus:ring-blue-300
+                           focus:outline-none focus:ring-2
+                           ">
                         Update
-                     </button>
+                        <input type='file' class="hidden" />
+                     </label>
                   </div>
                </div>
                <div class="flex">
                   <div class="relative">
-                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-blue-500 hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
-                                 focus:outline-none focus:ring-2 ">
-                        <span class="icon-x text-2xl text-white"></span>
+                     <button class="flex justify-center absolute -right-2 -top-2  h-8 w-8 rounded-full bg-white hover:bg-blue-700 focus:bg-bg-blue-700 focus:ring-blue-500
+                           focus:outline-none focus:ring-2 ">
+                        <span class="icon-x text-2xl text-blue-700 hover:text-white"></span>
                      </button>
                      <div class="w-28 h-32 bg-gray-500 flex flex-col items-center justify-center p-1">
                         <span class="icon-exclamation-circle text-2xl text-gray-200"></span>
-                        <p class="flex text-md text-gray-200 text-center">File size must be under 2mb!</p>
+                        <p class="flex text-md text-gray-200 text-center leading-4">File size must be under 2mb!</p>
                      </div>
                   </div>
                   <div class="flex flex-col justify-end ml-4">
-                     <button type="button" class="
-                                 font-medium
-                                 rounded-lg
-                                 py-2
-                                 px-4
-                                 transition
-                                 ease-in
-                                 duration-200
-                                 text-blue-600 
-                                 bg-white
-                                 border border-blue-500    
-                                 hover:bg-blue-100
-                                 focus:bg-blue-100
-                                 focus:ring-blue-300
-                                 focus:outline-none focus:ring-2
-                                 ">
+                     <label type="button" class="
+                           font-medium
+                           rounded-lg
+                           py-2
+                           px-4
+                           transition
+                           ease-in
+                           duration-200
+                           text-blue-600 
+                           bg-white
+                           border border-blue-500    
+                           hover:bg-blue-100
+                           focus:bg-blue-100
+                           focus:ring-blue-300
+                           focus:outline-none focus:ring-2
+                           ">
                         Update
-                     </button>
+                        <input type='file' class="hidden" />
+                     </label>
                   </div>
                </div>
-
-
             </div>
          </div>
       </section>
-
    </main>
 </body>
 
