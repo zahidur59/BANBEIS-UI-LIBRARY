@@ -14,15 +14,28 @@
     <link rel="stylesheet" href="css/forms.min.css" />
     <link rel="stylesheet" href="css/components.min.css" />
     <link rel="stylesheet" href="css/utilities.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-
   <body>
     <!-- root -->
-    <div class="antialiased flex min-w-max h-screen">
+    <div class=" flex flex-col md:flex-row">
       <!-- Left panel -->
-      <div class="flex flex-col w-72 h-screen banneis-blue-1" >
-          <a href="index.html"><img src="img/IEMIS_logo_2.png" class="flex w-24 m-4"></a>
-          <div class="flex-grow flex-col p-2 ">
+      <div id="leftPanel" class="flex flex-col w-screen md:w-72 md:visible h-auto md:h-screen banneis-blue-1 absolute md:relative z-50 md:z-0" >
+          <div class="flex p-2 md:p-4 border-b border-white border-opacity-10 md:border-none">
+            <div class="w-1/2">
+            <a href="index.html"><img src="img/IEMIS_logo_2.png" class="flex w-24"></a>
+            </div>  
+            <div id="mobileMenu" class="w-1/2 text-right md:hidden">
+              <span id="menuOpenBtn" class="inline-block text-center">
+                <span class="block rounded px-2 icon-menu text-white text-3xl hover:bg-white hover:text-black"></span>
+              </span>
+              <span id="menuCloseBtn" class="inline-block text-center hidden">
+                <span class="block rounded px-2 icon-x text-white text-3xl hover:bg-white hover:text-black"></span>
+              </span>
+            </div>
+          </div>
+          <!-- The menu -->
+          <div id="mainMenu" class="md:flex-grow hidden md:block flex-col p-2 overflow-y-scroll">
             <!-- Default menu -->
             <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
               <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
@@ -69,21 +82,39 @@
               <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
               <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
             </a>
+            <div id="userInfo" class="border-t border-white border-opacity-10 mt-6 md:hidden">
+              <div class="flex flex-row items-center mt-6">
+                <img class="h-10 rounded-full mr-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                <div class="flex flex-col text-white">
+                    <p class="text-base font-medium">Mohammad Habibul Bashar</p>
+                    <p class="text-gray-100 text-sm">Head teacher</p>
+                </div>
+              </div>
+              <!-- User menu -->
+              <div id="UserMenu" class="md:flex-grow flex-col overflow-y-scroll">
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-user text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">My Profile</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-key text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Change Password</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-logout-1 text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Logout</span>
+                </a>
+              </div>
+            </div>
           </div>
-          
       </div>
       <!-- Right panel-->
       <div class="flex-1 bg-gray-200">
         <!-- div to make mid pane grow to available space -->
         <div class="flex flex-col h-screen">
           <!-- Page header -->
-          <div class="flex z-10 bg-white shadow-md p-4 items-center">
-              <!-- Header left -->
-              <div class="w-2/3">
-                <h1 class="text-lg font-semibold py-1">Add New School</h1>
-              </div>
-              <!-- Header Right -->
-              <div class="grid w-1/3 justify-items-end reltive">
+          <div class="invisible md:visible md:block flex z-10 bg-white shadow-md p-4 items-center">
+              <div class="grid justify-items-end w-full reltive">
                 <div class="flex flex-row items-center">
                   <div class="flex ml-6">
                     <div class="felx flex-col text-right">
@@ -91,204 +122,236 @@
                       <p class="text-gray-500 text-sm">KPBS HIgh School</p>
                     </div>
                     <img class="h-10 rounded-full mx-3" src="img/avatar2.jpg" alt="Avatar Image" />
-                    <a href="#" class="icon-chevron-down text-black text-xl mt-2"></a>
+                    <a id="userMenuHandler" class="icon-chevron-down text-black text-xl mt-2 cursor-pointer hover:text-blue-500"></a>
                   </div>
                 </div>
                 <!-- Profile Drop down -->
-                <div id="user_menu" class="absolute flex flex-col w-72 z-40 top-16 right-4 bg-white border shadow-md ">
-                  <div class="p-4 bg-gray-50">
+                <div id="UserMenuDropdonw" class="absolute flex flex-col w-72 z-40 top-16 right-4 bg-white border shadow-md hidden">
+                  <!-- <div class="p-4 bg-gray-50">
                     <p class="text-sm"><span class="text-gray-400 ">Role:</span> Board Official, System Administrator, Registration Manager</p>
-                  </div>
-                  <div class="px-4 font-semibold">
-                    <a href="" class="block my-4">My Profile</a>
-                    <a href="" class="block my-4">Change Password</a>
-                    <a href="" class="block my-4">Logout</a>
+                  </div> -->
+                  <div id="" class="flex flex-col gap-1 ">
+                    <a id="userMenu_profile" class="flex items-center block p-2 hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-user text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">My Profile</span>
+                    </a>
+                    <a id="userMenu_password" class="flex items-center block p-2 hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-key text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">Change Password</span>
+                    </a>
+                    <a id="userMenu_logout" class="flex items-center block p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-logout-1 text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">Logout</span>
+                    </a>
                   </div>
                  </div>
               </div>
           </div>
           <!-- Page Content -->
           <div class="flex flex-col z-0 flex-grow p-4 pt-6 overflow-y-auto pb-8 ">
+            <h1 class="text-lg font-semibold pb-4">Add New School</h1>
+            <!-- Steep bar wrapper -->
+            <div class="flex gap-2 my-4">
+              <!-- Step -->
+              <div class="grid grid-cols-2 bg-gray-50 rounded p-2">
+                <span class="icon-clipboard text-2xl" ></span>
+                <span>Dashboard</span>
+                <span>sfasdfa asdasd asd asd asd asd </span>
+              </div>
+              <!-- Step -->
+              <div class="flex col">
+                <div class="flex gap-2">
+                  <span class="icon-clipboard" ></span>
+                  <span>Dashboard</span>
+                </div>
+                <span>asdasdasdasd asdfasd asd asd asda </span>
+              </div>
+              <!-- Step -->
+              <div class="flex col">
+                <div class="flex gap-2">
+                  <span class="icon-clipboard" ></span>
+                  <span>Dashboard</span>
+                </div>
+                <span>&#160;</span>
+              </div>
+              <!-- Step -->
+              <div class="flex col">
+                <div class="flex gap-2">
+                  <span class="icon-clipboard" ></span>
+                  <span>Dashboard</span>
+                </div>
+                <span>&#160;</span>
+              </div>
+              <!-- Step -->
+              <div class="flex col">
+                <div class="flex gap-2">
+                  <span class="icon-clipboard" ></span>
+                  <span>Dashboard</span>
+                </div>
+                <span>&#160;</span>
+              </div>
+              <!-- Step -->
+              <div class="flex col">
+                <div class="flex gap-2">
+                  <span class="icon-clipboard" ></span>
+                  <span>Dashboard</span>
+                </div>
+                <span>&#160;</span>
+              </div> 
+            </div>
             <form id="grow_clearer" class="w-full">
               <!-- One card in a row-->
-              <div class="grid grid-flow-row grid-cols-2 grid-rows-1 gap-2 w-full mb-2">
-                <fieldset class="bg-white shadow-md rounded-md p-8">
+              <div class="flex flex-wrap md:flex-nowrap w-full gap-2 mb-2">
+                <fieldset class="flex flex-col w-full md:w-1/2 bg-white shadow-md rounded-md p-8">
                   <h2 class="text-xl mb-4 font-semibold">Single card (per row)</h2>
-                  <div class="grid grid-cols-2 gap-2 auto-cols-min ">
-                    <label class="text-gray-700 w-64" for="input1">
-                      <span>Your Name</span>
+                  <div class="flex flex-col md:grid md:grid-cols-3 gap-2">
+                    <!-- Input pair -->
+                    <label class="block text-gray-700 md:text-right">
+                      <span class="inline-block mt-1.5">Session</span>
                       <span title="required" class="text-red-500">*</span>
                     </label>
-                    <div id="wrapper">
-                      <input id="input1" type="text" placeholder="Full Name" class="
-                            w-full
-                            rounded-lg
-                            text-gray-700
-                            placeholder-gray-400
-                            bg-transparent
-                            border border-gray-300
-                            focus:outline-none
-                            focus:ring-2
-                            focus:ring-purple-600
-                            focus:border-transparent
-                        " />
-                      <p title="error-message" class="
-                          text-red-500
-                          mt-1
-                          ">
-                          &#160;
-                      </p>
-                    </div>
-                    <label class="text-gray-700 w-64" for="input2">
-                      <span>Your email address</span>
-                      <span title="required" class="text-red-500">*</span>
-                    </label>
-                    <div id="wrapper">
-                      <input id="input2" type="text" placeholder="Email Address" class="
-                            w-full
-                            rounded-lg
-                            text-gray-700
-                            placeholder-gray-400
-                            bg-transparent
-                            border border-gray-300
-                            focus:outline-none
-                            focus:ring-2
-                            focus:ring-purple-600
-                            focus:border-transparent
-                        " />
-                      <p title="error-message" class="
-                          text-red-500
-                          mt-1
-                          ">
-                          Error message over here
-                      </p>
-                    </div>
-                    <label class="text-gray-700 w-64" for="input3">
-                      <span>Select School</span>
-                      <span title="required" class="text-red-500">*</span>
-                    </label>
-                    <div id="wrapper">
-                      <select class="
-                      w-full
-                      rounded-lg
-                      border border-gray-300
-                      shadow-sm
-                      appearance-none
-                      leading-tight
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-purple-600
-                      focus:border-transparent
-                        ">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
+                    <div class="col-span-2">
+                      <select class="w-full rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
                       </select>
-                      <p title="error-message" class="
-                          text-red-500
-                          mt-1
-                          ">
-                          &#160;
-                      </p>
+                      <p title="error-message" class="mt-1 text-red-500  invisible ">Invalid email address</p>
+                    </div>
+                    <!-- Input pair -->
+                    <label class="block text-gray-700 md:text-right">
+                      <span class="inline-block mt-1.5">Type</span>
+                      <span title="required" class="text-red-500">*</span>
+                    </label>
+                    <div class="col-span-2">
+                      <div class="flex flex-row items-center">
+                        <select class="w-full rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent ">
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                        </select>
+                        <button id="pageSecondaryAction" type="button" class="w-12 font-medium rounded-lg ml-2 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+                          <span class="icon-plus-1 text-3xl"></span>
+                        </button>
+                        
+                      </div>
+                      <p title="error-message" class="mt-1 text-red-500  invisible ">Invalid email address</p>
+                    </div>
+                    <!-- Input pair -->  
+                    <label class="block text-gray-700 md:text-right">
+                      <span class="inline-block mt-1.5">Start Date</span>
+                      <span title="required" class="text-red-500">*</span>
+                    </label>
+                    <div class="relative col-span-2">
+                      <div class="w-full md:w-40 relative">
+                        <input type="text" class="w-full  py-1.5 rounded-lg text-gray-700 placeholder-gray-400 bg-transparent border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Select" value="Aug 21, 2021"/>
+                        <div class="absolute top-0 right-0 px-3 py-1 text-2xl">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600 cursor-pointer" ></span>
+                        </div>
+                      </div>
+                      <p title="error-message" class="mt-1 text-red-500  invisible ">Invalid email address</p>
+                    </div>
+                    <!-- Input pair -->
+                    <label class="block text-gray-700 md:text-right">
+                      <span class="inline-block mt-1.5">End Date</span>
+                      <span title="required" class="text-red-500">*</span>
+                    </label>
+                    <div class="relative col-span-2">
+                      <div class="w-full md:w-40 relative">
+                        <input type="text" class="w-full  py-1.5 rounded-lg text-gray-700 placeholder-gray-400 bg-transparent border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Select" value="Aug 21, 2021"/>
+                        <div class="absolute top-0 right-0 px-3 py-1 text-2xl">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600 cursor-pointer" ></span>
+                        </div>
+                      </div>
+                      <p title="error-message" class="mt-1 text-red-500  invisible ">Invalid email address</p>
                     </div>
                   </div>
                 </fieldset>
-                <div id="blank_row">&#160;</div>
+                <div id="blank_row" class="md:w-1/2 hidden md:block">&#160;</div>
               </div>
               <!-- Two card in a row-->
-              <div class="grid grid-flow-row grid-cols-2 grid-rows-1 gap-2 w-full mb-2">
-                <fieldset class="bg-white shadow-md rounded-md p-8">
-                  <h2 class="text-xl mb-4 font-semibold">Double column cards</h2>
-                  ...
-                  ...
-                  ...
+              <div class="flex flex-wrap md:flex-nowrap w-full gap-2 mb-2">
+                <fieldset class="flex flex-col w-full md:w-1/2 bg-white shadow-md rounded-md p-8">
+                  <h2 class="text-xl mb-4 font-semibold">2 column A</h2>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
                 </fieldset>
-                <fieldset class="bg-white shadow-md rounded-md p-8">
-                  <h2 class="text-xl mb-4 font-semibold">Double column cards</h2>
-                  ...
-                  ...
-                  ...
+                <fieldset class="flex flex-col w-full md:w-1/2 bg-white shadow-md rounded-md p-8">
+                  <h2 class="text-xl mb-4 font-semibold">2 column B</h2>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
                 </fieldset>
               </div>
               <!-- Full row-->
               <div class="flex gap-2 w-full mb-2">
                 <fieldset class="flex-1 bg-white shadow-md rounded-md p-8">
                   <h2 class="text-xl mb-4 font-semibold">Full row</h2>
-                  ...
-                  ...
-                  ...
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
                 </fieldset>
               </div>
               <!-- Multi config -->
-              <div class="grid grid-flow-row grid-cols-2 grid-rows-1 gap-2 w-full mb-2">
-                <fieldset class="bg-white shadow-md rounded-md p-8">
-                  <h2 class="text-xl mb-4 font-semibold">Multi config</h2>
-                  ...
-                  ...
-                  ...
+              <div class="flex flex-col md:grid md:grid-cols-2 gap-2 w-full mb-2">
+                <fieldset class="row-span-2 col-span-1 bg-white shadow-md rounded-md p-8">
+                  <h2 class="text-xl mb-4 font-semibold">Multi config 1</h2>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
                 </fieldset>
-                <div class="flex flex-col gap-2">
-                  <fieldset class="bg-white shadow-md rounded-md p-8">
-                    <h2 class="text-xl mb-4 font-semibold">Multi config</h2>
-                    ...
-                    ...
-                    ...
-                  </fieldset>
-                  <fieldset class="bg-white shadow-md rounded-md p-8">
-                    <h2 class="text-xl mb-4 font-semibold">Multi config</h2>
-                    ...
-                    ...
-                    ...
-                  </fieldset>
-                </div>
+                <fieldset class="bg-white shadow-md rounded-md p-8">
+                  <h2 class="text-xl mb-4 font-semibold">Multi config 2</h2>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                </fieldset>
+                <fieldset class="bg-white shadow-md rounded-md p-8">
+                  <h2 class="text-xl mb-4 font-semibold">Multi config 3</h2>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                </fieldset>
               </div>
             </form>
           </div>
-          <!-- Page action pane -->
-          <div class="flex z-10 gap-4 p-4 items-center bg-white shadow-lg border">
-            <!-- Left -->
-            <div class="flex-initial">
-              <button type="button" class="font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
-                Exit without save
-              </button>
-            </div>
-            <!-- Middle -->
-            <div class="flex-1 items-center text-center">
-               <p class="">Please check all the information before submitting</p>
-            </div>  
-            <!-- Right -->
-            <div class="grid grid-flow-col gap-4 items-center">
-                <button type="button" class="font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
-                  Disapprove
-                </button>
-                <button type="button" class=" font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
-                  Approve
-                </button>
-            </div>
-          </div>
+          <!-- Page action pane --> 
+        <div class="flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
+          <!-- Left -->
+          <button id="pageTertialAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Exit without save
+          </button>
+          <!-- Middle -->
+          <p class="flex-1 text-center">Please check all the information before submitting</p>
+          <!-- Right -->
+          <button id="pageSecondaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Disapprove
+          </button>
+          <button id="pagePrimaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Approve
+          </button>
+        </div>  
         </div>
       </div>
     </div>
     <!-- Modal -->
-    <div id="modal_dialouge" class="flex fixed top-0 left-0 bg-black h-screen min-w-full bg-opacity-75 z-50">
-      <div id="left_spacer" class="w-96">&#160;</div>
+    <div id="modal_dialouge" class="flex fixed top-0 left-0 bg-black h-screen min-w-full bg-opacity-75 z-50 hidden">
+      <div id="left_spacer" class="w-96 hidden md:block">&#160;</div>
       <div id="right_pane" class="flex items-center w-full">
-        <div class="m-auto border max-w-xl shadow-md bg-white rounded">
+        <div class="m-4 md:m-auto border max-w-xl shadow-md bg-white rounded">
           <div class="cursor-pointer relative">
-            <span class="icon-x text-2xl absolute top-2 right-2" onClick="(function(){
-              document. getElementById('modal_dialouge').remove();
-          })();return false;"></span> 
+            <span id="modalCloseBtn" class="icon-x text-2xl absolute top-2 right-2" ></span> 
           </div>
-            <div class="flex flex-row p-8">
-                <div class="flex-initial mr-4">
+            <div class="flex flex-col md:flex-row p-8">
+                <div class="flex-1 md:flex-initial mx-auto md:mr-4 my-4 md:my-0">
                   <div class="
-                      bg-indigo-100
+                      bg-blue-100
                       rounded-full
                       w-10 h-10
                       flex 
                       items-center
                       text-center
                     ">
-                    <span class="icon-exclamation-circle text-indigo-600 text-3xl mx-auto"></span> 
+                    <span class="icon-exclamation-circle text-blue-600 text-3xl mx-auto"></span> 
                   </div>
                 </div>
                 <div class="flex-1">
@@ -296,8 +359,21 @@
                     <p class="text-gray-500">This is a demo modal. You can close it by clicking any button. If you want to see it again, just refresh the page again.</p>
                 </div>
             </div>
-            <div class="border-t px-8 py-4 gap-4 flex flex-row-reverse"> 
-                  <button type="button" class="
+            <div class="flex flex-col md:flex-row border-t px-8 py-4 gap-4 "> 
+                <div id="spacer" class="hidden md:block flex-1"></div>  
+                <button id="secondaryBtn" class="
+                  font-medium
+                  rounded-lg
+                  py-2
+                  px-4
+                  transition
+                  ease-in
+                  duration-200
+                  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2"
+                >
+                  Secondary
+              </button>
+              <button id="primaryBtn" type="button" class="
                     font-medium
                     rounded-lg
                     py-2
@@ -306,44 +382,67 @@
                     ease-in
                     duration-200
                     text-white
-                    bg-indigo-600
-                    hover:bg-indigo-800
-                    focus:bg-indigo-800
-                    focus:ring-indigo-200
-                    focus:outline-none focus:ring-2
-                  "
-                  onClick="(function(){
-                    document. getElementById('modal_dialouge').remove();
-                })();return false;"
+                    bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2"
                   >
                     Primary
                   </button>
-                  <button class="
-                  font-medium
-                  rounded-lg
-                  py-2
-                  px-4
-                  transition
-                  ease-in
-                  duration-200
-                  text-indigo-600
-                  bg-white
-                  border border-indigo-600
-                  hover:bg-indigo-50
-                  focus:bg-indigo-50
-                  focus:ring-indigo-200
-                  focus:outline-none
-                  focus:ring-2
-                "
-                onClick="(function(){
-                  document. getElementById('modal_dialouge').remove();
-              })();return false;"
-                >
-                  Secondary
-              </button>
             </div>
           </div> 
       </div>
-    </div>
+    </div> 
+    <script>
+      $(document).ready(function(){
+        // onload
+        
+        
+        // mobile menu toggler
+        function menuToggler(){
+          if($("#mainMenu").hasClass('hidden')) {
+            $("#menuOpenBtn").addClass('hidden');
+            $("#menuCloseBtn").removeClass('hidden');
+            $("#mainMenu").removeClass('hidden');
+            $("#leftPanel").addClass('h-screen');
+            $("#leftPanel").removeClass('h-auto');
+          }else{
+            $("#menuCloseBtn").addClass('hidden');
+            $("#menuOpenBtn").removeClass('hidden');
+            $("#mainMenu").addClass('hidden');
+            $("#leftPanel").addClass('h-auto');
+            $("#leftPanel").removeClass('h-screen');
+          }
+        }
+        $("#mobileMenu").click(function(){menuToggler()});  
+        
+        // Modal 
+        function modalToggler(){ 
+          if($("#modal_dialouge").hasClass("hidden")){
+            $("#modal_dialouge").removeClass("hidden")
+          }else{
+            $("#modal_dialouge").addClass("hidden")  
+          }
+        }
+        $("#primaryBtn").click(function() { modalToggler()});
+        $("#secondaryBtn").click(function() { modalToggler()});
+        $("#modalCloseBtn").click(function() { modalToggler()});
+        $("#pagePrimaryAction").click(function() { modalToggler()});
+
+        // UserMenuDropdonw
+        function toggleUserMenu() {
+          if($("#userMenuHandler").hasClass( "icon-chevron-down" )){
+            $("#userMenuHandler").removeClass('icon-chevron-down');
+            $("#userMenuHandler").addClass('icon-chevron-up');
+            $("#UserMenuDropdonw").removeClass('hidden');
+          }else{
+            $("#userMenuHandler").addClass('icon-chevron-down');
+            $("#userMenuHandler").removeClass('icon-chevron-up');
+            $("#UserMenuDropdonw").addClass('hidden');
+          }
+        }
+        $("#userMenuHandler").click(function() {toggleUserMenu()});
+        $("#userMenu_profile").click(function() {toggleUserMenu()});
+        $("#userMenu_password").click(function() {toggleUserMenu()});
+        $("#userMenu_logout").click(function() {toggleUserMenu()});
+      });
+    </script>
   </body>
 </html>

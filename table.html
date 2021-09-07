@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/banbeis_fonticons.css" />
   <link rel="stylesheet" href="css/base.min.css" />
+  <link rel="stylesheet" href="css/forms.min.css" />
   <link rel="stylesheet" href="css/components.min.css" />
   <link rel="stylesheet" href="css/utilities.min.css" />
 </head>
@@ -25,7 +26,7 @@
               text-white
             ">BANBEIS
       UI GUIDE</span>
-    <tabs class="flex flex-row max-w-screen-md mx-auto">
+    <tabs class="flex flex-wrap flex-row max-w-screen-md mx-auto">
       <tab class="ml-2 py-2 px-4 text-white">
         <a href="index.html">Icons</a>
       </tab>
@@ -59,10 +60,24 @@
 
     <section id="pageheader">
       <h2 class="text-4xl my-8">Table</h2>
+      <!-- Full table -->
       <div class="w-full p-1 overflow-x-auto">
         <table class="w-full shadow rounded-lg overflow-hidden text-gray-900">
           <thead>
             <tr>
+              <th scope="col" class="text-gray-500 text-left uppercase font-normal py-3 pl-4 bg-gray-100 border-b border-gray-200 w-8">
+                <div class="flex items-center">
+                  <input type="checkbox" class="
+                    rounded
+                    border border-gray-300
+                    text-indigo-600
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                        "/>
+                </div>
+              </th>
               <th scope="col" class="text-gray-500 text-left uppercase font-normal py-3 pl-4 bg-gray-100 border-b border-gray-200">
                 <div class="flex flex-row items-center">
                   <div class="inline-flex flex-col mr-1 text-xs text-gray-500 ">
@@ -115,6 +130,19 @@
           </thead>
           <tbody>
             <tr>
+              <td scope="col" class="text-gray-500 text-left uppercase font-normal py-3 pl-4 border-b border-gray-200 w-8">
+                <div class="flex items-center">
+                  <input type="checkbox" class="
+                    rounded
+                    border border-gray-300
+                    text-indigo-600
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                        "/>
+                </div>
+              </td>
               <td class="py-5 pl-4 border-b border-gray-200 bg-white">Abrar Hossain</td>
               <td class="py-5 border-b border-gray-200 bg-white">Science</td>
               <td class="py-5 border-b border-gray-200 bg-white">Islam</td>
@@ -131,6 +159,19 @@
               </td>
             </tr>
             <tr>
+              <td scope="col" class="text-gray-500 text-left uppercase font-normal py-3 pl-4 border-b border-gray-200 w-8">
+                <div class="flex items-center">
+                  <input type="checkbox" class="
+                    rounded
+                    border border-gray-300
+                    text-indigo-600
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                        "/>
+                </div>
+              </td>
               <td class="py-5 pl-4 border-b border-gray-200 bg-white">Shourav Saha</td>
               <td class="py-5 border-b border-gray-200 bg-white">Science</td>
               <td class="py-5 border-b border-gray-200 bg-white">Hinduism</td>
@@ -147,6 +188,19 @@
               </td>
             </tr>
             <tr>
+              <td scope="col" class="text-gray-500 text-left uppercase font-normal py-3 pl-4 border-b border-gray-200 w-8">
+                <div class="flex items-center">
+                  <input type="checkbox" class="
+                    rounded
+                    border border-gray-300
+                    text-indigo-600
+                    focus:outline-none
+                    focus:ring-2
+                    focus:ring-purple-600
+                    focus:border-transparent
+                        "/>
+                </div>
+              </td>
               <td class="py-5 pl-4 border-b border-gray-200 bg-white">Fairooz Maliha</td>
               <td class="py-5 border-b border-gray-200 bg-white ">Business Studies</td>
               <td class="py-5 border-b border-gray-200 bg-white ">Islam</td>
@@ -165,6 +219,7 @@
           </tbody>
         </table>
       </div>
+      <!-- no data table -->
       <div class="w-full p-1 pt-10 overflow-x-auto">
         <table class="w-full shadow rounded-lg overflow-hidden text-gray-900">
           <thead>
@@ -220,18 +275,81 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td colspan="6" class="bg-gray-50 p-4">
-                <div class="flex m-auto w-32 items-center">
-                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>Processing
-              </div>
-            </td>
-            </tr>
           </tbody>
         </table>
+        <!-- Table info block -->
+        <div class="bg-gray-50 p-4 text-center">
+          <div class="inline-flex items-center">
+            <span class="icon-chat-alt text-2xl text-gray-500 mr-2"></span>No data available yet
+          </div>
+        </div>
+      </div>
+      <!-- Loading datta table -->
+      <div class="w-full p-1 pt-10 overflow-x-auto">
+        <table class="w-full shadow rounded-lg overflow-hidden text-gray-900">
+          <thead>
+            <tr>
+              <th scope="col" class="text-gray-500 text-left uppercase font-normal py-3 pl-4 bg-gray-100 border-b border-gray-200">
+                <div class="flex flex-row items-center">
+                  <div class="inline-flex flex-col mr-1 text-xs text-gray-500 ">
+                    <span class="icon-arrow-narrow-down"></span>
+                  </div>
+                  <p>Name</p>
+                </div>
+              </th>
+              <th scope="col" class="text-gray-500 text-left uppercase font-normal py-3 bg-gray-100 border-b border-gray-200">
+                <div class="flex flex-row items-center">
+                  <div class="inline-flex flex-col mr-1 text-xs text-gray-500 ">
+                    <span class="icon-arrow-narrow-up"></span>
+                  </div>
+                  <p>Group</p>
+                </div>
+              </th>
+              <th scope="col" class="text-gray-500 text-left uppercase font-normal py-3 bg-gray-100 border-b border-gray-200">
+                <div class="flex flex-row items-center">
+                  <div class="inline-flex flex-col mr-1 text-xs text-gray-400 ">
+                    <span class="icon-switch-vertical"></span>
+                  </div>
+                  <p>Religion</p>
+                </div>
+              </th>
+              <th scope="col" class="text-gray-500 text-left uppercase font-normal py-3 bg-gray-100 border-b border-gray-200">
+                <div class="flex flex-row items-center">
+                  <div class="inline-flex flex-col mr-1 text-xs text-gray-400 ">
+                    <span class="icon-switch-vertical"></span>
+                  </div>
+                  <p>Gender</p>
+                </div>
+              </th>
+              <th scope="col" class="text-gray-500 text-left text-center uppercase font-normal py-3 bg-gray-100 border-b border-gray-200">
+                <div class="flex flex-row items-center">
+                  <div class="inline-flex flex-col mr-1 text-xs text-gray-400 ">
+                    <span class="icon-switch-vertical"></span>
+                  </div>
+                  <p>Status</p>
+                </div>
+              </th>
+              <th scope="col" class="text-gray-500 uppercase font-normal py-3 bg-gray-100 border-b border-gray-200">
+                <div class="flex flex-row items-center">
+                  <div class="inline-flex flex-col mr-1 text-xs text-gray-400 ">
+                    <span class="icon-switch-vertical"></span>
+                  </div>
+                  <p>Manage</p>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <div class="bg-gray-50 p-4 text-center">
+          <div class="inline-flex items-center">
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>Processing
+          </div>
+        </div>
       </div>
       <section id="example" class="my-8 p-8 bg-gray-200 rounded">
         <p class="font-bold mb-2">Html</p>
@@ -239,6 +357,19 @@
   &lt;table class=&quot;w-full shadow rounded-lg overflow-hidden text-gray-900&quot;&gt;
     &lt;thead&gt;
     &lt;tr&gt;
+    &lt;th scope=&quot;col&quot; class=&quot;text-gray-500 text-left uppercase font-normal py-3 pl-4 bg-gray-100 border-b border-gray-200 w-8&quot;&gt;
+        &lt;div class=&quot;flex items-center&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; class=&quot;
+            rounded
+            border border-gray-300
+            text-indigo-600
+            focus:outline-none
+            focus:ring-2
+            focus:ring-purple-600
+            focus:border-transparent
+                &quot;/&gt;
+        &lt;/div&gt;
+      &lt;/th&gt;
       &lt;th scope=&quot;col&quot; class=&quot;text-gray-500 text-left uppercase font-normal py-3 pl-4 bg-gray-100 border-b border-gray-200&quot;&gt;
         &lt;div class=&quot;flex flex-row items-center&quot;&gt;
           &lt;div class=&quot;inline-flex flex-col mr-1 text-xs text-gray-500 &quot;&gt;
@@ -291,6 +422,19 @@
   &lt;/thead&gt;
     &lt;tbody&gt;
       &lt;tr&gt;
+      &lt;td scope=&quot;col&quot; class=&quot;text-gray-500 text-left uppercase font-normal py-3 pl-4 border-b border-gray-200 w-8&quot;&gt;
+          &lt;div class=&quot;flex items-center&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; class=&quot;
+                rounded
+                border border-gray-300
+                text-indigo-600
+                focus:outline-none
+                focus:ring-2
+                focus:ring-purple-600
+                focus:border-transparent
+                    &quot;/&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
           &lt;td class=&quot;py-5 pl-4 border-b border-gray-200 bg-white &quot;&gt;Abrar Hossain&lt;/td&gt;
           &lt;td class=&quot;py-5 border-b border-gray-200 bg-white &quot;&gt;Science&lt;/td&gt;
           &lt;td class=&quot;py-5 border-b border-gray-200 bg-white &quot;&gt;Islam&lt;/td&gt;
@@ -307,6 +451,18 @@
           &lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
+          &lt;div class=&quot;flex items-center&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; class=&quot;
+                rounded
+                border border-gray-300
+                text-indigo-600
+                focus:outline-none
+                focus:ring-2
+                focus:ring-purple-600
+                focus:border-transparent
+                    &quot;/&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
           &lt;td class=&quot;py-5 pl-4 border-b border-gray-200 bg-white&quot;&gt;Shourav Saha&lt;/td&gt;
           &lt;td class=&quot;py-5 border-b border-gray-200 bg-white&quot;&gt;Science&lt;/td&gt;
           &lt;td class=&quot;py-5 border-b border-gray-200 bg-white&quot;&gt;Hinduism&lt;/td&gt;
@@ -322,7 +478,19 @@
             &lt;/a&gt;
           &lt;/td&gt;
       &lt;/tr&gt;
-      &lt;tr&gt;
+          &lt;tr&gt;
+            &lt;div class=&quot;flex items-center&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; class=&quot;
+                rounded
+                border border-gray-300
+                text-indigo-600
+                focus:outline-none
+                focus:ring-2
+                focus:ring-purple-600
+                focus:border-transparent
+                    &quot;/&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
           &lt;td class=&quot;py-5 pl-4 border-b border-gray-200 bg-white&quot;&gt;Fairooz Maliha&lt;/td&gt;
           &lt;td class=&quot;py-5 border-b border-gray-200 bg-white &quot;&gt;Business Studies&lt;/td&gt;
           &lt;td class=&quot;py-5 border-b border-gray-200 bg-white &quot;&gt;Islam&lt;/td&gt;
@@ -341,19 +509,31 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre>
-         <p class="my-6">Data loading state</p>
-         <pre><code>&lt;tbody&gt;
-  &lt;tr&gt;
-    &lt;td colspan=&quot;6&quot; class=&quot;bg-gray-50 p-4&quot;&gt;
-      &lt;div class=&quot;flex m-auto w-32 items-center&quot;&gt;
-      &lt;svg class=&quot;animate-spin -ml-1 mr-3 h-5 w-5 text-gray-500&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
-        &lt;circle class=&quot;opacity-25&quot; cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;4&quot;&gt;&lt;/circle&gt;
-        &lt;path class=&quot;opacity-75&quot; fill=&quot;currentColor&quot; d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;&gt;&lt;/path&gt;
-      &lt;/svg&gt;Processing
+<p class="my-6">No data state</p>
+         <pre><code>&lt;/thead&gt;
+...
+...
+&lt;/table&gt;
+  &lt;div class=&quot;bg-gray-50 p-4 text-center&quot;&gt;
+    &lt;div class=&quot;inline-flex items-center&quot;&gt;
+      &lt;span class=&quot;icon-chat-alt text-2xl text-gray-500 mr-2&quot;&gt;&lt;/span&gt;No data available yet
     &lt;/div&gt;
-  &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+         </code></pre> 
+         <p class="my-6">Data loading state</p>
+         <pre><code>&lt;/thead&gt;
+...
+...
+&lt;/table&gt;
+&lt;div class=&quot;bg-gray-50 p-4 text-center&quot;&gt;
+  &lt;div class=&quot;inline-flex items-center&quot;&gt;
+    &lt;svg class=&quot;animate-spin -ml-1 mr-3 h-5 w-5 text-gray-500&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+      &lt;circle class=&quot;opacity-25&quot; cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;4&quot;&gt;&lt;/circle&gt;
+      &lt;path class=&quot;opacity-75&quot; fill=&quot;currentColor&quot; d=&quot;M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;Processing
+  &lt;/div&gt;
+&lt;/div&gt;
          </code></pre> 
       </section>
     </section>
