@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BANBEIS UI</title>
+    <meta
+      name="description"
+      content="The style guide for BANBAIS applications"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/banbeis_fonticons.css" />
+    <link rel="stylesheet" href="css/base.min.css" />
+    <link rel="stylesheet" href="css/forms.min.css" />
+    <link rel="stylesheet" href="css/components.min.css" />
+    <link rel="stylesheet" href="css/utilities.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- root -->
+    <div class=" flex flex-col md:flex-row">
+      <!-- Left panel -->
+      <div id="leftPanel" class="flex flex-col w-screen md:w-72 md:visible h-auto md:h-screen banneis-blue-1 absolute md:relative z-50 md:z-0" >
+          <div class="flex p-2 md:p-4 border-b border-white border-opacity-10 md:border-none">
+            <div class="w-1/2">
+            <a href="index.html"><img src="img/IEMIS_logo_2.png" class="flex w-24"></a>
+            </div>  
+            <div id="mobileMenu" class="w-1/2 text-right md:hidden">
+              <span id="menuOpenBtn" class="inline-block text-center">
+                <span class="block rounded px-2 icon-menu text-white text-3xl hover:bg-white hover:text-black"></span>
+              </span>
+              <span id="menuCloseBtn" class="inline-block text-center hidden">
+                <span class="block rounded px-2 icon-x text-white text-3xl hover:bg-white hover:text-black"></span>
+              </span>
+            </div>
+          </div>
+          <!-- The menu -->
+          <div id="mainMenu" class="md:flex-grow hidden md:block flex-col p-2 hover:overflow-y-auto">
+            <!-- Default menu -->
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Dashboard</span>
+            </a>
+            <!-- Default menu full -->
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-user-group text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">User Management</span>
+              <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
+                <p class="text-white text-xs mx-auto">3</p>
+              </div>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
+            </a>
+            <!-- Selected Menu -->
+            <a href="" class="flex group items-center block px-2 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25 ">
+              <span class="flex icon-folder text-2xl"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 rounded-md">Registration</span>
+              <span class="flex icon-chevron-up text-1xl opacity-60 group-hover:opacity-100"></span>
+            </a>
+            <!-- Sub Menu -->
+            <div id="submenu">
+              <!-- Submenu Default-->
+              <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-calendar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Examiner Assign</span>
+              </a>
+              <!-- Submenu Selected-->
+              <a href="" class="flex group items-center block px-2 pl-8 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25">
+                <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Practical Mark</span>
+              </a>
+              <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Centre Report</span>
+              </a>  
+            </div>
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Review</span>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
+            </a>
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
+            </a>
+            <div id="userInfo" class="border-t border-white border-opacity-10 mt-6 md:hidden">
+              <div class="flex flex-row items-center mt-6">
+                <img class="h-10 rounded-full mr-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                <div class="flex flex-col text-white">
+                    <p class="text-base font-medium">Mohammad Habibul Bashar</p>
+                    <p class="text-gray-100 text-sm">Head teacher</p>
+                </div>
+              </div>
+              <!-- User menu -->
+              <div id="UserMenu" class="md:flex-grow flex-col overflow-y-scroll">
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-user text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">My Profile</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-key text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Change Password</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-logout-1 text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Logout</span>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Right panel-->
+      <div class="flex-1 bg-gray-200">
+        <!-- div to make mid pane grow to available space -->
+        <div class="flex flex-col h-screen">
+          <!-- Page header -->
+          <div class="invisible md:visible md:block flex z-10 bg-white shadow-md p-4 items-center">
+              <div class="grid justify-items-end w-full reltive">
+                <div class="flex flex-row items-center">
+                  <div class="flex ml-6">
+                    <div class="felx flex-col text-right">
+                      <p class="text-black text-base font-medium">Mohammad Habibul Bashar</p>
+                      <p class="text-gray-500 text-sm">KPBS HIgh School</p>
+                    </div>
+                    <img class="h-10 rounded-full mx-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                    <a id="userMenuHandler" class="icon-chevron-down text-black text-xl mt-2 cursor-pointer hover:text-blue-500"></a>
+                  </div>
+                </div>
+                <!-- Profile Drop down -->
+                <div id="UserMenuDropdonw" class="absolute flex flex-col w-72 z-40 top-16 right-4 bg-white border shadow-md hidden">
+                  <!-- <div class="p-4 bg-gray-50">
+                    <p class="text-sm"><span class="text-gray-400 ">Role:</span> Board Official, System Administrator, Registration Manager</p>
+                  </div> -->
+                  <div id="" class="flex flex-col gap-1 ">
+                    <a id="userMenu_profile" class="flex items-center block p-2 hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-user text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">My Profile</span>
+                    </a>
+                    <a id="userMenu_password" class="flex items-center block p-2 hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-key text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">Change Password</span>
+                    </a>
+                    <a id="userMenu_logout" class="flex items-center block p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-logout-1 text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">Logout</span>
+                    </a>
+                  </div>
+                 </div>
+              </div>
+          </div>
+          <!-- Page Content -->
+          <div class="flex flex-col z-0 flex-grow p-4 pt-6 overflow-y-auto pb-8 ">
+            <h1 class="text-lg font-semibold pb-4">Add New School</h1>
+            <form id="grow_clearer" class="w-full">
+              <!-- Single card / two column -->
+              <div class="flex flex-wrap lg:flex-nowrap w-full gap-2 mb-2">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold">Single card / Two column - Left aligned<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <!-- Informative row -->
+                <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                  <div id="inputID" class="inline-block flex-1">Type</div>
+                  <div title="spacer" class="w-full lg:w-2/3">
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
+                </div>
+                <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Student Name</div>
+                  <input
+                      type="text" class="
+                        w-full
+                        lg:w-2/3
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                </label>
+                <!-- Non required complex field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                  <div class="w-full lg:w-2/3 group relative items-center">
+                    <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                    <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                      ></span>
+                    </div>
+                  </div>
+                </label>
+                <!-- Required field With error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Session</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                  </div>
+                </label>
+                <!-- Required field without error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Examination</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                  </div> -->
+                </label>
+                <!-- Other 1 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Start Date</div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">End Date</div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+              <div id="blank_row" class="lg:w-1/2 hidden lg:block">&#160;</div>
+              </div>
+              <!-- Double card -->
+              <div class="flex flex-wrap lg:flex-nowrap w-full gap-2 mb-2">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold text-center">Double card / Two column - Center aligned <i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <!-- Informative row -->
+                <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                  <div id="inputID" class="inline-block flex-1 lg:text-right mr-4">Type</div>
+                  <div title="Requirement" class="w-full lg:w-2/3">
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
+                </div>
+                <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Student Name</div>
+                  <div title="required" class="w-3 text-red-500 opacity-0"></div>
+                  <input
+                      type="text" class="
+                        w-full
+                        lg:w-2/3
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                </label>
+                <!-- Non required complex field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Add Institutions</div>
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div class="w-full lg:w-2/3 group relative items-center">
+                    <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                    <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                      ></span>
+                    </div>
+                  </div>
+                </label>
+                <!-- Required field With error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Session</div>
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                  </div>
+                </label>
+                <!-- Required field without error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Examination</div>
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                  </div> -->
+                </label>
+                <!-- Other 1 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Start Date</div>
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">End Date</div>
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold">Double card / Single column <i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <!-- Informative row -->
+                <div for="inputID" class="flex flex-wrap rounded-lg bg-yellow-50 p-3">
+                    <p class="">Type</p>
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                </div>
+                <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Student Name</div>
+                  <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                </label>
+                <!-- Non required complex field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                  <div class="w-full group relative items-center">
+                    <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                    <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                      ></span>
+                    </div>
+                  </div>
+                </label>
+                <!-- Required field With error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Session</div>
+                    <select class="w-full rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <div title="Requirement" class="w-full text-red-500 pl-3">Required</div>
+                </label>
+                <!-- Required field without error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Examination</div>
+                    <select class="w-full rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                  </div> -->
+                </label>
+                <!-- Other 1 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Start Date</div>
+                    <div class="w-full group relative lg:col-span-6 items-center">
+                      <input
+                        type="text" class="
+                          w-full
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value="August-21,2021"
+                      />
+                      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                        <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">End Date</div>
+                    <div class="w-full group relative lg:col-span-6 items-center">
+                      <input
+                        type="text" class="
+                          w-full
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value="August-21,2021"
+                      />
+                      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                        <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+              </div>
+              <!-- Full row-->
+              <div class="flex flex-col lg:flex-row gap-2 w-full mb-2 bg-white shadow-md rounded-md p-8 divide-gray-200 lg:divide-x-2 divide-solid">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 order-2 lg:order-1 lg:px-8">
+                  <h2 class="text-xl mb-4 font-semibold">Single row with information pane<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                  <!-- Informative row -->
+                  <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                    <div id="inputID" class="inline-block flex-1">Type</div>
+                    <div title="spacer" class="w-full lg:w-2/3">
+                      <p class="font-bold">Special Registration</p>
+                      <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                      <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                    </div>
+                  </div>
+                  <!-- Non required simple field -->
+                  <label for="inputID" class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Student Name</div>
+                    <input
+                        type="text" class="
+                          w-full
+                          lg:w-2/3
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value=""
+                      />
+                  </label>
+                  <!-- Non required complex field -->
+                  <label for="inputID" class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                    <div class="w-full lg:w-2/3 group relative items-center">
+                      <input
+                        type="text" class="
+                          w-full
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value=""
+                      />
+                      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                        <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                        ></span>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Required field With error message-->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="required" class="w-3 text-red-500">*</div>
+                      <div id="inputID" class="inline-block flex-1">Session</div>
+                      <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                      <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                    </div>
+                  </label>
+                  <!-- Required field without error message-->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="required" class="w-3 text-red-500">*</div>
+                      <div id="inputID" class="inline-block flex-1">Examination</div>
+                      <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <!-- <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                      <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                    </div> -->
+                  </label>
+                  <!-- Other 1 -->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="w-3 text-red-500"></div>
+                      <div id="inputID" class="inline-block flex-1">Start Date</div>
+                      <div class="w-full lg:w-2/3">
+                        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value="August-21,2021"
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Other 2 -->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="w-3 text-red-500"></div>
+                      <div id="inputID" class="inline-block flex-1">End Date</div>
+                      <div class="w-full lg:w-2/3">
+                        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value="August-21,2021"
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+              </fieldset>
+              <div class="w-full lg:w-1/2 order-1 lg:order-2 lg:px-8">
+                <h2 class="text-xl mb-4 font-semibold">Informations</h2>
+                <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim tincidunt lectus, vel vestibulum dui maximus ut.</p>
+              </div>
+              </div>
+              <!-- Full row single card double column-->
+              <div class="w-full mb-2 bg-white shadow-md rounded-md" >
+                <div class="flex flex-col w-full p-8 gap-2 xl:max-w-screen-lg mx-auto">
+                  <h2 class="text-xl mb-4 font-semibold text-center">Full row single card in two columns<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                  <!-- Informative row -->
+                  <div for="inputID" class="flex flex-col rounded-lg bg-yellow-50 p-6 lg:p-2">
+                      <p class="font-bold">Type</p>
+                      <p class="font-bold">Special Registration</p>
+                      <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                      <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                      <div class="w-1/2">
+                        <label for="inputID" class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">Student Name</div>
+                          <input
+                              type="text" class="
+                                w-full
+                                lg:w-2/3
+                                pr-12
+                                rounded-lg
+                                text-gray-700
+                                placeholder-gray-400
+                                bg-transparent
+                                border border-gray-300
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-blue-600
+                                focus:border-transparent
+                              "
+                              placeholder=""
+                              value=""
+                            />
+                        </label>
+                      </div>
+                      <div class="w-1/2">
+                        <label for="inputID" class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">Student Name</div>
+                          <input
+                              type="text" class="
+                                w-full
+                                lg:w-2/3
+                                pr-12
+                                rounded-lg
+                                text-gray-700
+                                placeholder-gray-400
+                                bg-transparent
+                                border border-gray-300
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-blue-600
+                                focus:border-transparent
+                              "
+                              placeholder=""
+                              value=""
+                            />
+                        </label>
+                      </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID" class="flex flex-wrap lg:items-center">
+                        <div title="spacer" class="w-3 text-red-500"></div>
+                        <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                        <div class="w-full lg:w-2/3 group relative items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value=""
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID" class="flex flex-wrap lg:items-center">
+                        <div title="spacer" class="w-3 text-red-500"></div>
+                        <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                        <div class="w-full lg:w-2/3 group relative items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value=""
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 pl-3">A very long long long validation message - Lorem ipsum dolor sit amet. </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 pl-3">A very long long long validation message - Lorem ipsum dolor sit amet. </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Examination</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <!-- <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                        </div> -->
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Examination</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <!-- <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 pl-3">Required</div>
+                        </div> -->
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">Start Date</div>
+                          <div class="w-full lg:w-2/3">
+                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                              <input
+                                type="text" class="
+                                  w-full
+                                  pr-12
+                                  rounded-lg
+                                  text-gray-700
+                                  placeholder-gray-400
+                                  bg-transparent
+                                  border border-gray-300
+                                  focus:outline-none
+                                  focus:ring-2
+                                  focus:ring-blue-600
+                                  focus:border-transparent
+                                "
+                                placeholder=""
+                                value="August-21,2021"
+                              />
+                              <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                                <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">End Date</div>
+                          <div class="w-full lg:w-2/3">
+                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                              <input
+                                type="text" class="
+                                  w-full
+                                  pr-12
+                                  rounded-lg
+                                  text-gray-700
+                                  placeholder-gray-400
+                                  bg-transparent
+                                  border border-gray-300
+                                  focus:outline-none
+                                  focus:ring-2
+                                  focus:ring-blue-600
+                                  focus:border-transparent
+                                "
+                                placeholder=""
+                                value="August-21,2021"
+                              />
+                              <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                                <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Page action pane --> 
+        <div class="flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
+          <!-- Left -->
+          <button id="pageTertialAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Exit without save
+          </button>
+          <!-- Middle -->
+          <p class="flex-1 text-center">Please check all the information before submitting</p>
+          <!-- Right -->
+          <button id="pageSecondaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Disapprove
+          </button>
+          <button id="pagePrimaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Approve
+          </button>
+        </div>  
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal_dialouge" class="flex fixed top-0 left-0 bg-black h-screen min-w-full bg-opacity-75 z-50 hidden">
+      <div id="left_spacer" class="w-96 hidden md:block">&#160;</div>
+      <div id="right_pane" class="flex items-center w-full">
+        <div class="m-4 md:m-auto border max-w-xl shadow-md bg-white rounded">
+          <div class="cursor-pointer relative">
+            <span id="modalCloseBtn" class="icon-x text-2xl absolute top-2 right-2" ></span> 
+          </div>
+            <div class="flex flex-col md:flex-row p-8">
+                <div class="flex-1 md:flex-initial mx-auto md:mr-4 my-4 md:my-0">
+                  <div class="
+                      bg-blue-100
+                      rounded-full
+                      w-10 h-10
+                      flex 
+                      items-center
+                      text-center
+                    ">
+                    <span class="icon-exclamation-circle text-blue-600 text-3xl mx-auto"></span> 
+                  </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-gray-900 text-xl">Demo Modal Dialouge Box</p>
+                    <p class="text-gray-500">This is a demo modal. You can close it by clicking any button. If you want to see it again, just refresh the page again.</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row border-t px-8 py-4 gap-4 "> 
+                <div id="spacer" class="hidden md:block flex-1"></div>  
+                <button id="secondaryBtn" class="
+                  font-medium
+                  rounded-lg
+                  py-2
+                  px-4
+                  transition
+                  ease-in
+                  duration-200
+                  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2"
+                >
+                  Secondary
+              </button>
+              <button id="primaryBtn" type="button" class="
+                    font-medium
+                    rounded-lg
+                    py-2
+                    px-4
+                    transition
+                    ease-in
+                    duration-200
+                    text-white
+                    bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2"
+                  >
+                    Primary
+                  </button>
+            </div>
+          </div> 
+      </div>
+    </div> 
+    <script>
+      $(document).ready(function(){
+        // onload
+        
+        
+        // mobile menu toggler
+        function menuToggler(){
+          if($("#mainMenu").hasClass('hidden')) {
+            $("#menuOpenBtn").addClass('hidden');
+            $("#menuCloseBtn").removeClass('hidden');
+            $("#mainMenu").removeClass('hidden');
+            $("#leftPanel").addClass('h-screen');
+            $("#leftPanel").removeClass('h-auto');
+          }else{
+            $("#menuCloseBtn").addClass('hidden');
+            $("#menuOpenBtn").removeClass('hidden');
+            $("#mainMenu").addClass('hidden');
+            $("#leftPanel").addClass('h-auto');
+            $("#leftPanel").removeClass('h-screen');
+          }
+        }
+        $("#mobileMenu").click(function(){menuToggler()});  
+        
+        // Modal 
+        function modalToggler(){ 
+          if($("#modal_dialouge").hasClass("hidden")){
+            $("#modal_dialouge").removeClass("hidden")
+          }else{
+            $("#modal_dialouge").addClass("hidden")  
+          }
+        }
+        $("#primaryBtn").click(function() { modalToggler()});
+        $("#secondaryBtn").click(function() { modalToggler()});
+        $("#modalCloseBtn").click(function() { modalToggler()});
+        $("#pagePrimaryAction").click(function() { modalToggler()});
+
+        // UserMenuDropdonw
+        function toggleUserMenu() {
+          if($("#userMenuHandler").hasClass( "icon-chevron-down" )){
+            $("#userMenuHandler").removeClass('icon-chevron-down');
+            $("#userMenuHandler").addClass('icon-chevron-up');
+            $("#UserMenuDropdonw").removeClass('hidden');
+          }else{
+            $("#userMenuHandler").addClass('icon-chevron-down');
+            $("#userMenuHandler").removeClass('icon-chevron-up');
+            $("#UserMenuDropdonw").addClass('hidden');
+          }
+        }
+        $("#userMenuHandler").click(function() {toggleUserMenu()});
+        $("#userMenu_profile").click(function() {toggleUserMenu()});
+        $("#userMenu_password").click(function() {toggleUserMenu()});
+        $("#userMenu_logout").click(function() {toggleUserMenu()});
+      });
+    </script>
+  </body>
+</html>
+
+
+<div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BANBEIS UI</title>
+    <meta
+      name="description"
+      content="The style guide for BANBAIS applications"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/banbeis_fonticons.css" />
+    <link rel="stylesheet" href="css/base.min.css" />
+    <link rel="stylesheet" href="css/forms.min.css" />
+    <link rel="stylesheet" href="css/components.min.css" />
+    <link rel="stylesheet" href="css/utilities.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- root -->
+    <div class=" flex flex-col md:flex-row">
+      <!-- Left panel -->
+      <div id="leftPanel" class="flex flex-col w-screen md:w-72 md:visible h-auto md:h-screen banneis-blue-1 absolute md:relative z-50 md:z-0" >
+          <div class="flex p-2 md:p-4 border-b border-white border-opacity-10 md:border-none">
+            <div class="w-1/2">
+            <a href="index.html"><img src="img/IEMIS_logo_2.png" class="flex w-24"></a>
+            </div>  
+            <div id="mobileMenu" class="w-1/2 text-right md:hidden">
+              <span id="menuOpenBtn" class="inline-block text-center">
+                <span class="block rounded px-2 icon-menu text-white text-3xl hover:bg-white hover:text-black"></span>
+              </span>
+              <span id="menuCloseBtn" class="inline-block text-center hidden">
+                <span class="block rounded px-2 icon-x text-white text-3xl hover:bg-white hover:text-black"></span>
+              </span>
+            </div>
+          </div>
+          <!-- The menu -->
+          <div id="mainMenu" class="md:flex-grow hidden md:block flex-col p-2 hover:overflow-y-auto">
+            <!-- Default menu -->
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Dashboard</span>
+            </a>
+            <!-- Default menu full -->
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-user-group text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">User Management</span>
+              <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
+                <p class="text-white text-xs mx-auto">3</p>
+              </div>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
+            </a>
+            <!-- Selected Menu -->
+            <a href="" class="flex group items-center block px-2 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25 ">
+              <span class="flex icon-folder text-2xl"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 rounded-md">Registration</span>
+              <span class="flex icon-chevron-up text-1xl opacity-60 group-hover:opacity-100"></span>
+            </a>
+            <!-- Sub Menu -->
+            <div id="submenu">
+              <!-- Submenu Default-->
+              <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-calendar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Examiner Assign</span>
+              </a>
+              <!-- Submenu Selected-->
+              <a href="" class="flex group items-center block px-2 pl-8 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25">
+                <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Practical Mark</span>
+              </a>
+              <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Centre Report</span>
+              </a>  
+            </div>
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Review</span>
+              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
+            </a>
+            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+              <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
+            </a>
+            <div id="userInfo" class="border-t border-white border-opacity-10 mt-6 md:hidden">
+              <div class="flex flex-row items-center mt-6">
+                <img class="h-10 rounded-full mr-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                <div class="flex flex-col text-white">
+                    <p class="text-base font-medium">Mohammad Habibul Bashar</p>
+                    <p class="text-gray-100 text-sm">Head teacher</p>
+                </div>
+              </div>
+              <!-- User menu -->
+              <div id="UserMenu" class="md:flex-grow flex-col overflow-y-scroll">
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-user text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">My Profile</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-key text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Change Password</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-logout-1 text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Logout</span>
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Right panel-->
+      <div class="flex-1 bg-gray-200">
+        <!-- div to make mid pane grow to available space -->
+        <div class="flex flex-col h-screen">
+          <!-- Page header -->
+          <div class="invisible md:visible md:block flex z-10 bg-white shadow-md p-4 items-center">
+              <div class="grid justify-items-end w-full reltive">
+                <div class="flex flex-row items-center">
+                  <div class="flex ml-6">
+                    <div class="felx flex-col text-right">
+                      <p class="text-black text-base font-medium">Mohammad Habibul Bashar</p>
+                      <p class="text-gray-500 text-sm">KPBS HIgh School</p>
+                    </div>
+                    <img class="h-10 rounded-full mx-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                    <a id="userMenuHandler" class="icon-chevron-down text-black text-xl mt-2 cursor-pointer hover:text-blue-500"></a>
+                  </div>
+                </div>
+                <!-- Profile Drop down -->
+                <div id="UserMenuDropdonw" class="absolute flex flex-col w-72 z-40 top-16 right-4 bg-white border shadow-md hidden">
+                  <!-- <div class="p-4 bg-gray-50">
+                    <p class="text-sm"><span class="text-gray-400 ">Role:</span> Board Official, System Administrator, Registration Manager</p>
+                  </div> -->
+                  <div id="" class="flex flex-col gap-1 ">
+                    <a id="userMenu_profile" class="flex items-center block p-2 hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-user text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">My Profile</span>
+                    </a>
+                    <a id="userMenu_password" class="flex items-center block p-2 hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-key text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">Change Password</span>
+                    </a>
+                    <a id="userMenu_logout" class="flex items-center block p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                      <span class="flex icon-logout-1 text-2xl mr-2"></span>
+                      <span class="flex-1 font-medium text-sm">Logout</span>
+                    </a>
+                  </div>
+                 </div>
+              </div>
+          </div>
+          <!-- Page Content -->
+          <div class="flex flex-col z-0 flex-grow p-4 pt-6 overflow-y-auto pb-8 ">
+            <h1 class="text-lg font-semibold pb-4">Add New School</h1>
+            <form id="grow_clearer" class="w-full">
+              <!-- Single card / two column -->
+              <div class="flex flex-wrap lg:flex-nowrap w-full gap-2 mb-2">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold">Single card / Two column - Left aligned<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <!-- Informative row -->
+                <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                  <div id="inputID" class="inline-block flex-1">Type</div>
+                  <div title="spacer" class="w-full lg:w-2/3">
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
+                </div>
+                <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Student Name</div>
+                  <input
+                      type="text" class="
+                        w-full
+                        lg:w-2/3
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                </label>
+                <!-- Non required complex field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                  <div class="w-full lg:w-2/3 group relative items-center">
+                    <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                    <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                      ></span>
+                    </div>
+                  </div>
+                </label>
+                <!-- Required field With error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Session</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                  </div>
+                </label>
+                <!-- Required field without error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Examination</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                  </div> -->
+                </label>
+                <!-- Other 1 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Start Date</div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">End Date</div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+              <div id="blank_row" class="lg:w-1/2 hidden lg:block">&#160;</div>
+              </div>
+              <!-- Double card -->
+              <div class="flex flex-wrap lg:flex-nowrap w-full gap-2 mb-2">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold text-center">Double card / Two column - Center aligned <i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <!-- Informative row -->
+                <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                  <div id="inputID" class="inline-block flex-1 lg:text-right mr-4">Type</div>
+                  <div title="info" class="w-full lg:w-2/3">
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
+                </div>
+                <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Student Name</div>
+                  <div title="required" class="w-3 text-red-500 opacity-0"></div>
+                  <input
+                      type="text" class="
+                        w-full
+                        lg:w-2/3
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                </label>
+                <!-- Non required complex field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Add Institutions</div>
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div class="w-full lg:w-2/3 group relative items-center">
+                    <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                    <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                      ></span>
+                    </div>
+                  </div>
+                </label>
+                <!-- Required field With error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Session</div>
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                  </div>
+                </label>
+                <!-- Required field without error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Examination</div>
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                  </div> -->
+                </label>
+                <!-- Other 1 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">Start Date</div>
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div id="inputID" class="inline-block flex-1 lg:text-right ml-3 mr-1">End Date</div>
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold">Double card / Single column <i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <!-- Informative row -->
+                <div for="inputID" class="flex flex-col rounded-lg bg-yellow-50 p-3">
+                    <p class="">Type</p>
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                </div>
+                <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Student Name</div>
+                  <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                </label>
+                <!-- Non required complex field -->
+                <label for="inputID" class="flex flex-wrap lg:items-center">
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                  <div class="w-full group relative items-center">
+                    <input
+                      type="text" class="
+                        w-full
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
+                      value=""
+                    />
+                    <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                      ></span>
+                    </div>
+                  </div>
+                </label>
+                <!-- Required field With error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Session</div>
+                    <select class="w-full rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <div title="Requirement" class="w-full lg:w-full text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                </label>
+                <!-- Required field without error message-->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="inputID" class="inline-block flex-1">Examination</div>
+                    <select class="w-full rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
+                    </select>
+                  </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                  </div> -->
+                </label>
+                <!-- Other 1 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Start Date</div>
+                    <div class="w-full group relative lg:col-span-6 items-center">
+                      <input
+                        type="text" class="
+                          w-full
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value="August-21,2021"
+                      />
+                      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                        <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">End Date</div>
+                    <div class="w-full group relative lg:col-span-6 items-center">
+                      <input
+                        type="text" class="
+                          w-full
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value="August-21,2021"
+                      />
+                      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                        <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </fieldset>
+              </div>
+              <!-- Full row-->
+              <div class="flex flex-col lg:flex-row gap-2 w-full mb-2 bg-white shadow-md rounded-md p-8 divide-gray-200 lg:divide-x-2 divide-solid">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 order-2 lg:order-1 lg:px-8">
+                  <h2 class="text-xl mb-4 font-semibold">Single row with information pane<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                  <!-- Informative row -->
+                  <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                    <div id="inputID" class="inline-block flex-1">Type</div>
+                    <div title="spacer" class="w-full lg:w-2/3">
+                      <p class="font-bold">Special Registration</p>
+                      <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                      <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                    </div>
+                  </div>
+                  <!-- Non required simple field -->
+                  <label for="inputID" class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Student Name</div>
+                    <input
+                        type="text" class="
+                          w-full
+                          lg:w-2/3
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value=""
+                      />
+                  </label>
+                  <!-- Non required complex field -->
+                  <label for="inputID" class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                    <div class="w-full lg:w-2/3 group relative items-center">
+                      <input
+                        type="text" class="
+                          w-full
+                          pr-12
+                          rounded-lg
+                          text-gray-700
+                          placeholder-gray-400
+                          bg-transparent
+                          border border-gray-300
+                          focus:outline-none
+                          focus:ring-2
+                          focus:ring-blue-600
+                          focus:border-transparent
+                        "
+                        placeholder=""
+                        value=""
+                      />
+                      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                        <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                        ></span>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Required field With error message-->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="required" class="w-3 text-red-500">*</div>
+                      <div id="inputID" class="inline-block flex-1">Session</div>
+                      <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                      <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                    </div>
+                  </label>
+                  <!-- Required field without error message-->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="required" class="w-3 text-red-500">*</div>
+                      <div id="inputID" class="inline-block flex-1">Examination</div>
+                      <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                      </select>
+                    </div>
+                    <!-- <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                      <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                    </div> -->
+                  </label>
+                  <!-- Other 1 -->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="w-3 text-red-500"></div>
+                      <div id="inputID" class="inline-block flex-1">Start Date</div>
+                      <div class="w-full lg:w-2/3">
+                        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value="August-21,2021"
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                  <!-- Other 2 -->
+                  <label for="inputID">
+                    <div class="flex flex-wrap lg:items-center">
+                      <div title="spacer" class="w-3 text-red-500"></div>
+                      <div id="inputID" class="inline-block flex-1">End Date</div>
+                      <div class="w-full lg:w-2/3">
+                        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value="August-21,2021"
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+              </fieldset>
+              <div class="w-full lg:w-1/2 order-1 lg:order-2 lg:px-8">
+                <h2 class="text-xl mb-4 font-semibold">Informations</h2>
+                <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim tincidunt lectus, vel vestibulum dui maximus ut.</p>
+              </div>
+              </div>
+              <!-- Full row single card double column-->
+              <div class="w-full mb-2 bg-white shadow-md rounded-md" >
+                <div class="flex flex-col w-full p-8 gap-2 xl:max-w-screen-lg mx-auto">
+                  <h2 class="text-xl mb-4 font-semibold text-cen">Full row single card in two columns<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                  <!-- Informative row -->
+                  <div for="inputID" class="flex flex-col rounded-lg bg-yellow-50 p-6 lg:p-2">
+                      <p class="font-bold">Type</p>
+                      <p class="font-bold">Special Registration</p>
+                      <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                      <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                      <div class="w-1/2">
+                        <label for="inputID" class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">Student Name</div>
+                          <input
+                              type="text" class="
+                                w-full
+                                lg:w-2/3
+                                pr-12
+                                rounded-lg
+                                text-gray-700
+                                placeholder-gray-400
+                                bg-transparent
+                                border border-gray-300
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-blue-600
+                                focus:border-transparent
+                              "
+                              placeholder=""
+                              value=""
+                            />
+                        </label>
+                      </div>
+                      <div class="w-1/2">
+                        <label for="inputID" class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">Student Name</div>
+                          <input
+                              type="text" class="
+                                w-full
+                                lg:w-2/3
+                                pr-12
+                                rounded-lg
+                                text-gray-700
+                                placeholder-gray-400
+                                bg-transparent
+                                border border-gray-300
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-blue-600
+                                focus:border-transparent
+                              "
+                              placeholder=""
+                              value=""
+                            />
+                        </label>
+                      </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID" class="flex flex-wrap lg:items-center">
+                        <div title="spacer" class="w-3 text-red-500"></div>
+                        <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                        <div class="w-full lg:w-2/3 group relative items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value=""
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID" class="flex flex-wrap lg:items-center">
+                        <div title="spacer" class="w-3 text-red-500"></div>
+                        <div id="inputID" class="inline-block flex-1">Add Institutions</div>
+                        <div class="w-full lg:w-2/3 group relative items-center">
+                          <input
+                            type="text" class="
+                              w-full
+                              pr-12
+                              rounded-lg
+                              text-gray-700
+                              placeholder-gray-400
+                              bg-transparent
+                              border border-gray-300
+                              focus:outline-none
+                              focus:ring-2
+                              focus:ring-blue-600
+                              focus:border-transparent
+                            "
+                            placeholder=""
+                            value=""
+                          />
+                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                            <span class="icon-search text-gray-400 group-hover:text-gray-600"
+                            ></span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">A very long long long validation message - Lorem ipsum dolor sit amet. </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Session</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">A very long long long validation message - Lorem ipsum dolor sit amet. </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Examination</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <!-- <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                        </div> -->
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="required" class="w-3 text-red-500">*</div>
+                          <div id="inputID" class="inline-block flex-1">Examination</div>
+                          <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                          </select>
+                        </div>
+                        <!-- <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                          <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 rounded-b-lg">Required</div>
+                        </div> -->
+                      </label>
+                    </div>
+                  </div>
+                  <!-- row -->
+                  <div class="flex w-full gap-20">
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">Start Date</div>
+                          <div class="w-full lg:w-2/3">
+                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                              <input
+                                type="text" class="
+                                  w-full
+                                  pr-12
+                                  rounded-lg
+                                  text-gray-700
+                                  placeholder-gray-400
+                                  bg-transparent
+                                  border border-gray-300
+                                  focus:outline-none
+                                  focus:ring-2
+                                  focus:ring-blue-600
+                                  focus:border-transparent
+                                "
+                                placeholder=""
+                                value="August-21,2021"
+                              />
+                              <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                                <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-1/2">
+                      <label for="inputID">
+                        <div class="flex flex-wrap lg:items-center">
+                          <div title="spacer" class="w-3 text-red-500"></div>
+                          <div id="inputID" class="inline-block flex-1">End Date</div>
+                          <div class="w-full lg:w-2/3">
+                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                              <input
+                                type="text" class="
+                                  w-full
+                                  pr-12
+                                  rounded-lg
+                                  text-gray-700
+                                  placeholder-gray-400
+                                  bg-transparent
+                                  border border-gray-300
+                                  focus:outline-none
+                                  focus:ring-2
+                                  focus:ring-blue-600
+                                  focus:border-transparent
+                                "
+                                placeholder=""
+                                value="August-21,2021"
+                              />
+                              <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                                <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Page action pane --> 
+        <div class="flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
+          <!-- Left -->
+          <button id="pageTertialAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Exit without save
+          </button>
+          <!-- Middle -->
+          <p class="flex-1 text-center">Please check all the information before submitting</p>
+          <!-- Right -->
+          <button id="pageSecondaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Disapprove
+          </button>
+          <button id="pagePrimaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
+            Approve
+          </button>
+        </div>  
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="modal_dialouge" class="flex fixed top-0 left-0 bg-black h-screen min-w-full bg-opacity-75 z-50 hidden">
+      <div id="left_spacer" class="w-96 hidden md:block">&#160;</div>
+      <div id="right_pane" class="flex items-center w-full">
+        <div class="m-4 md:m-auto border max-w-xl shadow-md bg-white rounded">
+          <div class="cursor-pointer relative">
+            <span id="modalCloseBtn" class="icon-x text-2xl absolute top-2 right-2" ></span> 
+          </div>
+            <div class="flex flex-col md:flex-row p-8">
+                <div class="flex-1 md:flex-initial mx-auto md:mr-4 my-4 md:my-0">
+                  <div class="
+                      bg-blue-100
+                      rounded-full
+                      w-10 h-10
+                      flex 
+                      items-center
+                      text-center
+                    ">
+                    <span class="icon-exclamation-circle text-blue-600 text-3xl mx-auto"></span> 
+                  </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-gray-900 text-xl">Demo Modal Dialouge Box</p>
+                    <p class="text-gray-500">This is a demo modal. You can close it by clicking any button. If you want to see it again, just refresh the page again.</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row border-t px-8 py-4 gap-4 "> 
+                <div id="spacer" class="hidden md:block flex-1"></div>  
+                <button id="secondaryBtn" class="
+                  font-medium
+                  rounded-lg
+                  py-2
+                  px-4
+                  transition
+                  ease-in
+                  duration-200
+                  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2"
+                >
+                  Secondary
+              </button>
+              <button id="primaryBtn" type="button" class="
+                    font-medium
+                    rounded-lg
+                    py-2
+                    px-4
+                    transition
+                    ease-in
+                    duration-200
+                    text-white
+                    bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2"
+                  >
+                    Primary
+                  </button>
+            </div>
+          </div> 
+      </div>
+    </div> 
+    <script>
+      $(document).ready(function(){
+        // onload
+        
+        
+        // mobile menu toggler
+        function menuToggler(){
+          if($("#mainMenu").hasClass('hidden')) {
+            $("#menuOpenBtn").addClass('hidden');
+            $("#menuCloseBtn").removeClass('hidden');
+            $("#mainMenu").removeClass('hidden');
+            $("#leftPanel").addClass('h-screen');
+            $("#leftPanel").removeClass('h-auto');
+          }else{
+            $("#menuCloseBtn").addClass('hidden');
+            $("#menuOpenBtn").removeClass('hidden');
+            $("#mainMenu").addClass('hidden');
+            $("#leftPanel").addClass('h-auto');
+            $("#leftPanel").removeClass('h-screen');
+          }
+        }
+        $("#mobileMenu").click(function(){menuToggler()});  
+        
+        // Modal 
+        function modalToggler(){ 
+          if($("#modal_dialouge").hasClass("hidden")){
+            $("#modal_dialouge").removeClass("hidden")
+          }else{
+            $("#modal_dialouge").addClass("hidden")  
+          }
+        }
+        $("#primaryBtn").click(function() { modalToggler()});
+        $("#secondaryBtn").click(function() { modalToggler()});
+        $("#modalCloseBtn").click(function() { modalToggler()});
+        $("#pagePrimaryAction").click(function() { modalToggler()});
+
+        // UserMenuDropdonw
+        function toggleUserMenu() {
+          if($("#userMenuHandler").hasClass( "icon-chevron-down" )){
+            $("#userMenuHandler").removeClass('icon-chevron-down');
+            $("#userMenuHandler").addClass('icon-chevron-up');
+            $("#UserMenuDropdonw").removeClass('hidden');
+          }else{
+            $("#userMenuHandler").addClass('icon-chevron-down');
+            $("#userMenuHandler").removeClass('icon-chevron-up');
+            $("#UserMenuDropdonw").addClass('hidden');
+          }
+        }
+        $("#userMenuHandler").click(function() {toggleUserMenu()});
+        $("#userMenu_profile").click(function() {toggleUserMenu()});
+        $("#userMenu_password").click(function() {toggleUserMenu()});
+        $("#userMenu_logout").click(function() {toggleUserMenu()});
+      });
+    </script>
+  </body>
+</html>
