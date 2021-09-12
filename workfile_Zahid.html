@@ -67,4 +67,162 @@
   
 </div>
 
+<!-- Card centered aligned-->
+<fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+  <h2 class="text-xl mb-4 font-semibold text-center">Double card / Two column - Center aligned <i class="inline-block lg:hidden">(in mobile view)</i></h2>
+  <!-- Informative row -->
+  <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+    <div id="labelTxt" class="inline-block flex-1 lg:text-right mr-4 break-all xl:break-normal">Type</div>
+    <div title="info" class="w-full lg:w-2/3">
+      <p class="font-bold">Special Registration</p>
+      <p class="italic text-sm">Special Registration fee BDT 750.</p>
+      <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+    </div>
+  </div>
+  <!-- Non required simple field -->
+  <label for="inputID" class="flex flex-wrap lg:items-center">
+    <div id="labelTxt" class="inline-block flex-1 lg:text-right ml-3 mr-1 break-all xl:break-normal">Student Name</div>
+    <div title="required" class="w-3 text-red-500 opacity-0"></div>
+    <input
+        type="text" class="
+          w-full
+          lg:w-2/3
+          pr-12
+          rounded-lg
+          text-gray-700
+          placeholder-gray-400
+          bg-transparent
+          border border-gray-300
+          focus:outline-none
+          focus:ring-2
+          focus:ring-blue-600
+          focus:border-transparent
+        "
+        placeholder=""
+        value=""
+      />
+  </label>
+  <!-- Non required complex field -->
+  <label for="inputID" class="flex flex-wrap lg:items-center">
+    <div id="labelTxt" class="inline-block flex-1 lg:text-right ml-3 mr-1 break-all xl:break-normal">Add Institutions</div>
+    <div title="spacer" class="w-3 text-red-500"></div>
+    <div class="w-full lg:w-2/3 group relative items-center">
+      <input
+        type="text" class="
+          w-full
+          pr-12
+          rounded-lg
+          text-gray-700
+          placeholder-gray-400
+          bg-transparent
+          border border-gray-300
+          focus:outline-none
+          focus:ring-2
+          focus:ring-blue-600
+          focus:border-transparent
+        "
+        placeholder=""
+        value=""
+      />
+      <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+        <span class="icon-search text-gray-400 group-hover:text-gray-600"
+        ></span>
+      </div>
+    </div>
+  </label>
+  <!-- Required field With error message-->
+  <label for="inputID">
+    <div class="flex flex-wrap lg:items-center">
+      <div id="labelTxt" class="inline-block flex-1 lg:text-right ml-3 mr-1 break-all xl:break-normal">Session</div>
+      <div title="required" class="w-3 text-red-500">*</div>
+      <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <div class="flex flex-wrap lg:items-center">
+      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+      <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 bg-opacity-40 italic rounded-b-lg">Required</div>
+    </div>
+  </label>
+  <!-- Required field without error message-->
+  <label for="inputID">
+    <div class="flex flex-wrap lg:items-center">
+      <div id="labelTxt" class="inline-block flex-1 lg:text-right ml-3 mr-1 break-all xl:break-normal">Examination</div>
+      <div title="required" class="w-3 text-red-500">*</div>
+      <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+    </div>
+    <!-- <div class="flex flex-wrap lg:items-center">
+      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+      <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 bg-opacity-40 rounded-b-lg">Required</div>
+    </div> -->
+  </label>
+  <!-- Other 1 -->
+  <label for="inputID">
+    <div class="flex flex-wrap lg:items-center">
+      <div id="labelTxt" class="inline-block flex-1 lg:text-right ml-3 mr-1 break-all xl:break-normal">Start Date</div>
+      <div title="spacer" class="w-3 text-red-500"></div>
+      <div class="w-full lg:w-2/3">
+        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+          <input
+            type="text" class="
+              w-full
+              pr-12
+              rounded-lg
+              text-gray-700
+              placeholder-gray-400
+              bg-transparent
+              border border-gray-300
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-600
+              focus:border-transparent
+            "
+            placeholder=""
+            value="August-21,2021"
+          />
+          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </label>
+  <!-- Other 2 -->
+  <label for="inputID">
+    <div class="flex flex-wrap lg:items-center">
+      <div id="labelTxt" class="inline-block flex-1 lg:text-right ml-3 mr-1 break-all xl:break-normal">End Date</div>
+      <div title="spacer" class="w-3 text-red-500"></div>
+      <div class="w-full lg:w-2/3">
+        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+          <input
+            type="text" class="
+              w-full
+              pr-12
+              rounded-lg
+              text-gray-700
+              placeholder-gray-400
+              bg-transparent
+              border border-gray-300
+              focus:outline-none
+              focus:ring-2
+              focus:ring-blue-600
+              focus:border-transparent
+            "
+            placeholder=""
+            value="August-21,2021"
+          />
+          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+            <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </label>
+</fieldset>
 
