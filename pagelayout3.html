@@ -109,6 +109,7 @@
                 </a>
               </div>
             </div>
+            <div class="h-screen bg-gray-50"></div>
           </div>
           <!-- The footer -->
           <div id="footer" class="flex hidden md:block text-white px-2 py-4 text-xs italic">
@@ -117,14 +118,12 @@
         </div>  
       </div>
       <!-- Right panel-->
-      <div class="flex-1 bg-gray-700">
+      <div class="flex-1 bg-gray-200">
         <!-- div to make mid pane grow up to available space -->
         <div class="flex flex-col h-screen">
           <!-- Page header -->
-          <div class="invisible md:visible flex z-10 bg-white shadow-md p-4 items-center">
-              <h1 class="flex text-lg text-gray-700 text-2xl">Registrations</h1>
-              <div title="spacer" class="flex-1"></div>
-              <div class="flex justify-items-end reltive">
+          <div class="invisible md:visible md:block flex z-10 bg-white shadow-md p-4 items-center">
+              <div class="grid justify-items-end w-full reltive">
                 <div class="flex flex-row items-center">
                   <div class="flex ml-6">
                     <div class="felx flex-col text-right">
@@ -159,33 +158,48 @@
           </div>
           <!-- Page Content -->
           <div class="flex flex-col z-0 flex-grow p-4 pt-6 overflow-y-auto pb-8 ">
-            <h1 class="md:hidden text-lg text-white text-3xl pb-4">Registration</h1>
+            <h1 class="text-lg font-semibold pb-4">Add New School</h1>
             <form id="grow_clearer" class="w-full">
               <!-- Single card / two column -->
-              <div class="flex flex-wrap lg:flex-nowrap w-full gap-2 mb-6">
-              <fieldset class="flex flex-col w-full lg:w-1/2 gap-4 bg-gray-200 shadow-md rounded-md p-8">
-                <h2 class="text-2xl text-center font-semibold">Single card<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+              <div class="flex flex-wrap lg:flex-nowrap w-full gap-2 mb-2">
+              <fieldset class="flex flex-col w-full lg:w-1/2 gap-1 bg-white shadow-md rounded-md p-8">
+                <h2 class="text-xl mb-4 font-semibold">Single card / Two column - Left aligned<i class="inline-block lg:hidden">(in mobile view)</i></h2>
                 <!-- Informative row -->
-                <div title="spacer" class="w-full p-4 bg-yellow-100 text-gray-700 shadow-md">
-                  <p class="font-bold">Special Registration</p>
-                  <p class="italic text-sm">Special Registration fee BDT 750.</p>
-                  <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                <div for="inputID" class="flex flex-wrap lg:items-center rounded-lg bg-yellow-50 p-3 lg:p-2">
+                  <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">Type</div>
+                  <div title="spacer" class="w-full lg:w-2/3">
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
                 </div>
-                
                 <!-- Non required simple field -->
                 <label for="inputID" class="flex flex-wrap lg:items-center">
-                  <div title="spacer" class="w-4 text-red-500"></div>
-                  <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Student Name</div>
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">Student Name</div>
                   <input
-                      type="text" class="w-full lg:w-2/3 pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                      placeholder="Enter your name"
+                      type="text" class="
+                        w-full
+                        lg:w-2/3
+                        pr-12
+                        rounded-lg
+                        text-gray-700
+                        placeholder-gray-400
+                        bg-transparent
+                        border border-gray-300
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-blue-600
+                        focus:border-transparent
+                      "
+                      placeholder=""
                       value=""
                     />
                 </label>
                 <!-- Non required complex field -->
                 <label for="inputID" class="flex flex-wrap lg:items-center">
-                  <div title="spacer" class="w-4 text-red-500"></div>
-                  <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Institution</div>
+                  <div title="spacer" class="w-3 text-red-500"></div>
+                  <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">Add Institutions</div>
                   <div class="w-full lg:w-2/3 group relative items-center">
                     <input
                       type="text" class="
@@ -194,75 +208,57 @@
                         rounded-lg
                         text-gray-700
                         placeholder-gray-400
-                        bg-white
+                        bg-transparent
                         border border-gray-300
                         focus:outline-none
                         focus:ring-2
                         focus:ring-blue-600
                         focus:border-transparent
                       "
-                      placeholder="Search"
+                      placeholder=""
                       value=""
                     />
                     <div class="absolute top-1.5 right-0 px-3 text-2xl ">
-                      <span class="icon-search text-black"
+                      <span class="icon-search text-gray-400 group-hover:text-gray-600"
                       ></span>
                     </div>
                   </div>
                 </label>
                 <!-- Required field With error message-->
-                <label for="inputID" class="">
+                <label for="inputID">
                   <div class="flex flex-wrap lg:items-center">
-                    <div title="required" class="w-4 text-red-500">*</div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Session Starts</div>
-                    <select class="w-full lg:w-2/3 rounded-t-lg border border-red-700 border-opacity-50 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                      <option>Select</option>
-                      <option>96-97</option>
-                      <option>97-98</option>
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">Session</div>
+                    <select class="w-full lg:w-2/3 rounded-lg border border-red-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Option 1</option>
+                      <option>Option 2</option>
                     </select>
                   </div>
                   <div class="flex flex-wrap lg:items-center">
                     <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
-                    <div title="Requirement" class="w-full lg:w-2/3 text-white bg-red-500 border-opacity-50 rounded-b-lg px-3 py-1 text-sm italic">You must select session starts</div>
+                    <div title="Requirement" class="w-full lg:w-2/3 text-red-500 px-3 py-1 bg-red-50 bg-opacity-40 italic rounded-b-lg">Required</div>
                   </div>
                 </label>
                 <!-- Required field without error message-->
-                <label for="inputID" class="">
+                <label for="inputID">
                   <div class="flex flex-wrap lg:items-center">
-                    <div title="required" class="w-4 text-red-500">*</div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Examination</div>
+                    <div title="required" class="w-3 text-red-500">*</div>
+                    <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">Examination</div>
                     <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                      <option>Select</option>
-                      <option>S.S.C</option>
-                      <option>H.S.C</option>
+                      <option>Option 1</option>
+                      <option>Option 2</option>
                     </select>
                   </div>
+                  <!-- <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
+                    <div title="Requirement" class="w-2/3 text-red-500 px-3 py-1 bg-red-50 bg-opacity-40 rounded-b-lg">Required</div>
+                  </div> -->
                 </label>
                 <!-- Other 1 -->
-                <label for="inputID" class="">
+                <label for="inputID">
                   <div class="flex flex-wrap lg:items-center">
-                    <div title="spacer" class="w-4 text-red-500"></div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
-                    <div class="w-full lg:w-2/3">
-                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
-                        <input
-                          type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
-                          placeholder=""
-                          value="August-21,2021"
-                        />
-                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
-                          <span class="icon-calendar"
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </label>
-                <!-- Other 2 -->
-                <label for="inputID" class="">
-                  <div class="flex flex-wrap lg:items-center">
-                    <div title="spacer" class="w-4 text-red-500"></div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">Start Date</div>
                     <div class="w-full lg:w-2/3">
                       <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
                         <input
@@ -272,7 +268,7 @@
                             rounded-lg
                             text-gray-700
                             placeholder-gray-400
-                            bg-white
+                            bg-transparent
                             border border-gray-300
                             focus:outline-none
                             focus:ring-2
@@ -283,7 +279,39 @@
                           value="August-21,2021"
                         />
                         <div class="absolute top-1.5 right-0 px-3 text-2xl ">
-                          <span class="icon-calendar text-banbeis-blue-1"
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+                <!-- Other 2 -->
+                <label for="inputID">
+                  <div class="flex flex-wrap lg:items-center">
+                    <div title="spacer" class="w-3 text-red-500"></div>
+                    <div id="labelTxt" class="inline-block flex-1 break-all xl:break-normal">End Date</div>
+                    <div class="w-full lg:w-2/3">
+                      <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="
+                            w-full
+                            pr-12
+                            rounded-lg
+                            text-gray-700
+                            placeholder-gray-400
+                            bg-transparent
+                            border border-gray-300
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-blue-600
+                            focus:border-transparent
+                          "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar text-gray-400 group-hover:text-gray-600"
                           ></span>
                         </div>
                       </div>
@@ -1224,10 +1252,12 @@
             $("#userMenuHandler").removeClass('icon-chevron-down');
             $("#userMenuHandler").addClass('icon-chevron-up');
             $("#UserMenuDropdonw").removeClass('hidden');
+            $("#UserMenuDropdonw").addClass('h-screen');
           }else{
             $("#userMenuHandler").addClass('icon-chevron-down');
             $("#userMenuHandler").removeClass('icon-chevron-up');
             $("#UserMenuDropdonw").addClass('hidden');
+            $("#UserMenuDropdonw").removeClass('h-screen');
           }
         }
         $("#userMenuHandler").click(function() {toggleUserMenu()});

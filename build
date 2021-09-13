@@ -249,3 +249,6 @@ Hit CTRL-C to stop the server
 [2021-09-12T12:38:43.479Z]  "[36mGET[39m [36m/pagelayout2.html[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
 [2021-09-12T12:39:03.685Z]  "[36mGET[39m [36m/pagelayout2.html[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
 [2021-09-12T12:39:22.376Z]  "[36mGET[39m [36m/pagelayout2.html[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
+[2021-09-12T12:43:15.008Z]  "[36mGET[39m [36m/pagelayout2.html[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
+[2021-09-12T12:43:17.199Z]  "[36mGET[39m [36m/pagelayout2.html[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
+[2021-09-12T12:47:10.248Z]  "[36mGET[39m [36m/pagelayout2.html[39m" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"
