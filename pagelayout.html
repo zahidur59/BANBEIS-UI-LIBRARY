@@ -509,8 +509,8 @@
                             <div title="spacer" class="w-3 text-red-500">*</div>
                             <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
                           </div>
-                          <div class="w-full lg:w-2/3">
-                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                          <div class="w-auto">
+                            <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                               <input
                                 type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                                 placeholder=""
@@ -525,17 +525,16 @@
                         </div>
                       </label>
                   </div>
-                  <div title="spacer" class="flex-1 md:flex-none lg:w-4"></div>
                   <div class="flex">
-                      <!-- Start date -->
+                      <!-- End date -->
                       <label for="inputID" class="">
                         <div class="flex flex-col">
                           <div class="flex flex-wrap">
                             <div title="spacer" class="w-3 text-red-500">*</div>
                             <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
                           </div>
-                          <div class="w-full lg:w-2/3">
-                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                          <div class="w-auto">
+                            <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                               <input
                                 type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                                 placeholder=""
@@ -571,14 +570,8 @@
               </div>
               <!-- Full row-->
               <div class="flex flex-col lg:flex-row gap-2 w-full bg-gray-200 shadow-md rounded-md p-8 divide-white lg:divide-x divide-solid">
-                <fieldset class="flex flex-col w-full lg:w-1/2 gap-4 bg-gray-200 shadow-md rounded-md p-8">
+                <fieldset class="flex flex-col w-full lg:w-1/2 gap-4 bg-gray-200 md:p-8 order-2 lg:order-1">
                   <h2 class="text-2xl text-center font-semibold">Single Card<i class="inline-block lg:hidden">(in mobile view)</i></h2>
-                  <!-- Informative row -->
-                  <div title="spacer" class="w-full p-4 bg-yellow-100 text-gray-700 shadow-md">
-                    <p class="font-bold">Special Registration</p>
-                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
-                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
-                  </div>
                   <!-- Non required simple field -->
                   <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
                     <div title="required" class="w-3 text-red-500 md:col-span-1 justify-self-end">*</div>
@@ -654,7 +647,7 @@
                       <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
                       <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
                       <div class="w-full md:col-span-6">
-                        <div class="group relative lg:col-span-6 items-center">
+                        <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                           <input
                             type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                             placeholder=""
@@ -672,7 +665,7 @@
                     <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
                     <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
                     <div class="w-full md:col-span-6">
-                      <div class="group relative lg:col-span-6 items-center">
+                      <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                         <input
                           type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                           placeholder=""
@@ -686,7 +679,7 @@
                     </div>
                 </label>
                 </fieldset>
-                <div class="w-full lg:w-1/2 pb-12 md:pb-0 md:pt-12 order-1 lg:order-2 lg:px-8 order-1 lg:order-2">
+                <div class="w-full lg:w-1/2 pb-12 md:pb-0 md:pt-20 order-1 lg:px-16  lg:order-2 order-1 lg:order-2">
                   <!-- Informative row -->
                   <div title="spacer" class="w-full p-4 bg-yellow-100 text-gray-700 shadow-md">
                     <p class="font-bold">Special Registration</p>
@@ -869,7 +862,7 @@
                             <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
                           </div>
                           <div class="w-full lg:w-2/3">
-                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                            <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                               <input type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent " placeholder="" value="August-21,2021">
                               <div class="absolute top-1.5 right-0 px-3 text-2xl ">
                                 <span class="icon-calendar"></span>
@@ -887,7 +880,7 @@
                             <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
                           </div>
                           <div class="w-full lg:w-2/3">
-                            <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                            <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                               <input type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent " placeholder="" value="August-21,2021">
                               <div class="absolute top-1.5 right-0 px-3 text-2xl ">
                                 <span class="icon-calendar"></span>
