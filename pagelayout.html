@@ -251,7 +251,7 @@
                     <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
                     <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
                     <div class="w-full md:col-span-6">
-                      <div class="w-52 group relative lg:col-span-6 items-center">
+                      <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                         <input
                           type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                           placeholder=""
@@ -269,7 +269,7 @@
                   <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
                   <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
                   <div class="w-full md:col-span-6">
-                    <div class="w-52 group relative lg:col-span-6 items-center">
+                    <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                       <input
                         type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                         placeholder=""
@@ -383,7 +383,7 @@
                       <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
                       <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
                       <div class="w-full md:col-span-6">
-                        <div class="group relative lg:col-span-6 items-center">
+                        <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                           <input
                             type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                             placeholder=""
@@ -401,7 +401,7 @@
                     <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
                     <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
                     <div class="w-full md:col-span-6">
-                      <div class="group relative lg:col-span-6 items-center">
+                      <div class="group relative lg:col-span-6 items-center" style="max-width:13.5em">
                         <input
                           type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                           placeholder=""
@@ -571,33 +571,39 @@
               </div>
               <!-- Full row-->
               <div class="flex flex-col lg:flex-row gap-2 w-full bg-gray-200 shadow-md rounded-md p-8 divide-white lg:divide-x divide-solid">
-                <fieldset class="flex flex-col w-full lg:w-1/2 gap-4 order-2 lg:order-1 md:pr-6">
-                  <h2 class="text-2xl text-center font-semibold">Mixed Card<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                <fieldset class="flex flex-col w-full lg:w-1/2 gap-4 bg-gray-200 shadow-md rounded-md p-8">
+                  <h2 class="text-2xl text-center font-semibold">Single Card<i class="inline-block lg:hidden">(in mobile view)</i></h2>
+                  <!-- Informative row -->
+                  <div title="spacer" class="w-full p-4 bg-yellow-100 text-gray-700 shadow-md">
+                    <p class="font-bold">Special Registration</p>
+                    <p class="italic text-sm">Special Registration fee BDT 750.</p>
+                    <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
+                  </div>
                   <!-- Non required simple field -->
-                  <label for="inputID" class="flex flex-wrap lg:items-center">
-                    <div title="spacer" class="w-3 text-red-500"></div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Student Name</div>
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                    <div title="required" class="w-3 text-red-500 md:col-span-1 justify-self-end">*</div>
+                    <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0 break-words">Student's Name</div>
                     <input
-                        type="text" class="w-full lg:w-2/3 pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        type="text" class="w-full md:col-span-6 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                         placeholder="Enter your name"
                         value=""
                       />
                   </label>
                   <!-- Disabled field -->
-                  <label for="inputID" class="flex flex-wrap lg:items-center">
-                    <div title="spacer" class="w-3 text-red-500"></div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Group</div>
-                    <select disabled class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight bg-white opacity-40 ">
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                    <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
+                    <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0 break-words">Group</div>
+                    <select disabled class="w-full md:col-span-6 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight bg-white opacity-40 ">
                       <option>Select</option>
                       <option selected>Science</option>
                       <option>Arts</option>
                     </select>
                   </label>
                   <!-- Non required complex field -->
-                  <label for="inputID" class="flex flex-wrap lg:items-center">
-                    <div title="spacer" class="w-3 text-red-500"></div>
-                    <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Institution</div>
-                    <div class="w-full lg:w-2/3 group relative items-center">
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                    <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
+                    <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0 break-words">Institution</div>
+                    <div class="w-full md:col-span-6 group relative items-center">
                       <input
                         type="text" class="
                           w-full
@@ -622,40 +628,33 @@
                     </div>
                   </label>
                   <!-- Required field With error message-->
-                  <label for="inputID" class="">
-                    <div class="flex flex-wrap lg:items-center">
-                      <div title="required" class="w-3 text-red-500">*</div>
-                      <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Session Starts</div>
-                      <select class="w-full lg:w-2/3 rounded-lg border border-red-700 border-opacity-50 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                      <div title="required" class="w-3 text-red-500 md:col-span-1 justify-self-end">*</div>
+                      <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0 break-words">Session Starts</div>
+                      <select class="w-full md:col-span-6 rounded-lg border border-red-700 border-opacity-50 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                         <option>Select</option>
                         <option>96-97</option>
                         <option>97-98</option>
                       </select>
-                    </div>
-                    <div class="flex flex-wrap lg:items-center">
-                      <div title="spacer" class="hidden lg:inline-block flex-1">&#160;</div>
-                      <div title="Requirement" class="w-full lg:w-2/3 text-red-500 border-opacity-50 rounded-b-lg px-3 py-1 text-sm italic">You must select session starts</div>
-                    </div>
+                      <div title="spacer" class="hidden md:block md:col-span-5 ">&#160;</div>
+                      <div title="Requirement" class="w-full md:col-span-6 text-red-500 border-opacity-50 rounded-b-lg px-3 py-1 text-sm italic">You must select session starts</div>
                   </label>
                   <!-- Required field without error message-->
-                  <label for="inputID" class="">
-                    <div class="flex flex-wrap lg:items-center">
-                      <div title="required" class="w-3 text-red-500">*</div>
-                      <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Examination</div>
-                      <select class="w-full lg:w-2/3 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                        <option>Select</option>
-                        <option>S.S.C</option>
-                        <option>H.S.C</option>
-                      </select>
-                    </div>
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                    <div title="required" class="w-3 text-red-500 md:col-span-1 justify-self-end">*</div>
+                    <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">Examination</div>
+                    <select class="w-full md:col-span-6 rounded-lg border border-gray-300 shadow-sm appearance-none leading-tight focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                      <option>Select</option>
+                      <option>S.S.C</option>
+                      <option>H.S.C</option>
+                    </select>
                   </label>
                   <!-- Other 1 -->
-                  <label for="inputID" class="">
-                    <div class="flex flex-wrap lg:items-center">
-                      <div title="spacer" class="w-4 text-red-500"></div>
-                      <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
-                      <div class="w-full lg:w-2/3">
-                        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                      <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
+                      <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">Start Date</div>
+                      <div class="w-full md:col-span-6">
+                        <div class="group relative lg:col-span-6 items-center">
                           <input
                             type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
                             placeholder=""
@@ -667,40 +666,25 @@
                           </div>
                         </div>
                       </div>
-                    </div>
                   </label>
                   <!-- Other 2 -->
-                  <label for="inputID" class="">
-                    <div class="flex flex-wrap lg:items-center">
-                      <div title="spacer" class="w-4 text-red-500"></div>
-                      <div id="labelTxt" class="inline-block flex-1 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
-                      <div class="w-full lg:w-2/3">
-                        <div class="w-full lg:w-44 group relative lg:col-span-6 items-center">
-                          <input
-                            type="text" class="
-                              w-full
-                              pr-12
-                              rounded-lg
-                              text-gray-700
-                              placeholder-gray-400
-                              bg-white
-                              border border-gray-300
-                              focus:outline-none
-                              focus:ring-2
-                              focus:ring-blue-600
-                              focus:border-transparent
-                            "
-                            placeholder=""
-                            value="August-21,2021"
-                          />
-                          <div class="absolute top-1.5 right-0 px-3 text-2xl ">
-                            <span class="icon-calendar text-banbeis-blue-1"
-                            ></span>
-                          </div>
+                  <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                    <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
+                    <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">End Date</div>
+                    <div class="w-full md:col-span-6">
+                      <div class="group relative lg:col-span-6 items-center">
+                        <input
+                          type="text" class="w-full pr-12 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
+                          placeholder=""
+                          value="August-21,2021"
+                        />
+                        <div class="absolute top-1.5 right-0 px-3 text-2xl ">
+                          <span class="icon-calendar"
+                          ></span>
                         </div>
                       </div>
                     </div>
-                  </label>
+                </label>
                 </fieldset>
                 <div class="w-full lg:w-1/2 pb-12 md:pb-0 md:pt-12 order-1 lg:order-2 lg:px-8 order-1 lg:order-2">
                   <!-- Informative row -->
