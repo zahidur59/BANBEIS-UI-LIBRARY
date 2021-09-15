@@ -895,22 +895,22 @@
               </div>
             </form>
           </div>
-        <!-- Page action pane --> 
-        <div class="flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
-          <!-- Left -->
-          <button id="pageTertialAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
-            Exit without save
-          </button>
-          <!-- Middle -->
-          <p class="flex-1 text-center">Please check all the information before submitting</p>
-          <!-- Right -->
-          <button id="pageSecondaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
-            Disapprove
-          </button>
-          <button id="pagePrimaryAction3" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
-            Approve
-          </button>
-        </div>  
+          <!-- Page action pane --> 
+          <div id="pbActionPane" class="flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
+            <!-- Left -->
+            <button id="pbTertialAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+              Exit without save
+            </button>
+            <!-- Middle -->
+            <p class="flex-1 text-center">Please check all the information before submitting</p>
+            <!-- Right -->
+            <button id="pbSecondaryAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
+              Disapprove
+            </button>
+            <button id="pbPrimaryAction3" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200 text-white bg-blue-500 hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
+              Approve
+            </button>
+          </div>  
         </div>
       </div>
     </div>
@@ -994,6 +994,17 @@
         }
         $("#mobileMenu").click(function(){menuToggler()});  
         
+        // page action pane toggler
+        function togglePageActionPane() {
+          if($("#pbActionPane").hasClass('hidden')) {
+            $("#pbActionPane").removeClass('hidden');
+          }else{
+            $("#pbActionPane").addClass('hidden');
+          }
+        }
+        $("#pbTertialAction").click(function(){togglePageActionPane()});
+        $("#pbSecondaryAction").click(function(){togglePageActionPane()});
+
         // Modal 
         function modalToggler(){ 
           if($("#modal_dialouge").hasClass("hidden")){
@@ -1007,7 +1018,7 @@
         $("#modalCloseBtn").click(function() { modalToggler()});
         $("#pagePrimaryAction1").click(function() { modalToggler()});
         $("#pagePrimaryAction2").click(function() { modalToggler()});
-        $("#pagePrimaryAction3").click(function() { modalToggler()});
+        $("#pbPrimaryAction3").click(function() { modalToggler()});
 
         // UserMenuDropdonw
         function toggleUserMenu() {
