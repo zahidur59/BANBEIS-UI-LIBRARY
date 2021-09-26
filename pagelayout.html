@@ -38,80 +38,83 @@
             </div>
           </div>
           <!-- The menu -->
-          <div id="mainMenu" class="flex flex-grow hidden md:block flex-col p-2 md:overflow-y-hidden group-hover:overflow-y-auto">
-            <!-- Default menu -->
-            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-              <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
-              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Dashboard</span>
-            </a>
-            <!-- Default menu full -->
-            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-              <span class="flex icon-user-group text-2xl opacity-60 group-hover:opacity-100"></span>
-              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">User Management</span>
-              <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
-                <p class="text-white text-xs mx-auto">3</p>
-              </div>
-              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
-            </a>
-            <!-- Selected Menu -->
-            <a href="" class="flex group items-center block px-2 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25 ">
-              <span class="flex icon-folder text-2xl"></span>
-              <span class="flex-1 font-medium  my-auto ml-4 rounded-md">Registration</span>
-              <span class="flex icon-chevron-up text-1xl opacity-60 group-hover:opacity-100"></span>
-            </a>
-            <!-- Sub Menu -->
-            <div id="submenu">
-              <!-- Submenu Default-->
-              <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-                <span class="flex icon-calendar text-2xl opacity-60 group-hover:opacity-100"></span>
-                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Examiner Assign</span>
+          <div id="menu-wrapper" class="overflow-hidden transition-all duration-500 ease-in-out h-0 md:h-auto md:flex md:flex-grow">
+            <div id="mainMenu" class="md:block transform duration-500 ease-in-out -translate-y-full md:translate-y-0
+            flex-col p-2 md:overflow-y-hidden group-hover:overflow-y-auto">
+              <!-- Default menu -->
+              <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-home text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Dashboard</span>
               </a>
-              <!-- Submenu Selected-->
-              <a href="" class="flex group items-center block px-2 pl-8 py-1 my-1 rounded-md text-white opacity-100 bg-white bg-opacity-25">
-                <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
-                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Practical Mark</span>
-              </a>
-              <!-- Submenu Disabled -->
-              <a class="flex group items-center block px-2 pl-8 py-1 my-1 rounded-md text-gray-400 opacity-50 cursor-not-allowed title="Not accessable">
-                <span class="flex icon-clipboard text-2xl"></span>
-                <span class="flex-1 font-medium  my-auto ml-4 ">Review</span>
-              </a>
-              <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-                <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
-                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Centre Report</span>
-              </a>  
-            </div>
-            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-              <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
-              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Review</span>
-              <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
-            </a>
-            <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-              <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
-              <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
-            </a>
-            <div id="userInfo" class="border-t border-white border-opacity-10 mt-6 md:hidden">
-              <div class="flex flex-row items-center mt-6">
-                <img class="h-10 rounded-full mr-3" src="img/avatar2.jpg" alt="Avatar Image" />
-                <div class="flex flex-col text-white">
-                    <p class="text-base font-medium">Mohammad Habibul Bashar</p>
-                    <p class="text-gray-100 text-sm">Head teacher</p>
+              <!-- Default menu full -->
+              <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-user-group text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">User Management</span>
+                <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
+                  <p class="text-white text-xs mx-auto">3</p>
                 </div>
+                <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
+              </a>
+              <!-- Selected Menu -->
+              <a href="" class="flex group items-center block px-2 py-1 my-1 group flex rounded-md text-white opacity-100 bg-white bg-opacity-25 ">
+                <span class="flex icon-folder text-2xl"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 rounded-md">Registration</span>
+                <span class="flex icon-chevron-up text-1xl opacity-60 group-hover:opacity-100"></span>
+              </a>
+              <!-- Sub Menu -->
+              <div id="submenu">
+                <!-- Submenu Default-->
+                <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-calendar text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Examiner Assign</span>
+                </a>
+                <!-- Submenu Selected-->
+                <a href="" class="flex group items-center block px-2 pl-8 py-1 my-1 rounded-md text-white opacity-100 bg-white bg-opacity-25">
+                  <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Practical Mark</span>
+                </a>
+                <!-- Submenu Disabled -->
+                <a class="flex group items-center block px-2 pl-8 py-1 my-1 rounded-md text-gray-400 opacity-50 cursor-not-allowed title="Not accessable">
+                  <span class="flex icon-clipboard text-2xl"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 ">Review</span>
+                </a>
+                <a href="" class="flex group items-center block p-2 pl-8 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                  <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Centre Report</span>
+                </a>  
               </div>
-              <!-- User menu -->
-              <div id="UserMenu" class="md:flex-grow flex-col overflow-y-scroll">
-                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-                  <span class="flex icon-user text-2xl opacity-60 group-hover:opacity-100"></span>
-                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">My Profile</span>
-                </a>
-                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-                  <span class="flex icon-key text-2xl opacity-60 group-hover:opacity-100"></span>
-                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Change Password</span>
-                </a>
-                <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
-                  <span class="flex icon-logout-1 text-2xl opacity-60 group-hover:opacity-100"></span>
-                  <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Logout</span>
-                </a>
+              <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-clipboard text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Review</span>
+                <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
+              </a>
+              <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                <span class="flex icon-chart-square-bar text-2xl opacity-60 group-hover:opacity-100"></span>
+                <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Reports</span>
+              </a>
+              <div id="userInfo" class="border-t border-white border-opacity-10 mt-6 md:hidden">
+                <div class="flex flex-row items-center mt-6">
+                  <img class="h-10 rounded-full mr-3" src="img/avatar2.jpg" alt="Avatar Image" />
+                  <div class="flex flex-col text-white">
+                      <p class="text-base font-medium">Mohammad Habibul Bashar</p>
+                      <p class="text-gray-100 text-sm">Head teacher</p>
+                  </div>
+                </div>
+                <!-- User menu -->
+                <div id="UserMenu" class="md:flex-grow flex-col overflow-y-scroll">
+                  <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                    <span class="flex icon-user text-2xl opacity-60 group-hover:opacity-100"></span>
+                    <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">My Profile</span>
+                  </a>
+                  <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                    <span class="flex icon-key text-2xl opacity-60 group-hover:opacity-100"></span>
+                    <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Change Password</span>
+                  </a>
+                  <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
+                    <span class="flex icon-logout-1 text-2xl opacity-60 group-hover:opacity-100"></span>
+                    <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">Logout</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -978,18 +981,25 @@
         
         // mobile menu toggler
         function menuToggler(){
-          if($("#mainMenu").hasClass('hidden')) {
+          if($("#mainMenu").hasClass('transform')) {
             $("#menuOpenBtn").addClass('hidden');
             $("#menuCloseBtn").removeClass('hidden');
-            $("#mainMenu").removeClass('hidden');
-            $("#leftPanel").addClass('h-screen');
+            //$("#mainMenu").removeClass('hidden');
             $("#leftPanel").removeClass('h-auto');
+            //$("#leftPanel").addClass('h-screen');
+            $("#mainMenu").removeClass('transform');
+            $("#menu-wrapper").removeClass('h-0');
+            $("#menu-wrapper").addClass('h-screen');
+
           }else{
             $("#menuCloseBtn").addClass('hidden');
             $("#menuOpenBtn").removeClass('hidden');
-            $("#mainMenu").addClass('hidden');
+            //$("#mainMenu").addClass('hidden');
             $("#leftPanel").addClass('h-auto');
-            $("#leftPanel").removeClass('h-screen');
+            // $("#leftPanel").removeClass('h-screen');
+            $("#mainMenu").addClass('transform');
+            $("#menu-wrapper").removeClass('h-screen');
+            $("#menu-wrapper").addClass('h-0');
           }
         }
         $("#mobileMenu").click(function(){menuToggler()});  
