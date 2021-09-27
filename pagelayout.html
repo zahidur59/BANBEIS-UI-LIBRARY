@@ -39,7 +39,7 @@
           </div>
           <!-- The menu -->
           <div id="menu-wrapper" class="overflow-hidden transition-all duration-500 ease-in-out h-0 md:h-auto md:flex md:flex-grow">
-            <div id="mainMenu" class="md:block transform duration-500 ease-in-out -translate-y-full md:translate-y-0
+            <div id="mainMenu" class="md:block transform w-full duration-500 ease-in-out -translate-y-full md:translate-y-0
             flex-col p-2 md:overflow-y-hidden group-hover:overflow-y-auto">
               <!-- Default menu -->
               <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
@@ -50,9 +50,9 @@
               <a href="" class="flex group items-center block p-2 group rounded-md text-white hover:bg-white hover:bg-opacity-10">
                 <span class="flex icon-user-group text-2xl opacity-60 group-hover:opacity-100"></span>
                 <span class="flex-1 font-medium  my-auto ml-4 opacity-60 group-hover:opacity-100">User Management</span>
-                <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
+                <!-- <div class="flex  bg-red-500 rounded-full w-6 h-6 mx-1 items-center">
                   <p class="text-white text-xs mx-auto">3</p>
-                </div>
+                </div> -->
                 <span class="flex icon-chevron-down text-1xl opacity-60 group-hover:opacity-100"></span>
               </a>
               <!-- Selected Menu -->
@@ -899,7 +899,7 @@
             </form>
           </div>
           <!-- Page action pane --> 
-          <div id="pbActionPane" class="flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
+          <div id="pbActionPane" class="hidden flex flex-col md:flex-row z-10 gap-2 md:gap-4 p-4 items-center bg-white shadow-lg border">
             <!-- Left -->
             <button id="pbTertialAction" type="button" class="w-full md:w-auto font-medium rounded-lg py-2 px-4 transition ease-in duration-200  text-blue-600  bg-white border border-blue-500 hover:bg-blue-100 focus:ring-blue-300 focus:outline-none focus:ring-2">
               Exit without save
