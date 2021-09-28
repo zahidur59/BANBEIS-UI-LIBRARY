@@ -296,6 +296,24 @@
                     </div>
                   </div>
               </label>
+              <!-- Incremental -->
+              <label for="inputID" class="flex flex-wrap md:items-center md:grid grid-cols-12 col-rows-1 gap-1">
+                <div title="spacer" class="w-3 text-red-500 md:col-span-1 justify-self-end"></div>
+                <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold mb-1 lg:mb-0">Number of Items</div>
+                <div class="flex w-full md:col-span-6">
+                  <button type="button" class="flex-initial font-bold text-1xl rounded-l-lg py-2 px-4 transition ease-in duration-200 hover:text-white bg-white hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
+                    -
+                  </button>
+                    <input
+                      type="number" class="hover:appearance-none w-16 text-right rounded-none text-gray-700 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent "
+                      value="0"
+                    />  
+                    <button type="button" class="flex-initial font-bold text-1xl rounded-r-lg py-2 px-4 transition ease-in duration-200 hover:text-white bg-white hover:bg-blue-700 focus:ring-blue-300 focus:outline-none focus:ring-2">
+                      +
+                    </button>
+                  
+                </div>
+            </label>
                 <!-- Form Actions -->
                 <div class="flex border-t pt-4 mt-4 border-white">
                   <div title="spacer" class="flex-1 hidden md:block"></div>
