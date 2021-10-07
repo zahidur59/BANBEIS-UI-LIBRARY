@@ -26,7 +26,7 @@
         <!-- Logo -->
           <div class="flex block p-2 md:p-4 border-b border-white border-opacity-10 md:border-none">
             <div class="w-1/2">
-            <a href="index.html"><img src="img/IEMIS_logo_2.png" class="flex w-24"></a>
+            <a href="index.html"><img src="img/ieims-temp-logo.png" class="flex w-24"></a>
             </div>  
             <div id="mobileMenu" class="w-1/2 text-right md:hidden">
               <span id="menuOpenBtn" class="inline-block text-center">
@@ -180,6 +180,16 @@
                   <p class="italic text-sm">Special Institution Registration fee BDT 750.</p>
                 </div>
                 <!-- Non required simple field -->
+                <label for="inputID" class="flex flex-wrap md:items-start md:grid grid-cols-12 col-rows-1 gap-1">
+                  <div title="required" class="w-2 md:mt-2.5 text-red-500 md:col-span-1 justify-self-end">*</div>
+                  <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold md:mt-2 lg:mb-0 break-words">Student's Name (A level too long to fit in a single line)</div>
+                  <input
+                      type="text" class="w-full md:col-span-6 rounded-lg text-gray-700 placeholder-gray-400 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      placeholder="Enter your name"
+                      value=""
+                    />
+                </label>
+                <!-- Non required simple Col field -->
                 <label for="inputID" class="flex flex-wrap md:items-start md:grid grid-cols-12 col-rows-1 gap-1">
                   <div title="required" class="w-2 md:mt-2.5 text-red-500 md:col-span-1 justify-self-end">*</div>
                   <div id="labelTxt" class="inline-block flex-1 md:col-span-4 text-gray-700 font-semibold md:mt-2 lg:mb-0 break-words">Student's Name (A level too long to fit in a single line)</div>
@@ -1034,6 +1044,10 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <!-- data page -->
+              <div class="xl:max-w-screen-lg py-4 px-8 bg-white shadow-lg border flex-grow" >
+                <h1>Testing testing one two three</h1>
               </div>
             </form>
           </div>
