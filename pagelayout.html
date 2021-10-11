@@ -1048,7 +1048,7 @@
               <!-- data page -->
               <div class="flex flex-col gap-2 md:gap-4 py-4 px-8 items-center bg-gray-200 rounded-md shadow-lg border" >
                 <h2 class="text-2xl text-center font-semibold">Data Table</h2>
-                <table class="w-full shadow-sm overflow-y-auto overflow-x-auto" style="min-width:300px ">
+                <table class="w-full shadow-sm overflow-y-auto overflow-x-auto">
                   <thead class="text-left text-white bg-gray-700">
                     <th class="p-2">Institution Name</th>
                     <th class="p-2">Version</th>
@@ -1062,17 +1062,43 @@
                       <td rowspan="3" class="p-2 border-solid border border-light-blue-300">Bangla</td>
                       <td class="p-2 border-solid border border-light-blue-300">Science</td>
                       <td class="p-2 border-solid border border-light-blue-300 text-center">56</td>
-                      <td class="p-2 border-solid border border-light-blue-300 text-right">Manage</td>
+                      <td class="p-2 border-solid border border-light-blue-300 self-end relative">
+                        <div id="tblManageMenu" class="group flex items-center cursor-pointer">
+                          Manage
+                          <span class="icon-chevron-down text-gray-300 group-hover:text-gray-700"></span>
+                        </div>
+                        <div id="ManageMenuDropdown" class="absolute flex flex-col gap-1 text-right whitespace-nowrap right-0 top-8 z-40 bg-white border shadow-md hidden">
+                            <a id="userMenu_profile" class="flex items-center block p-2 px-4 hover:bg-gray-100 cursor-pointer">
+                              <span class="flex-1 font-medium text-sm">Reallocate</span>
+                            </a>
+                            <a id="userMenu_password" class="flex items-center block p-2 px-4 hover:bg-gray-100 cursor-pointer">
+                              <span class="flex-1 font-medium text-sm">Reallocate by Version</span>
+                            </a>
+                            <a id="userMenu_logout" class="flex items-center block p-2 px-4 rounded-md hover:bg-gray-100 cursor-pointer">
+                               <span class="flex-1 font-medium text-sm">Reallocate by Institute</span>
+                            </a>
+                         </div>
+                      </td>
                     </tr>
                     <tr class="text-felt">
                       <td class="p-2 border-solid border border-light-blue-300">Business Studies</td>
                       <td class="p-2 border-solid border border-light-blue-300 text-center">40</td>
-                      <td class="p-2 border-solid border border-light-blue-300 text-right">Manage</td>
+                      <td class="p-2 border-solid border border-light-blue-300 text-right">
+                        <div id="" class="group flex items-center cursor-pointer">
+                          Manage 
+                          <span class="icon-chevron-down text-gray-300 group-hover:text-gray-700"></span>
+                        </div>
+                      </td>
                     </tr>
                     <tr class="text-felt">
                       <td class="p-2 border-solid border border-light-blue-300">Humanities</td>
                       <td class="p-2 border-solid border border-light-blue-300 text-center">60</td>
-                      <td class="p-2 border-solid border border-light-blue-300 text-right">Manage</td>
+                      <td class="p-2 border-solid border border-light-blue-300 text-right">
+                        <div id="" class="group flex items-center cursor-pointer">
+                          Manage 
+                          <span class="icon-chevron-down text-gray-300 group-hover:text-gray-700"></span>
+                        </div>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -1219,10 +1245,23 @@
             $("#UserMenuDropdonw").addClass('hidden');
           }
         }
+        // TableManageMenu
+        function toggletblManageMenu() {
+          if($("#ManageMenuDropdown").hasClass( "hidden" )){
+            $("#ManageMenuDropdown").removeClass('icon-chevron-down');
+            $("#userMenuHandler").addClass('icon-chevron-up');
+            $("#ManageMenuDropdown").removeClass('hidden');
+          }else{
+            $("#userMenuHandler").addClass('icon-chevron-down');
+            $("#userMenuHandler").removeClass('icon-chevron-up');
+            $("#ManageMenuDropdown").addClass('hidden');
+          }
+        }
         $("#userMenuHandler").click(function() {toggleUserMenu()});
         $("#userMenu_profile").click(function() {toggleUserMenu()});
         $("#userMenu_password").click(function() {toggleUserMenu()});
         $("#userMenu_logout").click(function() {toggleUserMenu()});
+        $("#tblManageMenu").click(function() {toggletblManageMenu()});
       });
     </script>
   </body>
